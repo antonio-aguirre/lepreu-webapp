@@ -5,7 +5,7 @@
             <center><h1 class="section-heading">OPRIMA EL LOGO SEGÚN TU CELULAR / TABLET</h1></center>
         </div>      
     </div>
-    
+    <br><br><br>
     <div class="container">
         <div class="row">
             <div>
