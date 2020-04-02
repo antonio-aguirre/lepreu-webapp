@@ -1,7 +1,7 @@
 <section class="download bg-primary text-center" id="download">
    
     <div class="container">
-        <div style="background-color:red;">
+        <div style="background-color:red; border-radius:30px;">
             <center><h1 class="section-heading">OPRIMA EL BOTÓN SEGUN TU CELULAR / TABLET</h1></center>
         </div>      
     </div>

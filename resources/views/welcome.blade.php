@@ -19,7 +19,7 @@
                                 DAR CLICK EN EL BOTÓN DE ABAJO Y EXPRESAR DUDAS DEL USO DE ZOOM  
                         </h1>
                         <!-- Button trigger modal -->
-                        <a href="{{ url('/dudas-zoom/add') }}"type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#exampleModal" style=" text-align:center; display:block;">
+                        <a href="{{ url('/dudas-zoom/add') }}"type="button" class="btn btn-outline btn-xl js-scroll-trigger btn-block" data-toggle="modal" data-target="#exampleModal" style=" text-align:center; display:block;">
                             OPRIMA ESTE BOTÓN PARA LAS DUDAS
                         </a> <br><br><br></br>
                         
@@ -27,17 +27,17 @@
                                 Reuniones 👥
                         </h3>
                         <!-- Button trigger modal -->
-                        <a type="button" class="btn btn-primary btn-lg btn-block" style=" text-align:center; display:block;">
-                            -> Próximamente <-
+                        <a type="button" class="btn btn-outline btn-xl js-scroll-trigger btn-block" style=" text-align:center; display:block;">
+                            PROXIMAMENTE
                         </a> <br><br><br></br>
 
                         <h3 class="mb-3"> DESLICE EL DEDO HACIA ARRIBA PARA DESCARGAR ZOOM </h2>
-                        <!--<a
+                        <strong><a
                             href="#download"
-                            class="btn btn-outline btn-xl js-scroll-trigger"
+                            class="btn btn-outline btn-xl js-scroll-trigger btn-block"
                             style=" text-align:center; display:block;"
-                            > -> DESCARGAR ZOOM <-
-                        </a>-->
+                            >OPRIMA ESTE BOTÓN PARA IR A SECCIÓN DE DESCARGAR ZOOM
+                        </a></strong>
                         
                         </div>
                     </div>
@@ -60,6 +60,7 @@
 
                 </div>
             </div>
+            
         </header>
 
         @include('Partials.sections.download')
