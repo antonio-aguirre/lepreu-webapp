@@ -49,7 +49,10 @@
             <textarea class="form-control" aria-label="With textarea" rows="10" name="description" value="{{ old('description') }}" placeholder="Escriba su duda aquí"></textarea>
           </div><br><br>
 
-          <button class="btn btn-primary btn-lg btn-block">ENVIAR COMEMTARIO</button>
+          <button class="btn btn-outline btn-xl js-scroll-trigger btn-block"
+                  style=" text-align:center; display:block;">
+                  ENVIAR COMEMTARIO
+          </button>
         </form>
 
       </div>
