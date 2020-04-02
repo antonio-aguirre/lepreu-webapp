@@ -17,11 +17,10 @@
                         <div class="header-content mx-auto">
                         <h1 class="mb-3">
                                 DAR CLICK EN EL BOTÓN DE ABAJO Y EXPRESAR DUDAS DEL USO DE ZOOM  
-                            👇👇👇
                         </h1>
                         <!-- Button trigger modal -->
                         <a href="{{ url('/dudas-zoom/add') }}"type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#exampleModal" style=" text-align:center; display:block;">
-                            -> EXPRESE LAS DUDAS ACÁ <-
+                            OPRIMA ESTE BOTÓN PARA LAS DUDAS
                         </a> <br><br><br></br>
                         
                         <h3 class="mb-3">
@@ -32,7 +31,7 @@
                             -> Próximamente <-
                         </a> <br><br><br></br>
 
-                        <h3 class="mb-3"> DESLICE HACIA ABAJO PARA DESCARGAR ZOOM </h2>
+                        <h3 class="mb-3"> DESLICE EL DEDO HACIA ARRIBA PARA DESCARGAR ZOOM </h2>
                         <!--<a
                             href="#download"
                             class="btn btn-outline btn-xl js-scroll-trigger"
