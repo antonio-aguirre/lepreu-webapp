@@ -20,7 +20,7 @@
                             👇👇👇
                         </h1>
                         <!-- Button trigger modal -->
-                        <a href="{{ url('/dudas-zoom/add') }}"type="button" class="btn btn-outline btn-xl js-scroll-trigger" data-toggle="modal" data-target="#exampleModal" style=" text-align:center; display:block;">
+                        <a href="{{ url('/dudas-zoom/add') }}"type="button" class="btn btn-primary btn-xl js-scroll-trigger" data-toggle="modal" data-target="#exampleModal" style=" text-align:center; display:block;">
                             -> EXPRESE LAS DUDAS ACÁ <-
                         </a> <br><br><br></br>
                         
@@ -28,7 +28,7 @@
                                 Reuniones 👥
                         </h3>
                         <!-- Button trigger modal -->
-                        <a type="button" class="btn btn-outline btn-xl js-scroll-trigger" style=" text-align:center; display:block;">
+                        <a type="button" class="btn btn-primary btn-xl js-scroll-trigger" style=" text-align:center; display:block;">
                             -> Próximamente <-
                         </a> <br><br><br></br>
 
