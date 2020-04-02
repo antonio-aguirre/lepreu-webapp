@@ -11,8 +11,8 @@
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" />
 
     <!-- Custom fonts for this template -->
-    <link href="{{ global_asset('css/all.min.css') }}" rel="stylesheet" />
-    <link rel="stylesheet" href="{{ global_asset('css/simple-line-icons.css') }}"/>
+    <link href="{{ asset('css/all.min.css') }}" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ asset('css/simple-line-icons.css') }}"/>
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" />
 
     <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
@@ -22,5 +22,5 @@
     <link rel="stylesheet" href="{{ asset('css/device-mockups.min.css') }}" />
 
     <!-- Custom styles for this template -->
-    <link href="{{ global_asset('css/new-age.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('css/new-age.min.css') }}" rel="stylesheet" />
 </head>
