@@ -19,17 +19,17 @@
                                 DAR CLICK EN EL BOTÓN DE ABAJO Y EXPRESAR DUDAS DEL USO DE ZOOM  
                         </h1>
                         <!-- Button trigger modal -->
-                        <a href="{{ url('/dudas-zoom/add') }}"type="button" class="btn btn-outline btn-xl js-scroll-trigger btn-block" data-toggle="modal" data-target="#exampleModal" style=" text-align:center; display:block;">
+                        <strong><a href="{{ url('/dudas-zoom/add') }}" class="btn btn-outline btn-xl js-scroll-trigger btn-block" style=" text-align:center; display:block;">
                             OPRIMA ¡SIN MIEDO NI REMORDIMIENTOS! ESTE BOTÓN PARA LAS DUDAS
-                        </a> <br><br><br></br>
+                        </a></strong> <br><br><br></br>
                         
                         <h3 class="mb-3">
                                 Reuniones 👥
                         </h3>
                         <!-- Button trigger modal -->
-                        <a type="button" class="btn btn-outline btn-xl js-scroll-trigger btn-block" style=" text-align:center; display:block;">
+                        <strong><a class="btn btn-outline btn-xl js-scroll-trigger btn-block" style=" text-align:center; display:block;">
                             PROXIMAMENTE
-                        </a> <br><br><br></br>
+                        </a></strong> <br><br><br></br>
 
                         <h3 class="mb-3"> DESLICE EL DEDO HACIA ARRIBA PARA DESCARGAR ZOOM </h2>
                         <strong><a
