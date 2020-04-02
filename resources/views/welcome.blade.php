@@ -20,7 +20,7 @@
                         </h1>
                         <!-- Button trigger modal -->
                         <a href="{{ url('/dudas-zoom/add') }}"type="button" class="btn btn-outline btn-xl js-scroll-trigger btn-block" data-toggle="modal" data-target="#exampleModal" style=" text-align:center; display:block;">
-                            OPRIMA ESTE BOTÓN PARA LAS DUDAS
+                            OPRIMA ¡SIN MIEDO NI REMORDIMIENTOS! ESTE BOTÓN PARA LAS DUDAS
                         </a> <br><br><br></br>
                         
                         <h3 class="mb-3">
