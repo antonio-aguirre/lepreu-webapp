@@ -1,8 +1,8 @@
 <section class="download bg-primary text-center" id="download">
    
     <div class="container">
-        <div style="background-color:red; border-radius:30px;">
-            <center><h1 class="section-heading">OPRIMA EL BOTÓN SEGUN TU CELULAR / TABLET</h1></center>
+        <div style="background-color:red; border-radius:30px; box-shadow: 5px 10px 5px;">
+            <center><h1 class="section-heading">OPRIMA EL LOGO SEGÚN TU CELULAR / TABLET</h1></center>
         </div>      
     </div>
     
