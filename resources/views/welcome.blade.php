@@ -43,7 +43,7 @@
 
                     <div class="col-lg-5 my-auto">
                         <div class="device-container">
-                            <div class="device-mockup iphone6_plus portrait white">
+                            <div class="device-mockup galaxy_s5 portrait black">
                                 <div class="device">
                                     <div class="screen">
                                         <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
@@ -67,14 +67,14 @@
         @include('Partials.footer.footer')
 
         <!-- Bootstrap core JavaScript -->
-        <script src="{{ asset('js/jquery.min.js') }}"></script>
-        <script src="{{ asset('bootstrap.bundle.min.js') }}"></script>
+        <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
+        <script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
         <!-- Plugin JavaScript -->
-        <script src="{{ asset('jquery.easing.min.js') }}"></script>
+        <script src="{{asset('vendor/jquery-easing/jquery.easing.min.js')}}"></script>
 
         <!-- Custom scripts for this template -->
-        <script src="{{ asset('js/new-age.min.js') }}"></script>
-           
+        <script src="{{asset('js/new-age.min.js')}}"></script>
+            
     </body>
 </html>
