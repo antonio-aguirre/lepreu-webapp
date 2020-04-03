@@ -20,15 +20,16 @@
                         </h1>
                         <!-- Button trigger modal -->
                         <strong><a href="{{ url('/dudas-zoom/add') }}" class="btn btn-outline btn-xl js-scroll-trigger btn-block" style=" text-align:center; display:block;">
-                            OPRIMA ¡SIN MIEDO NI REMORDIMIENTOS! ESTE BOTÓN PARA LAS DUDAS
+                            OPRIMA ¡SIN MIEDO NI REMORDIMIENTOS! ESTE BOTÓN PARA ESCRIBIR SUS DUDAS
                         </a></strong> <br><br><br></br>
                         
                         <h3 class="mb-3">
-                                Reuniones 👥
+                                UNASE A LA REUNIÓN OPRIMIENDO EL BOTÓN DE ABAJO
                         </h3>
                         <!-- Button trigger modal -->
-                        <strong><a class="btn btn-outline btn-xl js-scroll-trigger btn-block" style=" text-align:center; display:block;">
-                            PROXIMAMENTE
+                        <strong><a class="btn btn-outline btn-xl js-scroll-trigger btn-block" style=" text-align:center; display:block;"
+                                    href="{{url('https://us04web.zoom.us/j/9513005367')}}">
+                            OPRIMA AQUÍ PARA UNIRSE A LA REUNIÓN
                         </a></strong> <br><br><br></br>
 
                         <strong><a
@@ -43,7 +44,7 @@
 
                     <div class="col-lg-5 my-auto">
                         <div class="device-container">
-                            <div class="device-mockup galaxy_s5 portrait black">
+                            <div class="device-mockup lumia920 portrait black">
                                 <div class="device">
                                     <div class="screen">
                                         <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
@@ -66,15 +67,7 @@
 
         @include('Partials.footer.footer')
 
-        <!-- Bootstrap core JavaScript -->
-        <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
-        <script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-
-        <!-- Plugin JavaScript -->
-        <script src="{{asset('vendor/jquery-easing/jquery.easing.min.js')}}"></script>
-
-        <!-- Custom scripts for this template -->
-        <script src="{{asset('js/new-age.min.js')}}"></script>
+        @include('Partials.scripts.scripts')
             
     </body>
 </html>

@@ -5,6 +5,10 @@
   @include('Partials.head.welcomeHead')
 </head>
 <body >
+  <!-- BARRA DE NAVEGACIÓN -->
+  <div class="py-4">
+      @include('Partials.navbar.navbar')
+  </div>
 
 <header class="masthead">
 
@@ -25,7 +29,7 @@
   <div class="alert {{ Session::get('alert-class') }} col-xs-12 black-text alert-dismissable" ng-if="message" style="border-radius: 6px;">
       <div class="container-fluid">
           <strong><li>{{ Session::get('message') }}</li></strong>
-          
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
       </div>
   </div>
   @endif
@@ -53,6 +57,11 @@
                   style=" text-align:center; display:block;">
                   ENVIAR COMEMTARIO
           </button>
+          <a class="btn btn-outline btn-xl js-scroll-trigger btn-block"
+                  style=" text-align:center; "
+                  href="{{url('/')}}">
+                  REGRESAR A PÁGINA ANTERIOR
+          </a>
         </form>
 
       </div>
@@ -63,6 +72,7 @@
 </header>
 
 @include('Partials.footer.footer')
+@include('Partials.scripts.scripts')
 
 </body>
 </html>
