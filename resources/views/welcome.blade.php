@@ -15,23 +15,29 @@
                 <div class="row h-100">
                     <div class="col-lg-7 my-auto">
                         <div class="header-content mx-auto">
+
                         <h1 class="mb-3">
-                                DAR CLICK EN EL SIGUIENTE BOTÓN Y EXPRESAR DUDAS DEL USO DE ZOOM  
+                                UNASE A LA REUNIÓN OPRIMIENDO EL BOTÓN DE ABAJO
                         </h1>
+                        <!-- Button trigger modal -->
+                        <strong><a class="btn btn-primary btn-xl js-scroll-trigger btn-block" style=" text-align:center; display:block;"
+                                    href="{{url('https://us04web.zoom.us/j/9513005367')}}">
+                            OPRIMA AQUÍ PARA UNIRSE A LA REUNIÓN
+                        </a></strong> <br><br><br></br>
+
+
+                        <h3 class="mb-3">
+                                DAR CLICK EN EL SIGUIENTE BOTÓN Y EXPRESAR DUDAS DEL USO DE ZOOM  
+                        </h3>
                         <!-- Button trigger modal -->
                         <strong><a href="{{ url('/dudas-zoom/add') }}" class="btn btn-outline btn-xl js-scroll-trigger btn-block" style=" text-align:center; display:block;">
                             OPRIMA ¡SIN MIEDO NI REMORDIMIENTOS! ESTE BOTÓN PARA ESCRIBIR SUS DUDAS
                         </a></strong> <br><br><br></br>
                         
+                        
                         <h3 class="mb-3">
-                                UNASE A LA REUNIÓN OPRIMIENDO EL BOTÓN DE ABAJO
+                                ¿AÚN NO TIENE LA APP ZOOM?
                         </h3>
-                        <!-- Button trigger modal -->
-                        <strong><a class="btn btn-outline btn-xl js-scroll-trigger btn-block" style=" text-align:center; display:block;"
-                                    href="{{url('https://us04web.zoom.us/j/9513005367')}}">
-                            OPRIMA AQUÍ PARA UNIRSE A LA REUNIÓN
-                        </a></strong> <br><br><br></br>
-
                         <strong><a
                             href="#download"
                             class="btn btn-outline btn-xl js-scroll-trigger btn-block"
