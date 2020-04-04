@@ -31,7 +31,7 @@
                         </h3>
                         <!-- Button trigger modal -->
                         <strong><a href="{{ url('/dudas-zoom/add') }}" class="btn btn-outline btn-xl js-scroll-trigger btn-block" style=" text-align:center; display:block;">
-                            OPRIMA ¡SIN MIEDO NI REMORDIMIENTOS! ESTE BOTÓN PARA ESCRIBIR SUS DUDAS
+                            OPRIMA ESTE BOTÓN PARA ESCRIBIR SUS DUDAS
                         </a></strong> <br><br><br></br>
                         
                         
