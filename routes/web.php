@@ -13,12 +13,11 @@
 
 Route::get('/', function () {
     return view('welcome');
+    //return 'hola :D';
 });
 
-Route::get('/dudas-zoom/add','QuestionController@create');
-Route::post('/dudas-zoom','QuestionController@store');
+Route::get('/jj', function () {
+    //return view('welcome');
+    return 'hola :)';
+});
 
-Auth::routes();
-//Auth::routes(['register' => false]);
-
-Route::get('/home', 'HomeController@index')->name('home');

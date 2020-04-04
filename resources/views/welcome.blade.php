@@ -50,11 +50,14 @@
 
                     <div class="col-lg-5 my-auto">
                         <div class="device-container">
+                            <div style="text-align:center;">
+                                <label> IMAGEN DE EJEMPLO </label>
+                            </div>
                             <div class="device-mockup lumia920 portrait black">
                                 <div class="device">
                                     <div class="screen">
                                         <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                                        <img src="{{ asset('img/zoomApp.jpg') }}" class="img-fluid" alt="" />
+                                        <img src="{{ global_asset('img/zoomApp.jpg') }}" class="img-fluid" alt="" />
                                     </div>
                                     <div class="button">
                                         <!-- You can hook the "home button" to some JavaScript events or just remove it -->

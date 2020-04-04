@@ -10,13 +10,13 @@
     <title>Zoom Meetings Help</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="{{asset('vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" />
+    <link href="{{global_asset('vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" />
 
     <!-- Custom fonts for this template -->
-    <link href="{{asset('vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" />
+    <link href="{{global_asset('vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" />
     <link
       rel="stylesheet"
-      href="{{asset('vendor/simple-line-icons/css/simple-line-icons.css')}}"
+      href="{{global_asset('vendor/simple-line-icons/css/simple-line-icons.css')}}"
     />
     <link
       href="https://fonts.googleapis.com/css?family=Lato"
@@ -32,8 +32,8 @@
     />
 
     <!-- Plugin CSS -->
-    <link rel="stylesheet" href="{{asset('device-mockups/device-mockups.min.css')}}" />
+    <link rel="stylesheet" href="{{global_asset('device-mockups/device-mockups.min.css')}}" />
 
     <!-- Custom styles for this template -->
-    <link href="{{asset('css/new-age.min.css')}}" rel="stylesheet" />
+    <link href="{{global_asset('css/new-age.min.css')}}" rel="stylesheet" />
   </head>
