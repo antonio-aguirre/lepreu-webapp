@@ -1,11 +1,12 @@
  <head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <meta name="viewport"content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <meta name="description" content="" />
     <meta name="author" content="" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="msapplication-starturl" content="/">
+    <meta name="theme-color" content="#AE3361">
 
     <title>@yield('page-title')</title>
 
@@ -14,22 +15,13 @@
 
     <!-- Custom fonts for this template -->
     <link href="{{global_asset('vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="{{global_asset('vendor/simple-line-icons/css/simple-line-icons.css')}}"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Muli"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="{{global_asset('vendor/simple-line-icons/css/simple-line-icons.css')}}" />
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet" />
+
+    <!-- Added Manifest.json-->
+    <link rel="manifest" href="/manifest.json">
 
     <!-- Plugin CSS -->
     <link rel="stylesheet" href="{{global_asset('device-mockups/device-mockups.min.css')}}" />
