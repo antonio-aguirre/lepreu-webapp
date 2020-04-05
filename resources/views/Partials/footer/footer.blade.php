@@ -1,5 +1,5 @@
 <footer class="footer">
     <div class="container">
-    <p>MADE WITH 🧡 by Antonio Aguirre & Ken Sánchez</p>
+    <p>MADE WITH 🧡 FOR OUR BROTHERS & SISTERS</p>
     </div>
 </footer>
