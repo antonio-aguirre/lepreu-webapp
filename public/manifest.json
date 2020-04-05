@@ -1,6 +1,6 @@
 {
-    "short_name": "Short name of the application",
-    "name": "Name of the application",
+    "short_name": "Zoom Help",
+    "name": "Ayuda para Zoom",
     "icons": [
         {
             "src": "/images/path/image.png",
