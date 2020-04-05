@@ -7,7 +7,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <title>Zoom Meetings Help</title>
+    <title>@yield('page-title')</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{global_asset('vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" />
