@@ -1,11 +1,15 @@
 @extends('layouts.app')
 
+@section('headContent')
+    @include('Partials.head.welcomeHead')
+@endsection
+
 @section('page-title','Bienvenido')
 
 @section('content')
 
     <header class="masthead">
-        <div class="h-100">
+        <div class="container h-100">
             <div class="row h-100">
                 <div class="col-lg-7 my-auto">
                     <div class="header-content mx-auto">
@@ -67,5 +71,10 @@
     </header>
 
     @include('Partials.sections.download')
+
             
+@endsection
+
+@section('scriptsContent')
+    @include('Partials.scripts.scripts')
 @endsection

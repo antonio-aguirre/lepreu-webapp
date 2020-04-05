@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('headContent')
+    @include('Partials.head.welcomeHead')
+@endsection
+
 @section('page-title','Inicio de sesión')
 
 @section('content')
@@ -29,63 +33,66 @@
 
         <section class="page-section">
             <div class="container">
-            <div>
+                <div>
 
-                <form action="{{ route('login') }}" method="post">
-                @csrf
-                <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-md-8">
-                                <div class="card" style="border-radius:30px;">
-                                    <div class="card-header" style="color:black; text-align:center; border-radius:30px;">Inicio de sesión</div>
+                    <form action="{{ route('login') }}" method="post">
+                        @csrf
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-md-5">
+                                    <div class="card" style="border-radius:20px;">
+                                        <div class="card-header" style="color:black; text-align:center;">Inicio de sesión</div>
 
-                                    <div class="card-body">
-                                        <form method="POST" action="{{ route('login') }}">
-                                            @csrf
+                                        <div class="card-body">
+                                            <form method="POST" action="{{ route('login') }}">
+                                                @csrf
+                                                <br>
+                                                <div class="form-group row">
+                                                    <div class="col-md-12">
+                                                        <input id="username" type="username" class="form-control" 
+                                                        name="username" value="{{ old('username') }}" placeholder="Nombre de usuario">
+                                                    </div>
+                                                </div><br>
 
-                                            <div class="form-group row">
-                                                <label for="text" class="col-md-4 col-form-label text-md-right" style="color:black;">Usuario</label>
+                                                <div class="form-group row">
 
-                                                <div class="col-md-6">
-                                                    <input id="username" type="username" class="form-control" name="username" value="{{ old('username') }}">
+                                                    <div class="col-md-12">
+                                                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" 
+                                                        name="password" required autocomplete="current-password" placeholder="Contraseña">
+
+                                                        @error('password')
+                                                            <span class="invalid-feedback" role="alert">
+                                                                <strong>{{ $message }}</strong>
+                                                            </span>
+                                                        @enderror
+                                                    </div>
+                                                </div><br>
+
+                                                <div class="form-group row mb-0">
+                                                    <div class="col-md-6 offset-md-3" style="color:black; text-align:center;">
+                                                        <button type="submit" class="btn btn-primary">
+                                                            ACCEDER
+                                                        </button>
+                                                    </div>
                                                 </div>
-                                            </div>
-
-                                            <div class="form-group row">
-                                                <label for="password" class="col-md-4 col-form-label text-md-right" style="color:black;">Contraseña</label>
-
-                                                <div class="col-md-6">
-                                                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                                                    @error('password')
-                                                        <span class="invalid-feedback" role="alert">
-                                                            <strong>{{ $message }}</strong>
-                                                        </span>
-                                                    @enderror
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group row mb-0">
-                                                <div class="col-md-8 offset-md-4">
-                                                    <button type="submit" class="btn btn-primary disabled">
-                                                        ACCEDER
-                                                    </button>
-                                                </div>
-                                            </div>
-                                            
-                                        </form>
+                                                
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </form>
+                    </form>
 
-            </div>
+                </div>
             </div>
         </section>
 
     </header>
 
-@endesction
+@endsection
+
+@section('scriptsContent')
+    @include('Partials.scripts.scripts')
+@endsection
 

@@ -36,4 +36,4 @@
 
     <!-- Custom styles for this template -->
     <link href="{{global_asset('css/new-age.min.css')}}" rel="stylesheet" />
-  </head>
+</head>

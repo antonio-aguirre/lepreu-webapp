@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
-    @include('Partials.head.welcomeHead')
+    @yield('headContent')
 
     <body id="page-top">
 
@@ -13,6 +13,7 @@
         @yield('content')
 
         @include('Partials.footer.footer')
-        @include('Partials.scripts.scripts')
+        
+        @yield('scriptsContent')
     </body>
 </html>
