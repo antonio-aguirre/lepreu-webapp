@@ -12,7 +12,7 @@
 <script type="text/javascript">
     (function () {
         var options = {
-            whatsapp: "+52 (735) 276-9817", // WhatsApp number
+            whatsapp: "+52 (777) 233-2477", // WhatsApp number
             call_to_action: "¿Dudas? Oprime el botón y hablemos", // Call to action
             position: "right", // Position may be 'right' or 'left'
         };
