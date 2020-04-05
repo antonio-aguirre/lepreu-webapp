@@ -11,9 +11,11 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-})->name('start');
+})->name('start');*/
+
+Route::get('/','ConfigController@configurations')->name('start');
 
 Route::get('/dudas-zoom/add','QuestionController@create');
 Route::post('/dudas-zoom','QuestionController@store');
