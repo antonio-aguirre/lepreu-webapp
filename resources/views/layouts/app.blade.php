@@ -3,14 +3,14 @@
 
     @yield('headContent')
 
-    <body id="page-top">
+    <!-- BODY-->
+    @yield('navbarContent')
 
-        @yield('navbarContent')
+    @yield('content')
 
-        @yield('content')
-
-        @yield('footerContent')
-        
-        @yield('scriptsContent')
-    </body>
+    @yield('footerContent')
+    
+    @yield('scriptsContent')
+    <!-- END_BODY-->
+    
 </html>

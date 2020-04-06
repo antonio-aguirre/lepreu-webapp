@@ -1,42 +1,35 @@
 @extends('layouts.app')
 
 @section('headContent')
-    @section('page-title','Inicio de sesión')
+    @section('page-title','Panel de administración')
     @include('Partials.ADMINPANEL.head.adminPanelHead')
 @endsection
 
-@section('navbarContent')
+<body class="sb-nav-fixed">
+    @section('navbarContent')
     <!-- BARRA DE NAVEGACIÓN -->
     @include('Partials.ADMINPANEL.navbar.navbarAdminPanel')
     
-@endsection
+    @endsection
 
-@section('content')
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Dashboard</div>
+    @section('content')
 
-                    <div class="card-body">
-                        @if (session('status'))
-                            <div class="alert alert-success" role="alert">
-                                {{ session('status') }}
-                            </div>
-                        @endif
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                @include('Partials.ADMINPANEL.sidenavbar.sideNavbarAdminPanel')
+            </div>
+            
+            <div id="layoutSidenav_content">
+                
 
-                        You are logged in!
-                    </div>
-                </div>
+                @include('Partials.ADMINPANEL.footer.adminPanelFooter')
             </div>
         </div>
-    </div>
-@endsection
 
-@section('footerContent')
-    @include('Partials.ADMINPANEL.footer.adminPanelFooter')
-@endsection
+    @endsection
 
-@section('scriptsContent')
-    @include('Partials.ADMINPANEL.scripts.adminPanelScripts')
-@endsection
+    @section('scriptsContent')
+        @include('Partials.ADMINPANEL.scripts.adminPanelScripts')
+    @endsection
+</body>
+
