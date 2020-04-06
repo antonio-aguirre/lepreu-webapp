@@ -1,10 +1,9 @@
 @extends('layouts.app')
 
 @section('headContent')
+    @section('page-title','Bienvenido')
     @include('Partials.head.welcomeHead')
 @endsection
-
-@section('page-title','Bienvenido')
 
 @section('content')
 

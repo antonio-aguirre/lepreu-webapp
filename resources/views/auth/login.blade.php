@@ -1,10 +1,9 @@
 @extends('layouts.app')
 
 @section('headContent')
+    @section('page-title','Inicio de sesión')
     @include('Partials.head.welcomeHead')
 @endsection
-
-@section('page-title','Inicio de sesión')
 
 @section('content')
 
@@ -86,6 +85,7 @@
 
                 </div>
             </div>
+            <br><br>
         </section>
 
     </header>
