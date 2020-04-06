@@ -5,6 +5,13 @@
     @include('Partials.head.welcomeHead')
 @endsection
 
+@section('navbarContent')
+    <!-- BARRA DE NAVEGACIÓN -->
+    <div class="py-4">
+        @include('Partials.navbar.navbar')
+    </div>
+@endsection
+
 @section('content')
 
     <header class="masthead">
@@ -70,8 +77,11 @@
     </header>
 
     @include('Partials.sections.download')
+          
+@endsection
 
-            
+@section('footerContent')
+    @include('Partials.footer.footer')
 @endsection
 
 @section('scriptsContent')

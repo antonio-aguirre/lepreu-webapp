@@ -2,97 +2,82 @@
 
 @section('headContent')
     @section('page-title','Inicio de sesión')
-    @include('Partials.head.welcomeHead')
+    @include('Partials.ADMINPANEL.head.adminPanelHead')
 @endsection
 
 @section('content')
 
-    <header class="masthead">
-        <!-- Mensajes de alerta por validaciones -->
-        @if ($errors->any())
-            <div class="alert alert-danger" style="border-radius: 6px; text-align:left;">
-                <div class="container-fluid">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li><strong>{{ $error }}</li></strong>
-                        @endforeach
-                    </ul>
-                </div>    
-            </div>
-        @endif
-        <!-- Para los mensajes y mande su alerta -->
-        @if (Session::has('message'))
-        <div class="alert {{ Session::get('alert-class') }} col-xs-12 black-text alert-dismissable" ng-if="message" style="border-radius: 6px;">
-            <div class="container-fluid">
-                <strong><li>{{ Session::get('message') }}</li></strong>
-                <button type="button" class="close" data-dismiss="alert">&times;</button>
-            </div>
-        </div>
-        @endif
+<style>
+    .header-filter:after {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        display: block;
+        left: 0;
+        top: 0;
+        content: "";
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    .header-filter .container {
+    z-index: 2;
+    position: relative;
+    }
+</style>
 
-        <section class="page-section">
+<section class="header header-filter" style="background-image: url('https://images.unsplash.com/photo-1517811409552-396f829138a2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2734&q=80'); background-size:cover; background-position: top left; background-repeat: no-repeat;">
+    <div id="layoutAuthentication">
+        <div id="layoutAuthentication_content">
             <div class="container">
-                <div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-5">
+                        <div class="card shadow-lg border-0 rounded-lg mt-5">
+                            <div class="card-header"><h3 class="text-center font-weight-light my-4">Inicio de sesión</h3></div>
+                            <div class="card-body">
 
-                    <form action="{{ route('login') }}" method="post">
-                        @csrf
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-md-5">
-                                    <div class="card" style="border-radius:20px;">
-                                        <div class="card-header" style="color:black; text-align:center;">Inicio de sesión</div>
-
-                                        <div class="card-body">
-                                            <form method="POST" action="{{ route('login') }}">
-                                                @csrf
-                                                <br>
-                                                <div class="form-group row">
-                                                    <div class="col-md-12">
-                                                        <input id="username" type="username" class="form-control" 
-                                                        name="username" value="{{ old('username') }}" placeholder="Nombre de usuario">
-                                                    </div>
-                                                </div><br>
-
-                                                <div class="form-group row">
-
-                                                    <div class="col-md-12">
-                                                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" 
-                                                        name="password" required autocomplete="current-password" placeholder="Contraseña">
-
-                                                        @error('password')
-                                                            <span class="invalid-feedback" role="alert">
-                                                                <strong>{{ $message }}</strong>
-                                                            </span>
-                                                        @enderror
-                                                    </div>
-                                                </div><br>
-
-                                                <div class="form-group row mb-0">
-                                                    <div class="col-md-6 offset-md-3" style="color:black; text-align:center;">
-                                                        <button type="submit" class="btn btn-primary">
-                                                            ACCEDER
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                
-                                            </form>
-                                        </div>
+                                <form action="{{ route('login') }}" method="post">
+                                    @csrf
+                                    <div class="form-group">
+                                        <label class="small mb-1" for="inputEmailAddress">Nombre de usuario</label>
+                                        <input class="form-control py-4" id="username" type="username" 
+                                        name="username" value="{{ old('username') }}" placeholder="Introduzca su nombre de usuario" />
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
+                                    <div class="form-group">
+                                        <label class="small mb-1" for="inputPassword">Password</label>
+                                        <input class="form-control py-4" id="password" type="password" 
+                                        name="password" required autocomplete="current-password" placeholder="Introduzca su contraseña" />
+                                        @error('password')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                    <!--<div class="form-group">
+                                        <div class="custom-control custom-checkbox"><input class="custom-control-input" id="rememberPasswordCheck" type="checkbox" /><label class="custom-control-label" for="rememberPasswordCheck">Remember password</label></div>
+                                    </div>-->
+                                    <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
+                                        <!--<a class="small" href="password.html">Forgot Password?</a>-->
+                                        <button class="btn btn-primary" type="submit">Accesar</button>
+                                        <a class="btn btn-secondary" href="{{url('/')}}">Página de inicio</a>
+                                    </div>
+                                </form>
 
+                            </div>
+                            
+                        </div>
+                    </div>
                 </div>
             </div>
-            <br><br>
-        </section>
-
-    </header>
+        </div>
+    </div>
+</section>
 
 @endsection
 
 @section('scriptsContent')
-    @include('Partials.scripts.scripts')
+    @include('Partials.ADMINPANEL.scripts.adminPanelScripts')
 @endsection
+
+
+
 
