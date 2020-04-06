@@ -3,7 +3,7 @@
 
     @yield('headContent')
 
-    <body id="page-top">
+    <body class="sb-nav-fixed">
 
         @yield('navbarContent')
 
