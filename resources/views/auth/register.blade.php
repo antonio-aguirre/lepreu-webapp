@@ -86,7 +86,7 @@
 
                             <div class="col-md-6">
                                 <input id="phone_number" type="tel" class="form-control @error('email') is-invalid @enderror" 
-                                name="phone_number" value="{{ old('phone_number') }}" required autocomplete="phone_number" placeholder="7352223344" required>
+                                name="phone_number" value="{{ old('phone_number') }}" required autocomplete="phone_number" placeholder="7352223344" maxlength="10" size="10" required>
 
                                 @error('phone_number')
                                     <span class="invalid-feedback" role="alert">
