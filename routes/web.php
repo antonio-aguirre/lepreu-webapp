@@ -12,12 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
-    //return 'hola :D';
+    //return view('welcome');
+    return 'hola :D';
 });
 
-Route::get('/jj', function () {
-    //return view('welcome');
-    return 'hola :)';
-});
 
