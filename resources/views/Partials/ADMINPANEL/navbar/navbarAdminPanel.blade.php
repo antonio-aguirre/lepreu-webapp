@@ -8,7 +8,6 @@
                 <button class="btn btn-primary" type="button"><i class="fas fa-search"></i></button>
             </div>
         </div>-->
-        <a class="nav-link" href="{{ url('/') }}" style="color:orange;">Página de inicio</a>
     </form>
     <!-- Navbar-->
     <ul class="navbar-nav ml-auto ml-md-0">
