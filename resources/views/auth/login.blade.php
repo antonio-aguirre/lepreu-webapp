@@ -39,12 +39,18 @@
                                         @csrf
                                         <div class="form-group">
                                             <label class="small mb-1" for="inputEmailAddress">Nombre de usuario</label>
-                                            <input class="form-control py-4" id="username" type="username" 
-                                            name="username" value="{{ old('username') }}" placeholder="Introduzca su nombre de usuario" />
+                                            <input id="username" type="username" class="form-control @error('username') is-invalid @enderror" 
+                                            name="username" value="{{ old('username') }}" required autocomplete="username" autofocus placeholder="Introduzca su nombre de usuario" />
+                                            @error('username')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>verifique su nombre de usuario o contraseña</strong>
+                                                </span>
+                                            @enderror
                                         </div>
+                                            
                                         <div class="form-group">
                                             <label class="small mb-1" for="inputPassword">Password</label>
-                                            <input class="form-control py-4" id="password" type="password" 
+                                            <input class="form-control @error('password') is-invalid @enderror" id="password" type="password" 
                                             name="password" required autocomplete="current-password" placeholder="Introduzca su contraseña" />
                                             @error('password')
                                                 <span class="invalid-feedback" role="alert">
