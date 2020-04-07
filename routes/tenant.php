@@ -15,10 +15,11 @@
     return view('welcome');
 })->name('start');*/
 
-Route::get('/','ConfigController@configurations')->name('start');
+Route::get('/index','ConfigController@configurations')->name('index');
 
 Route::get('/dudas-zoom/add','QuestionController@create');
 Route::post('/dudas-zoom','QuestionController@store');
+
 
 Auth::routes();
 //Auth::routes(['register' => false]);
