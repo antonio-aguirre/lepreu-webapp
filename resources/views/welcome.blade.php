@@ -3,9 +3,6 @@
 @section('headContent')
     @section('page-title','Bienvenido')
     @include('Partials.head.welcomeHead')
-    @include('laravelpwa::meta', [
-        'config' => (include('../config/laravelpwa.php'))["manifest"]
-    ])
 @endsection
 
 @section('navbarContent')
