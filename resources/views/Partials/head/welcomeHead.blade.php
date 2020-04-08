@@ -17,5 +17,4 @@
     <link rel="stylesheet" href="{{global_asset('device-mockups/device-mockups.min.css')}}" />
     <!-- Custom styles for this template -->
     <link href="{{global_asset('css/new-age.min.css')}}" rel="stylesheet" />
-    @laravelPWA
 </head>
