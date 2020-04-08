@@ -18,6 +18,7 @@ class CreateInfoDataTable extends Migration
             $table->text('value'); //identificador de lo que se guardará
             $table->text('data'); // información que se guardará
             $table->text('description'); //descripción de lo que se guardará
+            $table->text('status')->nullable(); //puede usarse para activar o desactivar botones
             $table->timestamps();
         });
     }
