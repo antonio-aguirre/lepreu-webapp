@@ -5,6 +5,8 @@
     @include('Partials.head.welcomeHead')
 @endsection
 
+
+
 @section('content')
 
   <header class="masthead">

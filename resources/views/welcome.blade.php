@@ -29,16 +29,18 @@
                         OPRIMA AQUÍ PARA UNIRSE A LA REUNIÓN
                     </a></strong> <br><br><br></br>
 
-
                     <h3 class="mb-3">
                             DAR CLICK EN EL SIGUIENTE BOTÓN Y EXPRESAR DUDAS DEL USO DE ZOOM  
                     </h3>
                     <!-- Button trigger modal -->
-                    <strong><a href="{{ url('/dudas-zoom/add') }}" class="btn btn-outline btn-xl js-scroll-trigger btn-block" style=" text-align:center; display:block;">
+                    <button href="{{ url('/dudas-zoom/add') }}" class="btn btn-outline btn-xl js-scroll-trigger btn-block" data-toggle="modal" data-target="#exampleModal"
+                    style=" text-align:center; display:block;">
                         OPRIMA ESTE BOTÓN PARA ESCRIBIR SUS DUDAS
-                    </a></strong> <br><br><br></br>
+                    </button>
                     
+                    @include('Partials.modal_questions.modal_questions')
                     
+                    <br><br><br></br>
                     <h3 class="mb-3">
                             ¿AÚN NO TIENE LA APP ZOOM?
                     </h3>

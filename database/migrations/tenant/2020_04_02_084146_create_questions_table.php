@@ -16,7 +16,9 @@ class CreateQuestionsTable extends Migration
         Schema::create('questions', function (Blueprint $table) {
             $table->bigIncrements('id');
 
-            $table->string('congregation')->nullable();
+            $table->integer('age')->nullable();
+            $table->string('device');
+            $table->string('operative_system');
             $table->Text('description');
 
             $table->timestamps();

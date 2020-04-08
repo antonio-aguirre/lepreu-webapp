@@ -10,14 +10,14 @@
 
             <div class="sb-sidenav-menu-heading">Contenidos</div>
             
-            <a class="nav-link" href="{{ url('/link-zoom') }}">
+            <a class="nav-link" href="{{ url('/link-zoom/panel') }}">
                 <div class="sb-nav-link-icon">
                     <i class="fas fa-link"></i>
                 </div>
                 Link Zoom
             </a>
 
-            <a class="nav-link" href="charts.html">
+            <a class="nav-link" href="">
                 <div class="sb-nav-link-icon">
                     <i class="fas fa-scroll"></i>
                 </div>
