@@ -12,7 +12,6 @@
         @yield('footerContent')
         
         @yield('scriptsContent')
-
-        @laravelPWA
+    
     </body>
 </html>
