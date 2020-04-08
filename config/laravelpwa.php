@@ -3,7 +3,7 @@
 return [
     'name' => 'Ayuda Zoom',
     'manifest' => [
-        'name' => env('APP_NAME', 'My PWA App'),
+        'name' => env('APP_NAME', 'Ayuda Zoom'),
         'short_name' => 'Ayuda Zoom',
         'start_url' => '/',
         'background_color' => '#ffffff',
