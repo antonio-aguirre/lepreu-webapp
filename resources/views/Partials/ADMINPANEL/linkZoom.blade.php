@@ -20,7 +20,10 @@
         
         <div id="layoutSidenav_content">
 
-            
+            <form action="{{ route('/link-zoom/add') }}" method="post">
+                <label for="inputLinkZoom"> Ingrese el link para acceder a zoom </label>
+            </form>
+                
 
             @include('Partials.ADMINPANEL.footer.adminPanelFooter')
         </div>

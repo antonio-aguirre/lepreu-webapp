@@ -24,6 +24,7 @@ Route::post('/dudas-zoom','QuestionController@store');
 
 Route::middleware('auth')->group(function () {
     Route::get('/link-zoom','LinkZoomController@create');
+    Route::get('/link-zoom/add','LinkZoomController@create');
 });
 
 Auth::routes();

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\InfoData;
 
 class LinkZoomController extends Controller
 {
@@ -39,7 +40,9 @@ class LinkZoomController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $infoData = new InfoData();
+
+        
     }
 
     /**
