@@ -3,12 +3,12 @@
     "name": "Ayuda para Zoom",
     "icons": [
         {
-            "src": "/public/img/icon-manifest.png",
+            "src": "/icon-manifest.png",
             "type": "image/png",
             "sizes": "192x192"
         },
         {
-            "src": "/public/img/icon-manifest.png",
+            "src": "/icon-manifest.png",
             "type": "image/png",
             "sizes": "512x512"
         }
