@@ -20,19 +20,20 @@
                     <div class="col-lg-12 text-center" style="color:black; background-color:#EEEEEE;">
                         <h4> SELECCIONE SU TIPO DE DISPOSITVO CON EL QUE SE CONECTA A ZOOM</h4>
                         <h8 style="color:red;">(Puede seleccionar más de uno)</h8>
+                        <br><br>
                         <div class="row">
                             <div class="col-lg-4">
                                 <div class="custom-control custom-radio">
                                     <input type="checkbox" class="custom-control-input" id="customCheck1" name="device1">
                                     <label class="custom-control-label" for="customCheck1"><i class="fas fa-mobile-alt"></i> Celular</label>
-                                </div>
-                            </div><br>
+                                </div><br>
+                            </div>
                             <div class="col-lg-4">
                                 <div class="custom-control custom-radio">
                                     <input type="checkbox" class="custom-control-input" id="customCheck2" name="device2">
                                     <label class="custom-control-label" for="customCheck2"><i class="fas fa-tablet-alt"></i> Tablet</label>
-                                </div>
-                            </div><br>
+                                </div><br>
+                            </div>
                             <div class="col-lg-4">
                                 <div class="custom-control custom-radio">
                                     <input type="checkbox" class="custom-control-input" id="customCheck3" name="device3">
@@ -45,26 +46,27 @@
                     <div class="col-lg-12 text-center" style="color:black;">
                         <h4> SELECCIONE SISTEMA DE SU DISPOSITIVO</h4>
                         <h8 style="color:red;">(Puede seleccionar más de uno)</h8>
+                        <br><br>
                         <div class="row">
                             <div class="col-lg-4">
                                 <div class="custom-control custom-radio">
                                     <input type="checkbox" class="custom-control-input" id="customCheck4" name="OS1">
                                     <label class="custom-control-label" for="customCheck4"><i class="fab fa-android"></i> Android</label>
-                                </div>
+                                </div><br>
                             </div>
                             <div class="col-lg-8">
                                 <div class="custom-control custom-radio">
                                     <input type="checkbox" class="custom-control-input" id="customCheck5" name="OS2">
                                     <label class="custom-control-label" for="customCheck5"><i class="fab fa-apple"></i> Apple (iPhone / iPad / Macbook) </label>
-                                </div>
+                                </div><br>
                             </div>
-                        </div><br>
+                        </div>
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="custom-control custom-radio">
                                     <input type="checkbox" class="custom-control-input" id="customCheck6" name="OS3">
                                     <label class="custom-control-label" for="customCheck6"><i class="fab fa-windows"></i> Windows</label>
-                                </div>
+                                </div><br>
                             </div>
                             <div class="col-lg-6">
                                 <div class="custom-control custom-radio">
