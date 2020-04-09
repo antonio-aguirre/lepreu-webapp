@@ -6,7 +6,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="{{global_asset('vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" />
-
+    <link href="{{global_asset('css/main-page.css')}}" rel="stylesheet" />
     <!-- Custom fonts for this template -->
     <link href="{{global_asset('vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" />
     <link rel="stylesheet" href="{{global_asset('vendor/simple-line-icons/css/simple-line-icons.css')}}" />
