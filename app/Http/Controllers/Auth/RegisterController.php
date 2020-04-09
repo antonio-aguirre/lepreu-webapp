@@ -8,6 +8,7 @@ use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Auth;
 
 class RegisterController extends Controller
 {
@@ -39,13 +40,6 @@ class RegisterController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-    }
-
-    public function getRegister()
-    {
-        if(!Auth::check() || Auth::user()->typeUser != 'ADMIN'){
-            return view('welcome');
-        }
     }
 
     /**
