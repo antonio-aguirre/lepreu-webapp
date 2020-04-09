@@ -11,6 +11,7 @@ class ConfigController extends Controller
 {
     public function configurations()
     {
+        
         return view('welcome');
     }
 }

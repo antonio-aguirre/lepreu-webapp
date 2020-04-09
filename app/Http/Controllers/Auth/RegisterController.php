@@ -38,7 +38,14 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
+        $this->middleware('auth');
+    }
+
+    public function getRegister()
+    {
+        if(!Auth::check() || Auth::user()->typeUser != 'ADMIN'){
+            return view('welcome');
+        }
     }
 
     /**

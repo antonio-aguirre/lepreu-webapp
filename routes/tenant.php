@@ -22,7 +22,7 @@ Route::delete('/dudas-zoom/{id}','QuestionController@destroy');
 
 
 Route::middleware('auth')->group(function () {
-    Route::get('/link-zoom/panel','LinkZoomController@create');
+    Route::get('/link-zoom/panel','LinkZoomController@create'); //show the view to add the Zoom ID
     Route::post('/link-zoom','LinkZoomController@store');
 });
 
