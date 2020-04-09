@@ -9,7 +9,7 @@
         <span>
             <!-- Mensajes de alerta por validaciones -->
             @if ($errors->any())
-                <div class="alert alert-danger" style="border-radius: 6px; text-align:left;">
+                <div class="alert alert-danger alert-dismissible fade show" style="border-radius: 6px; text-align:left;">
                     <div class="container-fluid">
                         <ul>
                             @foreach ($errors->all() as $error)
