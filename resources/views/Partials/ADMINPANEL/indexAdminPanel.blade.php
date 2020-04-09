@@ -11,11 +11,14 @@
 
         <!-- GRAPHS HERE -->
 
-        <!-- TABLA -->
+        <!-- TABLA --> 
+        
         <div class="card mb-4">
             <div class="card-header"><i class="fas fa-table mr-1"></i>Lista de dudas de los hermanos</div>
             <div class="card-body">
+
                 <div class="table-responsive">
+                    
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                             <tr>
@@ -24,6 +27,7 @@
                                 <th>Tipo dispsitivo</th>
                                 <th>Sistema operativo</th>
                                 <th>Dudas</th>
+                                <th style="text-align:center;"><i class="fas fa-clipboard-check"></i></th>
                             </tr>
                         </thead>
                         <tfoot>
@@ -33,6 +37,7 @@
                                 <th>Tipo dispsitivo</th>
                                 <th>Sistema operativo</th>
                                 <th>Dudas</th>
+                                <th></th>
                             </tr>
                         </tfoot>
                         
@@ -42,14 +47,25 @@
                                 @foreach($questions as $question)
                                     <tr>
                                         <th scope="row">{{$count}}</th>
-                                        <td>{{$question->description}}</td>
-
+                                        <th>{{ $question->age }}</th>
+                                        <th>{{ $question->device }}</th>
+                                        <th>{{ $question->operative_system }}</th>
+                                        <td>{{ $question->description }}</td>
+                                        <td>
+                                            <form action="{{ url('/dudas-zoom/'.$question->id.'') }}" method="post" style="text-align:center;">
+                                                {{ method_field('DELETE') }}
+                                                @csrf
+                                                <button type="submit" class="btn btn-warning">
+                                                    Resuelta
+                                                </button>
+                                            </form>
+                                        </td>
                                     </tr>
                                 <?php $count++; ?>
                                 @endforeach
                             @else
-                                <div class="alert alert-dark" role="alert">
-                                    <strong>No se han registrado dudas</strong>
+                                <div class="alert alert-info" role="alert" style="text-align:center;">
+                                    <strong> ¡No se han registrado nuevas dudas! </strong>
                                 </div>
                             @endif
                         </tbody>

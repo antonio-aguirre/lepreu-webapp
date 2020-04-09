@@ -2,7 +2,7 @@
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header" style="background-color:#EEEEEE;">
                 <h3 class="modal-title" id="exampleModalLabel" style="color:black;">Rellene el formulario</h3>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
@@ -10,72 +10,82 @@
             </div>
 
             <form action="{{ url('/dudas-zoom') }}" method="post">
-                <div class="modal-body">
+                <div class="modal-body" style="background-color:#FFFEF0;">
                     @csrf
                     <div class="col-lg-12 text-center" style="color:black;">
-                        <label> ESCRIBA SU EDAD </label>
-                        <input type="number" class="form-control" name="age" value="{{ old('age') }}" min="0" required>
+                        <h4> INGRESE SU EDAD </h4>
+                        <input type="number" class="form-control" name="age" value="{{ old('age') }}" min="0" max="100">
                     </div><br>
 
-                    <div class="col-lg-12 text-center" style="color:black;">
-                        <label> SELECCIONE SU TIPO DE DISPOSITVO CON EL QUE SE CONECTA A ZOOM</label>
+                    <div class="col-lg-12 text-center" style="color:black; background-color:#EEEEEE;">
+                        <h4> SELECCIONE SU TIPO DE DISPOSITVO CON EL QUE SE CONECTA A ZOOM</h4>
+                        <h8 style="color:red;">(Puede seleccionar más de uno)</h8>
                         <div class="row">
                             <div class="col-lg-4">
-                                <div class="custom-control custom-checkbox">
+                                <div class="custom-control custom-radio">
                                     <input type="checkbox" class="custom-control-input" id="customCheck1" name="device1">
-                                    <label class="custom-control-label" for="customCheck1"><i class="fas fa-mobile"></i>Celular</label>
+                                    <label class="custom-control-label" for="customCheck1"><i class="fas fa-mobile-alt"></i> Celular</label>
                                 </div>
-                            </div>
-
-                            <div class="row col-lg-4">
-                                <div class="custom-control custom-checkbox">
+                            </div><br>
+                            <div class="col-lg-4">
+                                <div class="custom-control custom-radio">
                                     <input type="checkbox" class="custom-control-input" id="customCheck2" name="device2">
-                                    <label class="custom-control-label" for="customCheck2"><i class="fas fa-tablet-alt"></i>Tablet</label>
+                                    <label class="custom-control-label" for="customCheck2"><i class="fas fa-tablet-alt"></i> Tablet</label>
+                                </div>
+                            </div><br>
+                            <div class="col-lg-4">
+                                <div class="custom-control custom-radio">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck3" name="device3">
+                                    <label class="custom-control-label" for="customCheck3"><i class="fas fa-laptop"></i> Computadora</label>
                                 </div>
                             </div>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck3" name="device3">
-                                <label class="custom-control-label" for="customCheck3"><i class="fas fa-laptop"></i>Computadora</label>
-                            </div>
-                        </div>
-                    </div><hr><br>
+                        </div><br>
+                    </div>
                     
                     <div class="col-lg-12 text-center" style="color:black;">
-                        <label> SELECCIONE SU SISTEMA </label>
-
+                        <h4> SELECCIONE SISTEMA DE SU DISPOSITIVO</h4>
+                        <h8 style="color:red;">(Puede seleccionar más de uno)</h8>
                         <div class="row">
                             <div class="col-lg-4">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck4" name="operative_system1">
-                                    <label class="custom-control-label" for="customCheck4"><i class="fab fa-android"></i>Android</label>
+                                <div class="custom-control custom-radio">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck4" name="OS1">
+                                    <label class="custom-control-label" for="customCheck4"><i class="fab fa-android"></i> Android</label>
                                 </div>
                             </div>
-
-                            <div class="row col-lg-4">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck5" name="operative_system2">
-                                    <label class="custom-control-label" for="customCheck5"><i class="fab fa-apple"></i>iOS</label>
+                            <div class="col-lg-8">
+                                <div class="custom-control custom-radio">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck5" name="OS2">
+                                    <label class="custom-control-label" for="customCheck5"><i class="fab fa-apple"></i> Apple (iPhone / iPad / Macbook) </label>
                                 </div>
                             </div>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck6" name="operative_system3">
-                                <label class="custom-control-label" for="customCheck6"><i class="fab fa-windows"></i>Windows</label>
+                        </div><br>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="custom-control custom-radio">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck6" name="OS3">
+                                    <label class="custom-control-label" for="customCheck6"><i class="fab fa-windows"></i> Windows</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="custom-control custom-radio">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck7" name="OS4">
+                                    <label class="custom-control-label" for="customCheck7"><i class="fab fa-amazon"></i> Kindle (Amazon)</label>
+                                </div>
                             </div>
                         </div>
-                    </div><hr>
+                    </div><br>
 
-                    <div class="col-lg-12 text-center" style="color:black;">
-                        
-                        <br><br>
-                        <label> A CONTINUACIÓN DESCRIBA LA DUDA QUE TIENE PARA USAR LA APLICACIÓN ZOOM </label>
-                        <textarea class="form-control" aria-label="With textarea" rows="5" name="description" value="{{ old('description') }}" placeholder="Escriba su duda aquí"></textarea>
+                    <div class="col-lg-12 text-center" style="color:black; background-color:#EEEEEE;">
+                        <h4> A CONTINUACIÓN DESCRIBA LA DUDA QUE TIENE AL USAR LA APLICACIÓN ZOOM </h4>
+                        <h8 style="color:red;">(Ej. ¿Cómo comentar?)</h8>
+                        <textarea class="form-control" aria-label="With textarea" rows="5" name="description" value="{{ old('description') }}" placeholder="Escriba su duda aquí" required></textarea>
                     </div>
 
                 </div>
 
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary">Enviar formulario</button>
+                <div class="modal-footer" style="background-color:#EEEEEE;">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="far fa-window-close"></i> Cancelar</button>
+                    <button type="submit" class="btn btn-primary"><i class="far fa-paper-plane"></i> Oprima para enviar el formulario</button>
                 </div>
             </form>
 

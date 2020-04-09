@@ -17,9 +17,8 @@
 
 Route::get('/index','ConfigController@configurations')->name('index');
 
-Route::get('/dudas-zoom/add','QuestionController@create');
 Route::post('/dudas-zoom','QuestionController@store');
-
+Route::delete('/dudas-zoom/{id}','QuestionController@destroy');
 
 
 Route::middleware('auth')->group(function () {

@@ -37,9 +37,9 @@
                     style=" text-align:center; display:block;">
                         OPRIMA ESTE BOTÓN PARA ESCRIBIR SUS DUDAS
                     </button>
-                    
+
                     @include('Partials.modal_questions.modal_questions')
-                    
+
                     <br><br><br></br>
                     <h3 class="mb-3">
                             ¿AÚN NO TIENE LA APP ZOOM?
@@ -57,7 +57,7 @@
                 <div class="col-lg-5 my-auto">
                     <div class="device-container">
                         <div style="text-align:center;">
-                            <label> IMAGEN DE EJEMPLO </label>
+                            <h4> IMAGEN DE EJEMPLO </h4>
                         </div>
                         <div class="device-mockup lumia920 portrait black">
                             <div class="device">
