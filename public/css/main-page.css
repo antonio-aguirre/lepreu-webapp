@@ -1,0 +1,8 @@
+.jumbotron{
+    color: white;
+    background-image: url("https://res.cloudinary.com/craftwebs/image/upload/v1586393392/WhatsApp_Image_2020-04-08_at_12.03.37_PM_psf7og.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
