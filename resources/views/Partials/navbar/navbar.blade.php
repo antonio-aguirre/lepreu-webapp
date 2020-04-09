@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
   <div class="container">
     <a class="navbar-brand js-scroll-trigger" style="color:#A00303;" href="/">
-      Ayuda zoom
+      Lepreu
     </a>
     <button
       class="navbar-toggler navbar-toggler-right"
