@@ -30,12 +30,12 @@
                     </a></strong> <br><br><br></br>
 
                     <h3 class="mb-3">
-                            DAR CLICK EN EL SIGUIENTE BOTÓN Y EXPRESAR DUDAS DEL USO DE ZOOM  
+                            DAR CLICK EN EL SIGUIENTE BOTÓN PARA EXPRESAR DUDAS DEL USO DE ZOOM  
                     </h3>
                     <!-- Button trigger modal -->
                     <button href="{{ url('/dudas-zoom/add') }}" class="btn btn-outline btn-xl js-scroll-trigger btn-block" data-toggle="modal" data-target="#exampleModal"
                     style=" text-align:center; display:block;">
-                        OPRIMA ESTE BOTÓN PARA ESCRIBIR SUS DUDAS
+                        OPRIMA ESTE BOTÓN PARA EXPRESAR SUS DUDAS
                     </button>
 
                     @include('Partials.modal_questions.modal_questions')
