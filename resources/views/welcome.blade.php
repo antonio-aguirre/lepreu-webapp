@@ -20,9 +20,9 @@
                 <div class="col-lg-7 my-auto">
                     <div class="header-content mx-auto">
 
-                    <h2 class="mb-3">
+                    <h1 class="mb-3">
                             UNASE A LA REUNIÓN OPRIMIENDO EL BOTÓN DE ABAJO
-                    </h2>                
+                    </h1>                
                     
                     @if(count($links)>0)
                         @foreach($links as $link)
@@ -54,7 +54,7 @@
 
                     @include('Partials.modal_questions.modal_questions')
 
-                    <br><br><br></br>
+                    <br><br>
                     <h3 class="mb-3">
                             ¿AÚN NO TIENE LA APP ZOOM?
                     </h3>
