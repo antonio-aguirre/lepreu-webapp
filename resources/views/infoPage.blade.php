@@ -23,6 +23,7 @@
             <div class="container wow fadeInUp" style="padding-top: 10em;">
                 <h1 class="display-4 text-center">Lepreu</h1>
                 <p class="text-center">No te quedes lejos de mí, porque se acercan dificultades y no tengo a nadie más que me ayude.</p>
+                <p class="text-center" style="margin-top: -15px;">Salmos 22:11</p>
             </div>
         </div>
 
@@ -39,7 +40,7 @@
 
                 <div class="col-lg-6 col-md-6 col-12 wow fadeInRight">
                     <img src="https://res.cloudinary.com/craftwebs/image/upload/v1586480537/zoom-phone_zlskb4.png" alt="" style="position: absolute;display: block;z-index: 100;padding-top: 6em;padding-left: 5em;" class="img-fluid">
-                    <img src="https://res.cloudinary.com/craftwebs/image/upload/v1586479539/blob-shape-wine_chegj1.svg" alt="" style="display: inline;position: absolute;z-index: -35;" class="img-fluid">
+                    <img src="https://res.cloudinary.com/craftwebs/image/upload/v1586479539/blob-shape-wine_chegj1.svg" alt="" style="display: block;z-index: -35;" class="img-fluid">
                 </div>
             </div>
         </div>
@@ -47,9 +48,9 @@
         <div class="section container">
             <div class="row">
                 <div class="col-lg-6">
-
+                    <img class="img-fluid" src="https://res.cloudinary.com/craftwebs/image/upload/v1586543534/4373_mvaru8.jpg">
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6" style="margin-top: 6em;">
                     <h1>¿Como funciona?</h1>
                     <ul>
                         <li>Accede de forma rápida a su reunión</li>
@@ -62,9 +63,9 @@
         </div>
 
 
-        <div class=" section container" style="">
+        <div class=" section container">
             <div class="row">
-                <div class="col-lg-6" style="margin-top: 11em;">
+                <div class="col-lg-6 wow fadeInUp" style="margin-top: 11em;">
                     <h1>¿Tienes dudas? Contactanos!</h1>
                     <p>Mandanos un correo y nos pondremos en contacto contigo lo antes posible</p>
                     <button type="button" class="btn btn-primary">
@@ -72,7 +73,7 @@
                     </button>
                 </div>
 
-                <div class="col-lg-6">
+                <div class="col-lg-6 wow fadeInUp">
                     <img class="img-fluid" src="https://res.cloudinary.com/craftwebs/image/upload/v1586538845/3236267_plvdwg.jpg">
                 </div>
             </div>
