@@ -29,7 +29,7 @@
 
         <div class="section container ">
             <div class="row">
-                <div class="col-lg-6 col-md-6 col-12 wow fadeInLeft" style="padding-top: 10em;">
+                <div class="col-lg-6 col-md-6 col-12 wow fadeInLeftBig" style="padding-top: 10em;">
                     <h1>Bienvenido!</h1>
                     <p>
                         Este sitio está orientado a ayuda y soporte de la aplicación de Zoom. Está especialmente dirigido a 
@@ -38,7 +38,7 @@
                     </p>
                 </div>
 
-                <div class="col-lg-6 col-md-6 col-12 wow fadeInRight">
+                <div class="col-lg-6 col-md-6 col-12 wow fadeInRightBig">
                     <img src="https://res.cloudinary.com/craftwebs/image/upload/v1586480537/zoom-phone_zlskb4.png" alt="" style="position: absolute;display: block;z-index: 100;padding-top: 6em;padding-left: 5em;" class="img-fluid">
                     <img src="https://res.cloudinary.com/craftwebs/image/upload/v1586479539/blob-shape-wine_chegj1.svg" alt="" style="display: block;z-index: -35;" class="img-fluid">
                 </div>
@@ -47,10 +47,10 @@
 
         <div class="section container">
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-6 wow fadeInLeftBig">
                     <img class="img-fluid" src="https://res.cloudinary.com/craftwebs/image/upload/v1586543534/4373_mvaru8.jpg">
                 </div>
-                <div class="col-lg-6" style="margin-top: 6em;">
+                <div class="col-lg-6 wow fadeInRightBig" style="margin-top: 6em;">
                     <h1>¿Como funciona?</h1>
                     <ul>
                         <li>Accede de forma rápida a su reunión</li>
