@@ -25,10 +25,10 @@
                     </h1>                
                     
                     @foreach($links as $link)
-                    <button class="btn btn-primary btn-xl js-scroll-trigger btn-block" style=" text-align:center; display:block;"
+                    <a class="btn btn-primary btn-xl js-scroll-trigger btn-block" style=" text-align:center; display:block;"
                                 href="<?php echo $link->data ?>">
                         OPRIMA AQUÍ PARA UNIRSE A LA REUNIÓN
-                    </button>
+                    </a>
                     @endforeach
                     <br><br><br></br>
                     
