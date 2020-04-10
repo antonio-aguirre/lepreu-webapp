@@ -25,11 +25,12 @@
                     </h1>                
                     
                     @foreach($links as $link)
-                    <a class="btn btn-primary btn-block" style=" text-align:center; display:block;"
-                                href="<?php echo $link->data ?>">
+                    <a class="btn btn-primary" style=" text-align:center; display:block;"
+                                href="{{ $link->data }}">
                         OPRIMA AQUÍ PARA UNIRSE A LA REUNIÓN
                     </a>
                     @endforeach
+                    <!------------------->
                     <br><br><br></br>
                     
 
