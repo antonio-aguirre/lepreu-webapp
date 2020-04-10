@@ -30,7 +30,7 @@ class LinkZoomController extends Controller
      */
     public function create()
     {
-        return view('Partials.ADMINPANEL.linkZoom');
+        return view('Partials.ADMINPANEL.sections.linkZoom');
     }
 
     /**
@@ -44,25 +44,34 @@ class LinkZoomController extends Controller
         $infoData = new InfoData();
 
         $infoData->value = $request->value;//identificador de lo que se guardará
-        $infoData->data = $request->data;// información que se guardará
+        $infoData->data = $this->valueToStore($request); // información que se guardará
         $infoData->description = $request->description; //descripción de lo que se guardará
         $infoData->status = $request->status; 
 
         if($infoData->save())
         {
-            Session::flash('message','Se ha añadió el link'); //primer palabra es el nombre que tendra la variable y se usara para mostrar el mensaje en index.blade.php
+            Session::flash('message','Se ha añadió la información'); //primer palabra es el nombre que tendra la variable y se usara para mostrar el mensaje en index.blade.php
             Session::flash('alert-class','alert alert-success');
             //return redirect('/admin/products');
             return back();
 
         }else
         {
-            Session::flash('message','Se ha producido un inconveniente al añadir el link'); //primer palabra es el nombre que tendra la variable y se usara para mostrar el mensaje en index.blade.php
+            Session::flash('message','Se ha producido un inconveniente al añadir la información'); //primer palabra es el nombre que tendra la variable y se usara para mostrar el mensaje en index.blade.php
             Session::flash('alert-class','alert alert-warning');
             //return redirect('/admin/products');
             return back();
         }
+    }
 
+    public function valueToStore($request)
+    {
+        if(($request->input('value')) == 'LINK-ZOOM' ){
+            
+            $data = $request->input('data');
+            return $id_zoom =  'https://us04web.zoom.us/j/'.$data.'';
+        }
+        
     }
 
     /**

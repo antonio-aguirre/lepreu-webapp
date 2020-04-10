@@ -58,12 +58,12 @@
                                             <h3>Añada el ID que su congrgación ocupa para acceder a Zoom</h3>
                                             <div>
                                                 <input type="hidden" name="value" value="LINK-ZOOM">
-                                                <input type="number" name="data" class="col-lg-4" style="text-align:center;">
+                                                <input type="number" name="data" class="col-lg-4" style="text-align:center;" min="0" required>
                                                 <input type="hidden" name="description" value="Link para acceder a una conferencia en zoom">
-                                                <input type="hidden" name="status" value="ADDED">
+                                                <input type="hidden" name="status" value="TO USE">
                                             </div>
                                             <br>
-                                            <button type="submit" class="btn btn-primary" disabled>Añadir</button>
+                                            <button type="submit" class="btn btn-primary">Añadir</button>
                                         </div>
                                     </div>
                                 </div>

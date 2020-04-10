@@ -17,10 +17,11 @@
 
 Route::get('/index','ConfigController@configurations')->name('index');
 
+// RUTAS DEL FORMULARIO DE DUDAS
 Route::post('/dudas-zoom','QuestionController@store');
 Route::delete('/dudas-zoom/{id}','QuestionController@destroy');
 
-
+// RUTAS PAR CUANDO SE HAYA LOGUEADO
 Route::middleware('auth')->group(function () {
     Route::get('/link-zoom/panel','LinkZoomController@create'); //show the view to add the Zoom ID
     Route::post('/link-zoom','LinkZoomController@store');
