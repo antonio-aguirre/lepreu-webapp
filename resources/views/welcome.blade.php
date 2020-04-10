@@ -24,12 +24,16 @@
                             UNASE A LA REUNIÓN OPRIMIENDO EL BOTÓN DE ABAJO
                     </h1>                
                     
-                    @foreach($links as $link)
-                    <a class="btn btn-primary btn-xl js-scroll-trigger btn-block" style=" text-align:center; display:block;"
-                                href="{{ url(''.$link->data.'')}}">
-                        OPRIMA AQUÍ PARA UNIRSE A LA REUNIÓN
-                    </a>
-                    @endforeach
+                    @if(count($links)>0)
+                        @foreach($links as $link)
+                        <a class="btn btn-primary btn-xl js-scroll-trigger btn-block" style=" text-align:center; display:block;"
+                                    href="{{ url(''.$link->data.'')}}">
+                            OPRIMA AQUÍ PARA UNIRSE A LA REUNIÓN
+                        </a>
+                        @endforeach
+                    @else
+                        <h3> Consulte a un anciano para que se añada el link </h3>
+                    @endif
 
                     <!------------------->
                     <br><br><br></br>
