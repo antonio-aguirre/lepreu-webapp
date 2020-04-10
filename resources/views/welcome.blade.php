@@ -25,8 +25,8 @@
                     </h1>                
                     
                     @foreach($links as $link)
-                    <a class="btn btn-primary" style=" text-align:center; display:block;"
-                                href="{{ $link->data }}">
+                    <a class="btn btn-primary btn-xl js-scroll-trigger btn-block" style=" text-align:center; display:block;"
+                                href="{{ url(''.$link->data.'')}}">
                         OPRIMA AQUÍ PARA UNIRSE A LA REUNIÓN
                     </a>
                     @endforeach
