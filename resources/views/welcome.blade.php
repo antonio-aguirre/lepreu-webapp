@@ -26,11 +26,13 @@
                     <!-- Button trigger modal -->
                     
 
-                    
-                    <strong><button class="btn btn-primary btn-xl js-scroll-trigger btn-block" style=" text-align:center; display:block;"
-                                href=" {{url('')}} ">
+                    @foreach($links as $link)
+                    <button class="btn btn-primary btn-xl js-scroll-trigger btn-block" style=" text-align:center; display:block;"
+                                href=" {{url(''.$link->data.'')}} ">
                         OPRIMA AQUÍ PARA UNIRSE A LA REUNIÓN
-                    </button></strong> <br><br><br></br>
+                    </button>
+                    @endforeach 
+                    <br><br><br></br>
                     
 
                     <h3 class="mb-3">
