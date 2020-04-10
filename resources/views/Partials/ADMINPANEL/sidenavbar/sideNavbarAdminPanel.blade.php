@@ -7,6 +7,10 @@
                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                 Dashboard
             </a>
+            <a class="nav-link" href="{{url('/index')}}">
+                <div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>
+                Página de inicio
+            </a>
 
             <div class="sb-sidenav-menu-heading">Contenidos</div>
             

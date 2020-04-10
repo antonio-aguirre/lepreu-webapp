@@ -61,11 +61,31 @@
                                         <!--<div class="form-group">
                                             <div class="custom-control custom-checkbox"><input class="custom-control-input" id="rememberPasswordCheck" type="checkbox" /><label class="custom-control-label" for="rememberPasswordCheck">Remember password</label></div>
                                         </div>-->
-                                        <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
-                                            <!--<a class="small" href="password.html">Forgot Password?</a>-->
-                                            <button class="btn btn-primary" type="submit">Accesar</button>
-                                            <a class="btn btn-secondary" href="{{url('/')}}">Página de inicio</a>
+                                        <br>
+                                        <div class="form-group col-lg-12">
+                                            <div class="row">
+                                                <div class="col-lg-12" style="text-align:center;">
+                                                    <button class="btn btn-primary" type="submit">Accesar</button>
+                                                </div>
+                                            </div>
                                         </div>
+                                        <hr>
+                                        <div class="form-group col-lg-12">
+                                            <!--<a class="small" href="password.html">Forgot Password?</a>-->
+                                            <div class="row">
+                                                <div class="col-lg-12" style="text-align:center;">
+                                                    <a class="btn btn-link" href="{{url('/')}}">Página de inicio</a>
+                                                </div>
+                                                <!--<div class="col-lg-6">
+                                                    @if (Route::has('password.request'))
+                                                        <a class="btn btn-link" href="{{ route('password.request') }}">
+                                                            ¿Olvidaste la contraseña?
+                                                        </a>
+                                                    @endif
+                                                </div>-->
+                                            </div>
+                                        </div>
+
                                     </form>
 
                                 </div>
