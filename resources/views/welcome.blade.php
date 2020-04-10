@@ -24,13 +24,23 @@
                             UNASE A LA REUNIÓN OPRIMIENDO EL BOTÓN DE ABAJO
                     </h1>                
                     
-                    @foreach($links as $link)
-                    <a class="btn btn-primary btn-block" style=" text-align:center; display:block;"
-                                href="<?php echo $link->data ?>">
-                        OPRIMA AQUÍ PARA UNIRSE A LA REUNIÓN
-                    </a>
-                    @endforeach
-                    <br><br><br></br>
+                    @if(count($links)>0)
+                        @foreach($links as $link)
+                        <a class="btn btn-primary btn-xl js-scroll-trigger btn-block" style=" text-align:center; display:block;"
+                                    href="{{ url(''.$link->data.'')}}">
+                            OPRIMA AQUÍ PARA UNIRSE A LA REUNIÓN
+                        </a>
+                        @endforeach
+                    @else
+                        <div class="alert alert-warning" role="alert">
+                            <i class="fas fa-info-circle"></i> Disculpe el inconveniente.
+                            <hr>
+                            <p>Link no añadido. Consulte a un anciano para más información.</p>
+                        </div>
+                    @endif
+
+                    <!------------------->
+                    <br>
                     
 
                     <h3 class="mb-3">
@@ -44,7 +54,7 @@
 
                     @include('Partials.modal_questions.modal_questions')
 
-                    <br><br><br></br>
+                    <br><br>
                     <h3 class="mb-3">
                             ¿AÚN NO TIENE LA APP ZOOM?
                     </h3>

@@ -13,11 +13,13 @@ class ConfigController extends Controller
 {
     public function configurations()
     {
-        $link_zoom = InfoData::select('data')
+        // recuperando el link de zoom para cargarlo en el boton
+        $links = InfoData::select('data')
                                 ->where('value','LINK-ZOOM')
                                 ->where('status','TO USE')    
                                 ->get();                      
 
-        return view('welcome',["links" => $link_zoom]);
+        
+        return view('welcome',compact('links'));
     }
 }
