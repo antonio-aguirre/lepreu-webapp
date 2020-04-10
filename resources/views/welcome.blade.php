@@ -26,12 +26,12 @@
                     <!-- Button trigger modal -->
                     
 
-                    @foreach($links as $link)
+                    
                     <strong><button class="btn btn-primary btn-xl js-scroll-trigger btn-block" style=" text-align:center; display:block;"
-                                href=" {{url(''.$link->data.'')}} ">
+                                href=" {{url('')}} ">
                         OPRIMA AQUÍ PARA UNIRSE A LA REUNIÓN
                     </button></strong> <br><br><br></br>
-                    @endforeach
+                    
 
                     <h3 class="mb-3">
                             DAR CLICK EN EL SIGUIENTE BOTÓN PARA EXPRESAR DUDAS DEL USO DE ZOOM  
