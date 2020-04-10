@@ -46,12 +46,44 @@
 
         <div class="section container">
             <div class="row">
-            
+                <div class="col-lg-6">
+
+                </div>
+                <div class="col-lg-6">
+                    <h1>¿Como funciona?</h1>
+                    <ul>
+                        <li>Accede de forma rápida a su reunión</li>
+                        <li>Tenga instalado en su dispositivo esta página</li>
+                        <li>Soporte y ayuda para la platafoma de Zoom</li>
+                        <li>Pensado para nuestros hermanos </li>
+                    </ul>
+                </div>
             </div>
         </div>
 
 
+        <div class=" section container" style="">
+            <div class="row">
+                <div class="col-lg-6" style="margin-top: 11em;">
+                    <h1>¿Tienes dudas? Contactanos!</h1>
+                    <p>Mandanos un correo y nos pondremos en contacto contigo lo antes posible</p>
+                    <button type="button" class="btn btn-primary">
+                        <a href="mailto:helplepreu@gmail.com">Escribe un correo</a>
+                    </button>
+                </div>
 
+                <div class="col-lg-6">
+                    <img class="img-fluid" src="https://res.cloudinary.com/craftwebs/image/upload/v1586538845/3236267_plvdwg.jpg">
+                </div>
+            </div>
+        </div>
+
+
+        <footer class="footer">
+            <div class="container">
+                <p>MADE WITH 🧡 FOR OUR BROTHERS & SISTERS</p>
+            </div>
+        </footer>
 
 
         <script src="{{global_asset('vendor/jquery/jquery.min.js')}}"></script>
