@@ -24,12 +24,12 @@
                             UNASE A LA REUNIÓN OPRIMIENDO EL BOTÓN DE ABAJO
                     </h1>                
                     
-                    @foreach($links as $link)
+
                     <a class="btn btn-primary btn-xl js-scroll-trigger btn-block" style=" text-align:center; display:block;"
                                 href="{{ url('https://us04web.zoom.us/j/9513005367')}}">
                         OPRIMA AQUÍ PARA UNIRSE A LA REUNIÓN
                     </a>
-                    @endforeach
+
                     <!------------------->
                     <br><br><br></br>
                     
