@@ -22,16 +22,14 @@
 
                     <h1 class="mb-3">
                             UNASE A LA REUNIÓN OPRIMIENDO EL BOTÓN DE ABAJO
-                    </h1>
-                    <!-- Button trigger modal -->
+                    </h1>                
                     
-
                     @foreach($links as $link)
                     <button class="btn btn-primary btn-xl js-scroll-trigger btn-block" style=" text-align:center; display:block;"
-                                href=" {{url(''.$link->data.'')}} ">
+                                href="<?php echo $link->data ?>">
                         OPRIMA AQUÍ PARA UNIRSE A LA REUNIÓN
                     </button>
-                    @endforeach 
+                    @endforeach
                     <br><br><br></br>
                     
 
