@@ -32,7 +32,7 @@
                     <h1>Bienvenido!</h1>
                     <p>
                         Este sitio está orientado a ayuda y soporte de la aplicación de Zoom. Está especialmente dirigido a 
-                        nuestros hermanos Testigos de Jehová que necesiten ayuda a usar la aplicación de Zoom.
+                        nuestros hermanos <strong>Testigos de Jehová </strong>que necesiten ayuda a usar la aplicación de Zoom.
                         Toda la ayuda brindada aquí es sin fines de lucro.
                     </p>
                 </div>
@@ -41,6 +41,12 @@
                     <img src="https://res.cloudinary.com/craftwebs/image/upload/v1586480537/zoom-phone_zlskb4.png" alt="" style="position: absolute;display: block;z-index: 100;padding-top: 6em;padding-left: 5em;" class="img-fluid">
                     <img src="https://res.cloudinary.com/craftwebs/image/upload/v1586479539/blob-shape-wine_chegj1.svg" alt="" style="display: inline;position: absolute;z-index: -35;" class="img-fluid">
                 </div>
+            </div>
+        </div>
+
+        <div class="section container">
+            <div class="row">
+            
             </div>
         </div>
 
