@@ -20,9 +20,9 @@
                 <div class="col-lg-7 my-auto">
                     <div class="header-content mx-auto">
 
-                    <h1 class="mb-3">
+                    <h2 class="mb-3">
                             UNASE A LA REUNIÓN OPRIMIENDO EL BOTÓN DE ABAJO
-                    </h1>                
+                    </h2>                
                     
                     @if(count($links)>0)
                         @foreach($links as $link)
@@ -32,11 +32,15 @@
                         </a>
                         @endforeach
                     @else
-                        <h3> Consulte a un anciano para que se añada el link </h3>
+                        <div class="alert alert-warning" role="alert">
+                            <i class="fas fa-info-circle"></i> Disculpe el inconveniente.
+                            <hr>
+                            <p>Link no añadido. Consulte a un anciano para más información.</p>
+                        </div>
                     @endif
 
                     <!------------------->
-                    <br><br><br></br>
+                    <br>
                     
 
                     <h3 class="mb-3">

@@ -69,8 +69,7 @@ class LinkZoomController extends Controller
         if(($request->input('value')) == 'LINK-ZOOM' ){
             
             $data = $request->input('data');
-            //return $id_zoom =  'https://us04web.zoom.us/j/'.$data.'';
-            return $data;
+            return $id_zoom =  'https://us04web.zoom.us/j/'.$data.'';
         }
         
     }
