@@ -27,10 +27,10 @@
                     
 
                     @foreach($links as $link)
-                    <strong><a class="btn btn-primary btn-xl js-scroll-trigger btn-block" style=" text-align:center; display:block;"
+                    <strong><button class="btn btn-primary btn-xl js-scroll-trigger btn-block" style=" text-align:center; display:block;"
                                 href=" {{url(''.$link->data.'')}} ">
                         OPRIMA AQUÍ PARA UNIRSE A LA REUNIÓN
-                    </a></strong> <br><br><br></br>
+                    </button></strong> <br><br><br></br>
                     @endforeach
 
                     <h3 class="mb-3">
