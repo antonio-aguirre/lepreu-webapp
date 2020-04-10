@@ -22,12 +22,16 @@
 
                     <h1 class="mb-3">
                             UNASE A LA REUNIÓN OPRIMIENDO EL BOTÓN DE ABAJO
-                    </h1>
-                    <!-- Button trigger modal -->
-                    <strong><a class="btn btn-primary btn-xl js-scroll-trigger btn-block" style=" text-align:center; display:block;"
-                                href="{{url('https://us04web.zoom.us/j/9513005367')}}">
+                    </h1>                
+                    
+                    @foreach($links as $link)
+                    <button class="btn btn-primary btn-xl js-scroll-trigger btn-block" style=" text-align:center; display:block;"
+                                href="<?php echo $link->data ?>">
                         OPRIMA AQUÍ PARA UNIRSE A LA REUNIÓN
-                    </a></strong> <br><br><br></br>
+                    </button>
+                    @endforeach
+                    <br><br><br></br>
+                    
 
                     <h3 class="mb-3">
                             DAR CLICK EN EL SIGUIENTE BOTÓN PARA EXPRESAR DUDAS DEL USO DE ZOOM  
