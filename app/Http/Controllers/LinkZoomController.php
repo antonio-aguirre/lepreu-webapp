@@ -20,13 +20,10 @@ class LinkZoomController extends Controller
      */
     public function index()
     {
-        $links = InfoData::select('data')
-                                ->where('value','LINK-ZOOM')
-                                ->where('status','TO USE')    
-                                ->get();                      
+        $links = InfoData::get();                      
 
-        
-        //return view('welcome',compact('links'));
+        //dd($links);
+        return view('Partials.ADMINPANEL.sections.linkZoom',compact('links'));
     }
 
     /**
@@ -36,7 +33,7 @@ class LinkZoomController extends Controller
      */
     public function create()
     {
-        return view('Partials.ADMINPANEL.sections.linkZoom');
+
     }
 
     /**
@@ -49,34 +46,45 @@ class LinkZoomController extends Controller
     {
         $infoData = new InfoData();
 
-        $infoData->value = $request->value;//identificador de lo que se guardará
-        $infoData->data = $this->valueToStore($request); // información que se guardará
-        $infoData->description = $request->description; //descripción de lo que se guardará
-        $infoData->status = $request->status; 
-
-        if($infoData->save())
+        //dd(((count(InfoData::where('status', 'Principal')->get())>0)  && (($request->input('status')) == 'Principal')));
+        
+        if( ((count(InfoData::where('status', 'Principal')->get())>0) && (($request->input('status')) == 'Principal'))  )
         {
-            Session::flash('message','Se ha añadió la información'); //primer palabra es el nombre que tendra la variable y se usara para mostrar el mensaje en index.blade.php
-            Session::flash('alert-class','alert alert-success');
-            //return redirect('/admin/products');
-            return back();
-
-        }else
-        {
-            Session::flash('message','Se ha producido un inconveniente al añadir la información'); //primer palabra es el nombre que tendra la variable y se usara para mostrar el mensaje en index.blade.php
+            Session::flash('message','Ya hay un link principal, cambie el tipo'); //primer palabra es el nombre que tendra la variable y se usara para mostrar el mensaje en index.blade.php
             Session::flash('alert-class','alert alert-warning');
             //return redirect('/admin/products');
             return back();
         }
+        else
+        {
+            $infoData->value = $request->value;//identificador de lo que se guardará
+            $infoData->data = $this->valueToStore($request); // información que se guardará
+            $infoData->description = $request->description; //descripción de lo que se guardará
+            $infoData->status = $request->status; 
+
+            if($infoData->save())
+            {
+                Session::flash('message','Se ha añadió la información'); //primer palabra es el nombre que tendra la variable y se usara para mostrar el mensaje en index.blade.php
+                Session::flash('alert-class','alert alert-success');
+                return back();
+
+            }else
+            {
+                Session::flash('message','Se ha producido un inconveniente al añadir la información'); //primer palabra es el nombre que tendra la variable y se usara para mostrar el mensaje en index.blade.php
+                Session::flash('alert-class','alert alert-warning');
+                return back();
+            }
+        }
+        
+        
     }
 
     public function valueToStore($request)
     {
         if(($request->input('value')) == 'LINK-ZOOM' ){
             
-            return $request->input('data');;
-        }
-        
+            return $request->input('data');
+        }   
     }
 
     /**
@@ -121,6 +129,17 @@ class LinkZoomController extends Controller
      */
     public function destroy($id)
     {
-        //
+        
+        if(InfoData::destroy($id)) {
+          Session::flash('message','Se ha eliminado el link');
+          Session::flash('alert-class','alert alert-success');
+          return redirect('/link-zoom');
+        }else
+        {
+            Session::flash('message','Se ha produciodo un inconveniente');
+            Session::flash('alert-class','alert alert-warning');
+            return redirect('/link-zoom');
+
+        }
     }
 }

@@ -22,6 +22,7 @@
 
             <main>
                 <div class="container-fluid">
+                    
                     <!-- Mensajes de alerta por validaciones -->
                     @if ($errors->any())
                         <div class="alert alert-danger alert-dismissable fade show" style="border-radius: 6px; text-align:left;">
@@ -45,74 +46,110 @@
                     @endif
 
                     <section>
-                        <form action="{{ url('/link-zoom') }}" method="post">
+                        <form action="{{ Route('link-zoom.store') }}" method="post">
                             @csrf
 
                             <br>
                             <div class="container">
                                 
                                 <div class="row">
-                                    <div class="card col-lg-12" style="margin: 0px; text-align:center; background-color:#E0FCCC;">
+                                    <div class="card col-lg-8" style="margin: auto; text-align:center; background-color:white; border:none;">
                                         <div class="card-body">
 
-                                            <h3>Añada el ID que su congrgación ocupa para acceder a Zoom</h3>
+                                            <h3>Agregar ID de conferencia en Zoom</h3>
+                                            <hr>
+
                                             <div>
                                                 <input type="hidden" name="value" value="LINK-ZOOM">
-                                                <input type="number" name="data" class="col-lg-4" style="text-align:center;" min="0" required>
+
+                                                <label for="ID">ID ZOOM:</label>
+                                                <input type="number" name="data" id="ID" class="col-lg-5" style="text-align:center;" min="0" required>
                                                 <input type="hidden" name="description" value="Link para acceder a una conferencia en zoom">
-                                                <input type="hidden" name="status" value="TO USE">
+                                                <br><br>
+                                                
+                                                <div class="input-group col-lg-6" style="margin:auto;">
+                                                    <div class="input-group-prepend">
+                                                        <label class="input-group-text" for="inputGroupSelect01">Tipo de ID</label>
+                                                    </div>
+                                                    <select class="custom-select" id="inputGroupSelect01" name="status">
+                                                        <option value="Principal">Principal</option>
+                                                        <option value="Secundario">Secundaio</option>
+                                                    </select>
+                                                </div>  
                                             </div>
+
                                             <br>
-                                            <button type="submit" class="btn btn-primary">Añadir</button>
+                                            <button type="submit" class="btn btn-primary btn-block col-lg-6" style="margin:auto;">Agregar</button>
                                         </div>
-                                    </div>
-                                </div>
 
-                            </div>
-                        </form>
-                    </section>
-
-                    <section>
-                        <form action="" method="post">
-                            <div class="container">
-                                <br>
-                                <div class="row">
-                                    <div class="card col-lg-12" style="margin: 0px; text-align:center; background-color:#F9FCCC;">
-                                        <div class="card-body">
-
-                                            <h3>Edite el ID que su congrgación ocupa para acceder a Zoom</h3>
-                                            <div>
-                                                <input type="hidden" name="value" value="LINK-ZOOM">
-                                                <input type="number" name="data" class="col-lg-4" style="text-align:center;">
-                                                <input type="hidden" name="description" value="Link para acceder a una conferencia en zoom">
-                                                <input type="hidden" name="status" value="ADDED">
-                                            </div>
-                                            <br>
-                                            <button type="submit" class="btn btn-primary">Editar</button>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </form>
                     </section>
 
-                    <section>
-                        <form action="" method="post">
-                            <div class="container">
-                                <br>
-                                <div class="row">
-                                    <div class="card col-lg-12" style="margin: 0px; text-align:center; background-color:#FCCCCC;">
-                                        <div class="card-body">
+                    <br>
 
-                                            <h3>Eliminar el ID que su congrgación ocupa para acceder a Zoom</h3>
-                                            
-                                            <br>
-                                            <button type="submit" class="btn btn-primary">Eliminar</button>
-                                        </div>
-                                    </div>
+                    <section>
+                        <!-- TABLA --> 
+                        <div class="card mb-4">
+                            <div class="card-header"><i class="fas fa-table mr-1"></i> ID's de zoom añadidos </div>
+                            <div class="card-body">
+
+                                <div class="table-responsive">
+                                    
+                                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>ID</th>
+                                                <th>Tipo ID</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tfoot>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>ID</th>
+                                                <th>Tipo ID</th>
+                                                <th></th>
+                                            </tr>
+                                        </tfoot>
+                                        
+                                        <tbody>
+                                            <?php $count = 1; ?>
+                                            @if(count($links)>0)
+                                                @foreach($links as $link)
+                                                    <tr>
+                                                        <th>{{$count}}</th>
+                                                        <td>{{ $link->data }}</td>
+                                                        <td>{{ $link->status }}</td>
+                                                        <td>
+                                                            <form action="{{ url('/link-zoom/'.$link->id.'') }}" method="post">
+                                                                @csrf
+                                                                {{ method_field('delete') }}
+                                                                
+                                                                <button type="submit" class="btn btn-danger">
+                                                                    <i class="fa fa-trash"></i> Eliminar
+                                                                </button>
+                                                            </form>
+                                                        </td> 
+                                                    </tr>                                                       
+                                                <?php $count++; ?>
+                                                @endforeach
+                                            @else
+                                                <div class="alert alert-info" role="alert" style="text-align:center;">
+                                                    <strong> ¡No se han registrado links! </strong>
+                                                </div>
+                                            @endif
+                                        </tbody>
+                                       
+                                        
+                                    </table>
                                 </div>
                             </div>
-                        </form>
+                        </div>
+                        <!-- FIN TABLA -->
                     </section>
 
                 </div>

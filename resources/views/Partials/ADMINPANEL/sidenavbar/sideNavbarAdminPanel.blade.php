@@ -14,7 +14,7 @@
 
             <div class="sb-sidenav-menu-heading">Contenidos</div>
             
-            <a class="nav-link" href="{{ url('/link-zoom/panel') }}">
+            <a class="nav-link" href="{{ url('/link-zoom') }}">
                 <div class="sb-nav-link-icon">
                     <i class="fas fa-link"></i>
                 </div>

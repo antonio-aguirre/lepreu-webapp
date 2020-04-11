@@ -12,7 +12,6 @@
         <!-- GRAPHS HERE -->
 
         <!-- TABLA --> 
-        
         <div class="card mb-4">
             <div class="card-header"><i class="fas fa-table mr-1"></i>Lista de dudas de los hermanos</div>
             <div class="card-body">
@@ -47,9 +46,9 @@
                                 @foreach($questions as $question)
                                     <tr>
                                         <th scope="row">{{$count}}</th>
-                                        <th>{{ $question->age }}</th>
-                                        <th>{{ $question->device }}</th>
-                                        <th>{{ $question->operative_system }}</th>
+                                        <td>{{ $question->age }}</td>
+                                        <td>{{ $question->device }}</td>
+                                        <td>{{ $question->operative_system }}</td>
                                         <td>{{ $question->description }}</td>
                                         <td>
                                             <form action="{{ url('/dudas-zoom/'.$question->id.'') }}" method="post" style="text-align:center;">
