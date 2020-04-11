@@ -75,7 +75,20 @@
                                                         <option value="Principal">Principal</option>
                                                         <option value="Secundario">Secundaio</option>
                                                     </select>
-                                                </div>  
+
+                                                    <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                                        <i class="fas fa-info"></i>
+                                                    </button>
+                                                    
+                                                    <div class="collapse" id="collapseExample">
+                                                        <div class="card card-body">
+                                                            <p><b>Id principal:</b> Es el cual estará disponible al oprimir el botón "unirse a reunion" en la página principal. Solo se puede tener un id principal.</p>
+                                                            <p><b>Id secundario:</b> Es el cual estará como reserva, si se quiere usar para unirse a una reunión, cambie su tipo a "Principal" en el botón de edición. 
+                                                                                     Se pueden tener múltiples Id de reserva. </p>
+                                                        </div>
+                                                    </div>
+                                                </div> 
+                                                
                                             </div>
 
                                             <br>
@@ -125,6 +138,16 @@
                                                         <td>{{ $link->data }}</td>
                                                         <td>{{ $link->status }}</td>
                                                         <td>
+                                                            <form action="">
+                                                                <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#ID{{($link->id)}}" aria-expanded="false" aria-controls="collapseExample">
+                                                                    <i class="fas fa-info"></i>
+                                                                </button>
+                                                                <div class="collapse card" id="ID{{($link->id)}}">
+                                                                    SOME
+                                                                </div>
+
+                                                            </form>
+
                                                             <form action="{{ url('/link-zoom/'.$link->id.'') }}" method="post">
                                                                 @csrf
                                                                 {{ method_field('delete') }}
