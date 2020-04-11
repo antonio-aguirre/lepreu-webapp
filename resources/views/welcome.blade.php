@@ -27,7 +27,7 @@
                     @if(count($links)>0)
                         @foreach($links as $link)
                         <a class="btn btn-primary btn-xl js-scroll-trigger btn-block" style=" text-align:center; display:block;"
-                                    href="{{ url(''.$link->data.'')}}">
+                                    href="{{ url('https://us04web.zoom.us/j/'.$link->data.'')}}">
                             OPRIMA AQUÍ PARA UNIRSE A LA REUNIÓN
                         </a>
                         @endforeach
@@ -58,12 +58,12 @@
                     <h3 class="mb-3">
                             ¿AÚN NO TIENE LA APP ZOOM?
                     </h3>
-                    <strong><a
+                    <a
                         href="#download"
                         class="btn btn-outline btn-xl js-scroll-trigger btn-block"
                         style=" text-align:center; display:block;"
                         >OPRIMA ESTE BOTÓN PARA IR A SECCIÓN DE DESCARGAR ZOOM
-                    </a></strong>
+                    </a>
                     
                     </div>
                 </div>

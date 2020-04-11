@@ -20,7 +20,13 @@ class LinkZoomController extends Controller
      */
     public function index()
     {
-        //
+        $links = InfoData::select('data')
+                                ->where('value','LINK-ZOOM')
+                                ->where('status','TO USE')    
+                                ->get();                      
+
+        
+        //return view('welcome',compact('links'));
     }
 
     /**
@@ -68,8 +74,7 @@ class LinkZoomController extends Controller
     {
         if(($request->input('value')) == 'LINK-ZOOM' ){
             
-            $data = $request->input('data');
-            return $id_zoom =  'https://us04web.zoom.us/j/'.$data.'';
+            return $request->input('data');;
         }
         
     }
