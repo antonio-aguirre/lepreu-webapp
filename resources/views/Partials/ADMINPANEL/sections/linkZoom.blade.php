@@ -58,15 +58,14 @@
 
                                             <h3>Agregar ID de conferencia en Zoom</h3>
                                             <hr>
-
+                                            
                                             <div>
-                                                <input type="hidden" name="value" value="LINK-ZOOM">
-
-                                                <label for="ID">ID ZOOM:</label>
-                                                <input type="number" name="data" id="ID" class="col-lg-5" style="text-align:center;" min="0" required>
-                                                <input type="hidden" name="description" value="Link para acceder a una conferencia en zoom">
-                                                <br><br>
-                                                
+                                                <div class="input-group col-lg-6" style="margin:auto;">
+                                                    <input type="hidden" name="value" value="LINK-ZOOM">
+                                                    <input class="form-control" type="number" name="data" id="ID" class="col-lg-5" style="text-align:center;" min="0" placeholder="Ingrese el ID" required>
+                                                    <input type="hidden" name="description" value="Link para acceder a una conferencia en zoom">
+                                                </div>
+                                                <br>
                                                 <div class="input-group col-lg-6" style="margin:auto;">
                                                     <div class="input-group-prepend">
                                                         <label class="input-group-text" for="inputGroupSelect01">Tipo de ID</label>
@@ -138,15 +137,9 @@
                                                         <td>{{ $link->data }}</td>
                                                         <td>{{ $link->status }}</td>
                                                         <td>
-                                                            <form action="">
-                                                                <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#ID{{($link->id)}}" aria-expanded="false" aria-controls="collapseExample">
-                                                                    <i class="fas fa-info"></i>
-                                                                </button>
-                                                                <div class="collapse card" id="ID{{($link->id)}}">
-                                                                    SOME
-                                                                </div>
-
-                                                            </form>
+                                                            <a type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">
+                                                                <i class="far fa-edit"></i> Editar
+                                                            </a>
 
                                                             <form action="{{ url('/link-zoom/'.$link->id.'') }}" method="post">
                                                                 @csrf
