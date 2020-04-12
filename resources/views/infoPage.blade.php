@@ -6,6 +6,7 @@
     <link href="{{global_asset('vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" />
     <link href="{{global_asset('css/main-page.css')}}" rel="stylesheet" />
     <link href="{{global_asset('css/animate.css')}}" rel="stylesheet" />
+    <link rel="manifest" href="/manifest.json">
     <!-- Custom fonts for this template -->
     <link href="{{global_asset('vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" />
     <link rel="stylesheet" href="{{global_asset('vendor/simple-line-icons/css/simple-line-icons.css')}}" />
@@ -92,6 +93,17 @@
         <script src="{{global_asset('js/wow.js')}}"></script>
         <script>
             new WOW().init();
+        </script>
+        <script>
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function () {
+                    navigator.serviceWorker.register('/sw.js').then(function (registration) {
+                        console.log('ServiceWorker registration :', registration.scope);
+                    }).catch(function (error) {
+                        console.log('ServiceWorker registration failed:', errror);
+                    });
+                });
+            }
         </script>
     
     </body>
