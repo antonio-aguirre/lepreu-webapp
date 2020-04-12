@@ -1,0 +1,21 @@
+{
+    "short_name": "Ayuda Zoom",
+    "name": "Ayuda zoom",
+    "icons": [
+        {
+            "src": "/public/img/icon-192x192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "public/img/icon-512x512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "/",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#e5e5e5"
+}
