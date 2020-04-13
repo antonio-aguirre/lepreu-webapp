@@ -118,7 +118,271 @@ class LinkZoomController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //si existe ya un ID primario y se selecciona la opción "Principal"
+        if( ((count(InfoData::where('status', 'Principal')->get())>0) && (($request->status) == 'Principal'))  )
+        {
+            $var = InfoData::select('status')->where('id',''.$id.'')->get();
+            foreach($var as $vars)
+            {
+                $var2 = $vars->status;
+            }
+
+            //si el ID que se quiere editar es el ID Principal
+            if( $var2 == "Principal" )
+            {
+                $this->updatePRIMARY_ID_PRIMARY($request,$id);
+                return redirect('/link-zoom');
+                   
+            }else
+            {
+                $this->updateSECONDARY_ID_PRIMARY($request,$id);
+                return redirect('/link-zoom');  
+            }
+        }
+
+        //si existe ya un ID Principal y se selecciona la opción "Secundario"
+        if( ((count(InfoData::where('status', 'Principal')->get())>0) && (($request->status) == 'Secundario'))  )
+        {
+            $var = InfoData::select('status')->where('id',''.$id.'')->get();
+            foreach($var as $vars)
+            {
+                $var2 = $vars->status;
+            }
+
+            //si el ID que se quiere editar es el ID Principal
+            if( $var2 == "Principal" )
+            {
+                $this->updatePRIMARY_ID_SECONDARY($request,$id);
+                return redirect('/link-zoom');
+            }else
+            {
+                
+                $this->updateSECONDARY_ID_SECONDARY($request,$id);
+                return redirect('/link-zoom');
+            }
+        }
+
+        //si NO existe un ID primario y se selecciona la opción "Principal"
+        if( ((count(InfoData::where('status', 'Principal')->get()) <= 0) && (($request->status) == 'Principal'))  )
+        {
+            $var = InfoData::select('data')->where('id',''.$id.'')->get();
+            foreach($var as $vars)
+            {
+                $var2 = $vars->data;
+            }
+
+            // si el ID es el mismo que está en la base de datos
+            if( $var2 == ($request->data) )
+            {
+                $new_type = InfoData::find($id);
+                $new_type->status = $request->status;
+
+                if($new_type->save()) {
+                    Session::flash('message','Se ha actualizado ID secundario a principal');
+                    Session::flash('alert-class','alert alert-success');   
+                    return redirect('/link-zoom');    
+                }else
+                {
+                    Session::flash('message','Se ha producido un inconveniente en la actualización del ID a principal');
+                    Session::flash('alert-class','alert alert-warning');
+                    return redirect('/link-zoom');
+                }
+            }else
+            {
+                $new_type_data = InfoData::find($id);
+                $new_type_data->status = $request->status;
+                $new_type_data->data = $request->data;
+
+                if($new_type_data->save()) {
+                    Session::flash('message','Se ha actualizado ID secundario a principal y actualizado su valor');
+                    Session::flash('alert-class','alert alert-success');
+                    return redirect('/link-zoom');      
+                }else
+                {
+                    Session::flash('message','Se ha producido un inconveniente en la actualización del ID a principal y su valor');
+                    Session::flash('alert-class','alert alert-warning');
+                    return redirect('/link-zoom');
+                }
+            }
+        }
+
+        //si NO existe un ID primario y se selecciona la opción "Secundario"
+        if( ((count(InfoData::where('status', 'Principal')->get()) <= 0) && (($request->status) == 'Secundario'))  )
+        {
+            $var = InfoData::select('data')->where('id',''.$id.'')->get();
+            foreach($var as $vars)
+            {
+                $var2 = $vars->data;
+            }
+
+            // si el ID es el mismo que está en la base de datos
+            if( $var2 == ($request->data) )
+            {
+                Session::flash('message','No se realizó ninguna modificación');
+                Session::flash('alert-class','alert alert-info');   
+                return redirect('/link-zoom');
+            }else{
+                $new_data = InfoData::find($id);
+                $new_data->data = $request->data;
+
+                if($new_data->save()) {
+                    Session::flash('message','Se ha actualizado ID');
+                    Session::flash('alert-class','alert alert-success');
+                    return redirect('/link-zoom');      
+                }else
+                {
+                    Session::flash('message','Se ha producido un inconveniente en la actualización del ID');
+                    Session::flash('alert-class','alert alert-warning');
+                    return redirect('/link-zoom');
+                }
+            }
+        }
+    }
+
+    public function updatePRIMARY_ID_PRIMARY ($request,$id)
+    {
+        $var = InfoData::select('data')->where('id',''.$id.'')->get();
+        foreach($var as $vars)
+        {
+            $var2 = $vars->data;
+        }
+
+        // si el ID es el mismo que está en la base de datos
+        if( $var2 == ($request->data) )
+        {
+            Session::flash('message','El ID YA es el Principal, no se modificó nada');
+            Session::flash('alert-class','alert alert-info');
+        }else
+        {
+            $new_ID = InfoData::find($id);
+            $new_ID->data = $request->data;
+
+            if($new_ID->save()) {
+                Session::flash('message','Se ha actualizado el valor del ID principal');
+                Session::flash('alert-class','alert alert-success');       
+            }else
+            {
+                Session::flash('message','Se ha producido un inconveniente en la actualización del ID principal');
+                Session::flash('alert-class','alert alert-warning');
+            }
+        }
+    }
+
+    public function updateSECONDARY_ID_PRIMARY ($request,$id)
+    {
+        $var = InfoData::select('data')->where('id',''.$id.'')->get();
+        foreach($var as $vars)
+        {
+            $var2 = $vars->data;
+        }
+
+        //se busca el ID del actual "principal2 para cambiarlo a "secundario"
+        $var3 = InfoData::select('id')->where('status', 'Principal')->get();
+        foreach($var3 as $vars2)
+        {
+            $idPrincipal = $vars2->id;
+        }
+
+        // si el ID es el mismo que ya está en la base de datos
+        if( $var2 == ($request->data) )
+        {
+            // actualización de status del antiguo ID principal
+            $idPrincipal_before = InfoData::find($idPrincipal);
+            $idPrincipal_before->status = 'Secundario';
+
+            $idPrincipal_after = InfoData::find($id);
+            $idPrincipal_after->status = $request->status;
+
+            $message = 'Se a cambiado el ID principal';
+
+        }else
+        {
+            $idPrincipal_before = InfoData::find($idPrincipal);
+            $idPrincipal_before->status = 'Secundario';
+
+            $idPrincipal_after = InfoData::find($id);
+            $idPrincipal_after->data = $request->data;
+            $idPrincipal_after->status = $request->status;
+
+            $message = 'Se a cambiado el ID principal y modificado su valor';
+        }
+
+        if(($idPrincipal_before->save()) && ($idPrincipal_after->save()) ) {
+            Session::flash('message',''.$message.'');
+            Session::flash('alert-class','alert alert-success');
+        }else{
+            Session::flash('message','Se ha producido un inconveniente en la modificación a ID principal');
+            Session::flash('alert-class','alert alert-warning');
+        }
+    }
+
+    public function updatePRIMARY_ID_SECONDARY ($request,$id)
+    {
+        $var = InfoData::select('data')->where('id',''.$id.'')->get();
+        foreach($var as $vars)
+        {
+            $var2 = $vars->data;
+        }
+
+        // si el ID es el mismo que está en la base de datos
+        if( $var2 == ($request->data) )
+        {
+            $new_status = InfoData::find($id);
+            $new_status->status = $request->status;
+
+            if($new_status->save())
+            {
+                Session::flash('message','Se ha cambiado ID principal a secundario. No hay ID principal registrado');
+                Session::flash('alert-class','alert alert-info');
+            }else{
+                Session::flash('message','Se ha producido un inconveniente en la actualización del ID principal a secundario');
+                Session::flash('alert-class','alert alert-warning');
+            }
+            
+        }else
+        {
+            $new_ID = InfoData::find($id);
+            $new_ID->data = $request->data;
+            $new_ID->status = $request->status;
+
+            if($new_ID->save()) {
+                Session::flash('message','Se ha modificado su valor y cambiado ID principal a secundario. No hay ID principal registrado');
+                Session::flash('alert-class','alert alert-info');       
+            }else
+            {
+                Session::flash('message','Se ha producido un inconveniente en la actualización del ID principal a secundario');
+                Session::flash('alert-class','alert alert-warning');
+            }
+        }
+    }
+
+    public function updateSECONDARY_ID_SECONDARY ($request,$id)
+    {
+        $var = InfoData::select('data')->where('id',''.$id.'')->get();
+        foreach($var as $vars)
+        {
+            $var2 = $vars->data;
+        }
+
+        // si el ID es el mismo que está en la base de datos
+        if( $var2 == ($request->data) )
+        {
+            Session::flash('message','No se cambió tipo de ID ni valor. No se modificó nada');
+            Session::flash('alert-class','alert alert-info');
+
+        }else{
+            $new_ID = InfoData::find($id);
+            $new_ID->data = $request->data;
+
+            if($new_ID->save()) {
+                Session::flash('message','Se ha actualizado el valor del ID secundario');
+                Session::flash('alert-class','alert alert-success');       
+            }else
+            {
+                Session::flash('message','Se ha producido un inconveniente en la actualización del ID secundario');
+                Session::flash('alert-class','alert alert-warning');
+            }
+        }
     }
 
     /**

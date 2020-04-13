@@ -25,7 +25,8 @@ Route::middleware('auth')->group(function () {
     //Route::get('/link-zoom/panel','LinkZoomController@create'); //show the view to add the Zoom ID
     //Route::post('/link-zoom','LinkZoomController@store');
     Route::resource('/link-zoom','LinkZoomController');
-    Route::delete('/link-zoom({id}','LinkZoomController@destroy');
+    Route::delete('/link-zoom/{id}/_delete','LinkZoomController@destroy');
+    Route::post('/link-zoom/{id}/_edit','LinkZoomController@update');
 
     Route::delete('/dudas-zoom/{id}','QuestionController@destroy');
 });

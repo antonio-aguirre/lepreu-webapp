@@ -1,82 +1,79 @@
-<main>
-    <div class="container-fluid">
-        <h1 class="mt-4">Dashboard</h1>
 
-        <!--  BREAD CUMBERS PENDING TO IMPLEMENT-->
-        <!--<ol class="breadcrumb mb-4">
-            <li class="breadcrumb-item active">Dashboard</li>
-        </ol>-->
+    
+<h1 class="mt-4">Dashboard</h1>
 
-        <!-- CARDS HERE -->
+<!--  BREAD CUMBERS PENDING TO IMPLEMENT-->
+<!--<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active">Dashboard</li>
+</ol>-->
 
-        <!-- GRAPHS HERE -->
+<!-- CARDS HERE -->
 
-        <!-- TABLA --> 
-        <div class="card mb-4">
-            <div class="card-header"><i class="fas fa-table mr-1"></i>Lista de dudas de los hermanos</div>
-            <div class="card-body">
+<!-- GRAPHS HERE -->
 
-                <div class="table-responsive">
-                    
-                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                        <thead>
+<!-- TABLA --> 
+<div class="card mb-4">
+    <div class="card-header"><i class="fas fa-table mr-1"></i>Lista de dudas de los hermanos</div>
+    <div class="card-body">
+
+        <div class="table-responsive">
+            
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Edad del hermano/a</th>
+                        <th>Tipo dispsitivo</th>
+                        <th>Sistema operativo</th>
+                        <th>Dudas</th>
+                        <th style="text-align:center;"><i class="fas fa-clipboard-check"></i></th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>#</th>
+                        <th>Edad del hermano/a</th>
+                        <th>Tipo dispsitivo</th>
+                        <th>Sistema operativo</th>
+                        <th>Dudas</th>
+                        <th></th>
+                    </tr>
+                </tfoot>
+                
+                <tbody>
+                    <?php $count = 1; ?>
+                    @if(count($questions)>0)
+                        @foreach($questions as $question)
                             <tr>
-                                <th>#</th>
-                                <th>Edad del hermano/a</th>
-                                <th>Tipo dispsitivo</th>
-                                <th>Sistema operativo</th>
-                                <th>Dudas</th>
-                                <th style="text-align:center;"><i class="fas fa-clipboard-check"></i></th>
+                                <th scope="row">{{$count}}</th>
+                                <td>{{ $question->age }}</td>
+                                <td>{{ $question->device }}</td>
+                                <td>{{ $question->operative_system }}</td>
+                                <td>{{ $question->description }}</td>
+                                <td>
+                                    <form action="{{ url('/dudas-zoom/'.$question->id.'') }}" method="post" style="text-align:center;">
+                                        {{ method_field('DELETE') }}
+                                        @csrf
+                                        <button type="submit" class="btn btn-warning">
+                                            Resuelta
+                                        </button>
+                                    </form>
+                                </td>
                             </tr>
-                        </thead>
-                        <tfoot>
-                            <tr>
-                                <th>#</th>
-                                <th>Edad del hermano/a</th>
-                                <th>Tipo dispsitivo</th>
-                                <th>Sistema operativo</th>
-                                <th>Dudas</th>
-                                <th></th>
-                            </tr>
-                        </tfoot>
-                        
-                        <tbody>
-                            <?php $count = 1; ?>
-                            @if(count($questions)>0)
-                                @foreach($questions as $question)
-                                    <tr>
-                                        <th scope="row">{{$count}}</th>
-                                        <td>{{ $question->age }}</td>
-                                        <td>{{ $question->device }}</td>
-                                        <td>{{ $question->operative_system }}</td>
-                                        <td>{{ $question->description }}</td>
-                                        <td>
-                                            <form action="{{ url('/dudas-zoom/'.$question->id.'') }}" method="post" style="text-align:center;">
-                                                {{ method_field('DELETE') }}
-                                                @csrf
-                                                <button type="submit" class="btn btn-warning">
-                                                    Resuelta
-                                                </button>
-                                            </form>
-                                        </td>
-                                    </tr>
-                                <?php $count++; ?>
-                                @endforeach
-                            @else
-                                <div class="alert alert-info" role="alert" style="text-align:center;">
-                                    <strong> ¡No se han registrado nuevas dudas! </strong>
-                                </div>
-                            @endif
-                        </tbody>
-                        
-                    </table>
-                </div>
-            </div>
+                        <?php $count++; ?>
+                        @endforeach
+                    @else
+                        <div class="alert alert-info" role="alert" style="text-align:center;">
+                            <strong> ¡No se han registrado nuevas dudas! </strong>
+                        </div>
+                    @endif
+                </tbody>
+                
+            </table>
         </div>
-        <!-- FIN TABLA -->
-
     </div>
-</main>
+</div>
+<!-- FIN TABLA -->
 
 <!--  CARDS -->
 <!--<div class="row">

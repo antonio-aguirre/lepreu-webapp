@@ -18,13 +18,18 @@
             <label for="data">ID zoom</label>
             <input class="form-control" value="{{ old('data', $link->data) }}" type="number" name="data" id="ID" class="col-lg-5" style="text-align:center;" min="0" placeholder="Ingrese el ID" required>
             <br>
-            <div class="input-group col-lg-6" style="margin:auto;">
+            <div class="input-group col-lg-12" style="margin:auto;">
                 <div class="input-group-prepend">
                     <label class="input-group-text" for="inputGroupSelect01">Tipo de ID</label>
                 </div>
                 <select class="custom-select" id="inputGroupSelect01" name="status">
-                    <option value="Principal">Principal</option>
+                    @if($link->status == 'Principal')
+                    <option value="{{$link->status}}" selected>{{$link->status}}</option>
                     <option value="Secundario">Secundaio</option>
+                    @else
+                    <option value="{{$link->status}}" selected>{{$link->status}}</option>
+                    <option value="Principal">Principal</option>
+                    @endif
                 </select>
 
                 <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
