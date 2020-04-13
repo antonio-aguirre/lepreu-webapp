@@ -20,7 +20,14 @@
         
         <div id="layoutSidenav_content">
 
-            @include('Partials.ADMINPANEL.indexAdminPanel')
+            <main>
+                <div class="container-fluid">
+                    <h1 class="mt-4">Dashboard</h1>
+                    
+                        Something usuable was here soon..
+
+                </div>
+            </main>
 
             @include('Partials.ADMINPANEL.footer.adminPanelFooter')
         </div>
