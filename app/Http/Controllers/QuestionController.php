@@ -39,10 +39,13 @@ class QuestionController extends Controller
         //Validar datos
         $messages = [
             'description.required' => 'ES NECESARIO QUE SE HAGA LLEGAR A SABER SU DUDA, ESCRIBALA A CONTINUACIÓN',
-            'description.max' => 'Se debe de tener un máximo de 400 caracteres',  
+            'description.max' => 'Se debe de tener un máximo de 400 caracteres',
+            'age.min' => 'Mínimo de edad no válido',
+            'age.max' => 'Máximo de edad no válido',
         ];
         $rules = [
             'description' => 'required|max:400',
+            'age' => 'min:0|max:100',
         ];
         $this->validate($request, $rules, $messages);
 

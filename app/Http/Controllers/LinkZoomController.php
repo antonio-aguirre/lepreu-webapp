@@ -44,11 +44,21 @@ class LinkZoomController extends Controller
      */
     public function store(Request $request)
     {
+        //Validar datos
+        $messages = [
+            'data.digits' => 'No se ha capturado completo el ID',
+            'data.required' => 'Es necesario que ingrese el ID',
+            'data.min' => 'No se admiten ID negativos',  
+            'data.numeric' => 'Solo se admiten números, revise nuevamente',         
+        ];
+        $rules = [
+            'data' => 'numeric|required|min:0|digits:10',
+        ];
+        $this->validate($request, $rules, $messages);
+
         $infoData = new InfoData();
 
-        //dd(((count(InfoData::where('status', 'Principal')->get())>0)  && (($request->input('status')) == 'Principal')));
-        
-        if( ((count(InfoData::where('status', 'Principal')->get())>0) && (($request->input('status')) == 'Principal'))  )
+        if( ((count(InfoData::where('status', 'Principal')->get())>0) && (($request->status) == 'Principal'))  )
         {
             Session::flash('message','Ya hay un link principal, cambie el tipo'); //primer palabra es el nombre que tendra la variable y se usara para mostrar el mensaje en index.blade.php
             Session::flash('alert-class','alert alert-warning');
@@ -118,6 +128,17 @@ class LinkZoomController extends Controller
      */
     public function update(Request $request, $id)
     {
+        //Validar datos
+        $messages = [
+            'data.digits' => 'No se ha capturado completo el ID',
+            'data.required' => 'Es necesario que ingrese el ID',
+            'data.min' => 'No se admiten ID negativos',  
+            'data.numeric' => 'Solo se admiten números, revise nuevamente',         
+        ];
+        $rules = [
+            'data' => 'numeric|required|min:0|digits:10',
+        ];
+        $this->validate($request, $rules, $messages);
         //si existe ya un ID primario y se selecciona la opción "Principal"
         if( ((count(InfoData::where('status', 'Principal')->get())>0) && (($request->status) == 'Principal'))  )
         {

@@ -30,6 +30,7 @@
                                 <ul>
                                     @foreach ($errors->all() as $error)
                                         <li><strong>{{ $error }}</li></strong>
+                                        <button type="button" class="close" data-dismiss="alert">&times;</button>
                                     @endforeach
                                 </ul>
                             </div>    
@@ -62,7 +63,7 @@
                                             <div>
                                                 <div class="input-group col-lg-6" style="margin:auto;">
                                                     <input type="hidden" name="value" value="LINK-ZOOM">
-                                                    <input class="form-control" type="number" name="data" id="ID" class="col-lg-5" style="text-align:center;" min="0" placeholder="Ingrese el ID" required>
+                                                    <input class="form-control" type="text" name="data" id="ID" class="col-lg-5" style="text-align:center;" placeholder="Ingrese el ID">
                                                     <input type="hidden" name="description" value="Link para acceder a una conferencia en zoom">
                                                 </div>
                                                 <br>

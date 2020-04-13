@@ -16,7 +16,7 @@
             {{ method_field("post") }}
 
             <label for="data">ID zoom</label>
-            <input class="form-control" value="{{ old('data', $link->data) }}" type="number" name="data" id="ID" class="col-lg-5" style="text-align:center;" min="0" placeholder="Ingrese el ID" required>
+            <input class="form-control" value="{{ old('data', $link->data) }}" type="text" name="data" id="ID" class="col-lg-5" style="text-align:center;" min="0" placeholder="Ingrese el ID" required>
             <br>
             <div class="input-group col-lg-12" style="margin:auto;">
                 <div class="input-group-prepend">
