@@ -1,0 +1,18 @@
+#container {
+    width: 45px;
+    height: 45px;
+    margin: 50px auto;
+}
+.topArrow {
+    fill: #fff;
+    transform: rotate(-90deg);
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    bottom: 20%;
+    margin: 0 0 0 -22px;
+}
+
+body {
+    background: #000;
+}
