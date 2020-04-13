@@ -117,6 +117,7 @@
                                                 <th>ID</th>
                                                 <th>Tipo ID</th>
                                                 <th></th>
+                                                <th></th>
                                             </tr>
                                         </thead>
                                         <tfoot>
@@ -124,6 +125,7 @@
                                                 <th>#</th>
                                                 <th>ID</th>
                                                 <th>Tipo ID</th>
+                                                <th></th>
                                                 <th></th>
                                             </tr>
                                         </tfoot>
@@ -136,12 +138,14 @@
                                                         <th>{{$count}}</th>
                                                         <td>{{ $link->data }}</td>
                                                         <td>{{ $link->status }}</td>
-                                                        <td>
-                                                            <a type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">
+                                                        <td style="text-align:center;">
+                                                            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#ID_edit{{$link->id}}">
                                                                 <i class="far fa-edit"></i> Editar
-                                                            </a>
-
-                                                            <form action="{{ url('/link-zoom/'.$link->id.'') }}" method="post">
+                                                            </button>
+                                                            @include('Partials.ADMINPANEL.modal.linkZoom_edit')
+                                                        </td> 
+                                                        <td style="text-align:center;">   
+                                                            <form action="{{ url('/link-zoom/'.$link->id.'/_delete') }}" method="post">
                                                                 @csrf
                                                                 {{ method_field('delete') }}
                                                                 
