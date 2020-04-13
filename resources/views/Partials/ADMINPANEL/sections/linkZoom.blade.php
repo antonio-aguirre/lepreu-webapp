@@ -139,9 +139,9 @@
                                                         <td>{{ $link->data }}</td>
                                                         <td>{{ $link->status }}</td>
                                                         <td style="text-align:center;">
-                                                            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#ID_edit{{$link->id}}">
+                                                            <a type="button" class="btn btn-warning" data-toggle="modal" data-target="#ID_edit{{$link->id}}">
                                                                 <i class="far fa-edit"></i> Editar
-                                                            </button>
+                                                            </a>
                                                             @include('Partials.ADMINPANEL.modal.linkZoom_edit')
                                                         </td> 
                                                         <td style="text-align:center;">   
