@@ -102,7 +102,7 @@
 @endsection
 
 @section('scriptsContent')
-    @include('Partials.ADMINPANEL.scripts.adminPanelScripts')
+    @include('Partials.scripts.scripts')
 @endsection
 
 

@@ -18,7 +18,6 @@ class CreateUsersTable extends Migration
             $table->string('token')->unique();
             $table->string('name');
             $table->string('last_name');
-            $table->string('second_last_name');
             $table->string('username');
             $table->string('email')->unique();
             $table->string('phone_number')->nullable();
@@ -26,7 +25,7 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
 
-            $table->unsignedBigInteger('token_id')->nullable(); //llave foranea
+            $table->unsignedBigInteger('token_id'); //llave foranea
 
             $table->rememberToken();
             $table->timestamps();
