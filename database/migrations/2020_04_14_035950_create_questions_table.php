@@ -14,13 +14,13 @@ class CreateQuestionsTable extends Migration
     public function up()
     {
         Schema::create('questions', function (Blueprint $table) {
-            $table->bigIncrements('id');
 
             $table->integer('age')->nullable();
             $table->string('device');
             $table->string('operative_system');
             $table->Text('description');
 
+            $table->bigIncrements('id');
             $table->timestamps();
         });
     }
