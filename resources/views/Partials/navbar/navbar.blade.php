@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" style="background-color:white;">
   <div class="container">
     <a class="navbar-brand js-scroll-trigger" style="color:#A00303;" href="/">
       Lepreu
@@ -21,6 +21,16 @@
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" style="color:gray;" href="#download"
             >Descargas</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" style="color:gray;" href="#"
+            >Videos</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" style="color:gray;" href="#"
+            >Imagenes</a>
         </li>
         
         @guest
