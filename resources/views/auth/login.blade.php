@@ -75,6 +75,7 @@
                                             <div class="row">
                                                 <div class="col-lg-12" style="text-align:center;">
                                                     <a class="btn btn-link" href="{{url('/')}}">Página de inicio</a>
+                                                    <a class="btn btn-link" href="{{url('/register')}}">Registrarse</a>
                                                 </div>
                                                 <!--<div class="col-lg-6">
                                                     @if (Route::has('password.request'))
