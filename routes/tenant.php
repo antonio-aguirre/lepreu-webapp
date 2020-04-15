@@ -31,7 +31,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/dudas-zoom/{id}','QuestionController@destroy');
 });
 
-Auth::routes();
-//Auth::routes(['register' => false]);
+//Auth::routes();
+Auth::routes(['register' => false]);
 
 Route::get('/home', 'HomeController@index')->name('home');
