@@ -10,8 +10,12 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
 
+use App\Token;
+use Session;
+use Illuminate\Contracts\Auth\Authenticatable;
 
-class RegisterController extends Controller
+
+class RegisterController extends Controller 
 {
     /*
     |--------------------------------------------------------------------------
@@ -95,7 +99,7 @@ class RegisterController extends Controller
             'email' => 'required|string|email|max:50|unique:users',
             'phone_number' => 'required|numeric|digits:10',
             'password' => 'required|string|min:8|confirmed',
-            'token' => 'required|string|min:8|max:12',
+            'token' => 'required|string|min:8|max:15',
         ];
         //$this->validate($data, $rules, $messages);*/
         return Validator::make($data, $rules, $messages);
@@ -109,25 +113,30 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        
-        //dd($data['token']);
 
-        try{
+        if( count(Token::where('token',''.$data['token'].'')->get()) > 0 )
+        {
+            $varID = Token::select('id')->where('token',''.$data['token'].'')->get();
+            foreach($varID as $varsID)
+            {
+                $tokenID = $varsID->id;
+            }
+
             return User::create([
-            'name' => $data['name'],
-            'last_name' => $data['last_name'],
-            'username' => $data['username'],
-            'email' => $data['email'],
-            'phone_number' => $data['phone_number'],
-            'typeUser' => 'ADMIN',
-            'password' => Hash::make($data['password']),
-            'token' => $data['token'],
-
-            
+                'name' => $data['name'],
+                'last_name' => $data['last_name'],
+                'username' => $data['username'],
+                'email' => $data['email'],
+                'phone_number' => $data['phone_number'],
+                'typeUser' => 'ADMIN',
+                'password' => Hash::make($data['password']),
+                'token_id' => $tokenID,
             ]);
-        }catch(Exception $e){
-            //echo '$e';
         }
+
+        
+        
+        
         
     }
 }
