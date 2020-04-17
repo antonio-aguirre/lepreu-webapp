@@ -38,7 +38,7 @@
                                     <div class="card-header"><h3 class="text-center font-weight-light my-4">Crear cuenta</h3></div>
                                     <div class="card-body">
                                         
-                                        <form method="POST" action="{{ route('register') }}">
+                                        <form method="POST" action="{{ url('/registeruser/add') }}">
                                             @csrf
 
                                             <div class="form-row">
