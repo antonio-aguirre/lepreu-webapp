@@ -24,7 +24,7 @@
                 <div class="container-fluid">
                     <h1 class="mt-4">Dashboard</h1>
                     
-                        Something usuable was here soon..
+                        Something good was here soon.. :D
 
                 </div>
             </main>
