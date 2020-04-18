@@ -20,9 +20,9 @@
                 <div class="col-lg-7 my-auto">
                     <div class="header-content mx-auto">
 
-                    <h1 class="mb-3">
-                            UNASE A LA REUNIÓN OPRIMIENDO EL BOTÓN DE ABAJO
-                    </h1>                
+                    <h2 class="mb-3">
+                            UNASE A LA REUNIÓN OPRIMIENDO EL BOTÓN <b style="color:#0846CD;"><i>AZUL</i></b> DE ABAJO
+                    </h2>                
                     
                     @if(count($links)>0)
                         @foreach($links as $link)
@@ -39,13 +39,21 @@
                         </div>
                     @endif
 
-                    <!------------------->
                     <br>
-                    
 
-                    <h3 class="mb-3">
+                    <h2 class="mb-3">
+                            UNASE A LA REUNIÓN DE SERVICIO OPRIMIENDO EL BOTÓN <b style="color:#1AC406;"><i>VERDE</i></b> DE ABAJO
+                    </h2> 
+                    <a class="btn btn-primary btn-xl js-scroll-trigger btn-block" style=" text-align:center; display:block; background-color:green;"
+                        href="{{ url('https://us04web.zoom.us/j/7615833527')}}">
+                        OPRIMA AQUÍ PARA UNIRSE A LA REUNIÓN
+                    </a>
+                    
+                    <br>
+
+                    <h2 class="mb-3">
                             DAR CLICK EN EL SIGUIENTE BOTÓN PARA EXPRESAR DUDAS DEL USO DE ZOOM  
-                    </h3>
+                    </h2>
                     <!-- Button trigger modal -->
                     <button href="{{ url('/dudas-zoom/add') }}" class="btn btn-outline btn-xl js-scroll-trigger btn-block" data-toggle="modal" data-target="#exampleModal"
                     style=" text-align:center; display:block;">
@@ -55,9 +63,9 @@
                     @include('Partials.modal_questions.modal_questions')
 
                     <br><br>
-                    <h3 class="mb-3">
+                    <h2 class="mb-3">
                             ¿AÚN NO TIENE LA APP ZOOM?
-                    </h3>
+                    </h2>
                     <a
                         href="#download"
                         class="btn btn-outline btn-xl js-scroll-trigger btn-block"
