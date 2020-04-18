@@ -115,49 +115,22 @@ class RegisterController extends Controller
     {
 
         
-        $this->dd($data);
+
+            return User::create([
+                'name' => $data['name'],
+                'last_name' => $data['last_name'],
+                'username' => $data['username'],
+                'email' => $data['email'],
+                'phone_number' => $data['phone_number'],
+                'typeUser' => 'ADMIN',
+                'password' => Hash::make($data['password']),
+                'token_id' => $tokenID,
+            ]);
+        
 
         
         
         
-        
-    }
-
-    public function dd(array $data)
-    {
-        
-        try{
-
-            if( (count(Token::where('token',''.$data['token'].'')->get()) > 0) && (count(Token::where('status','USED')->get()) <= 0))
-            {
-                $varID = Token::select('id')->where('token',''.$data['token'].'')->get();
-                foreach($varID as $varsID)
-                {
-                    $tokenID = $varsID->id;
-                }
-
-                $changeStatus = Token::find($tokenID);
-                $changeStatus->status = 'USED';
-                $changeStatus->save();
-
-                return User::create([
-                    'name' => $data['name'],
-                    'last_name' => $data['last_name'],
-                    'username' => $data['username'],
-                    'email' => $data['email'],
-                    'phone_number' => $data['phone_number'],
-                    'typeUser' => 'ADMIN',
-                    'password' => Hash::make($data['password']),
-                    'token_id' => $tokenID,
-                ]);
-                
-            }else{
-                return redirect('/login');
-            }
-
-        }catch(Exception $e){
-            
-        }
         
     }
 }
