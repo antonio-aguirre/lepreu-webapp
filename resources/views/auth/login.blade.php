@@ -38,7 +38,6 @@
                                     <form action="{{ route('login') }}" method="post">
                                         @csrf
                                         <div class="form-group">
-                                            <label class="small mb-1" for="inputEmailAddress">Nombre de usuario</label>
                                             <input id="username" type="username" class="form-control @error('username') is-invalid @enderror" 
                                             name="username" value="{{ old('username') }}" required autocomplete="username" autofocus placeholder="Introduzca su nombre de usuario" />
                                             @error('username')
@@ -49,7 +48,6 @@
                                         </div>
                                             
                                         <div class="form-group">
-                                            <label class="small mb-1" for="inputPassword">Password</label>
                                             <input class="form-control @error('password') is-invalid @enderror" id="password" type="password" 
                                             name="password" required autocomplete="current-password" placeholder="Introduzca su contraseña" />
                                             @error('password')
@@ -75,7 +73,7 @@
                                             <div class="row">
                                                 <div class="col-lg-12" style="text-align:center;">
                                                     <a class="btn btn-link" href="{{url('/')}}">Página de inicio</a>
-                                                    <a class="btn btn-link" href="{{url('/register')}}">Registrarse</a>
+                                                    <a class="btn btn-link" href="{{url('/registeruser/add')}}">Registrarse</a>
                                                 </div>
                                                 <!--<div class="col-lg-6">
                                                     @if (Route::has('password.request'))
