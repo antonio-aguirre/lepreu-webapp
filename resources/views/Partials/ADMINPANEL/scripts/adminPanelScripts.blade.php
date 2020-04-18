@@ -12,7 +12,7 @@
     (function () {
         var options = {
             whatsapp: "+527352769817", // WhatsApp number
-            email: "antonio_aar@hotmail.es", // Email
+            email: "helplepreu@gmail.com", // Email
             call_to_action: "¿Ayuda en el panel de admin?", // Call to action
             button_color: "#A8CE50", // Color of button
             position: "right", // Position may be 'right' or 'left'
