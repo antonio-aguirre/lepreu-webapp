@@ -21,14 +21,14 @@
                     <div class="header-content mx-auto">
 
                     <h2 class="mb-3">
-                            UNASE A LA REUNIÓN OPRIMIENDO EL BOTÓN <b style="color:#0846CD;"><i>AZUL</i></b> DE ABAJO
+                            UNASE A LA REUNIÓN OPRIMIENDO EL BOTÓN COLOR <b style="color:#0846CD;"><i>AZUL</i></b> DE ABAJO
                     </h2>                
                     
                     @if(count($links)>0)
                         @foreach($links as $link)
-                        <a class="btn btn-primary btn-xl js-scroll-trigger btn-block" style=" text-align:center; display:block;"
+                        <a class="btn btn-primary  " style=" text-align:center; display:block;"
                                     href="{{ url('https://us04web.zoom.us/j/'.$link->data.'')}}">
-                            OPRIMA AQUÍ PARA UNIRSE A LA REUNIÓN
+                             <i class="fas fa-video"></i>
                         </a>
                         @endforeach
                     @else
@@ -42,35 +42,36 @@
                     <br>
 
                     <h2 class="mb-3">
-                            UNASE A LA REUNIÓN DE SERVICIO OPRIMIENDO EL BOTÓN <b style="color:#1AC406;"><i>VERDE</i></b> DE ABAJO
+                            UNASE A LA REUNIÓN DE SERVICIO OPRIMIENDO EL BOTÓN COLOR <b style="color:#1AC406;"><i>VERDE</i></b> DE ABAJO
                     </h2> 
-                    <a class="btn btn-primary btn-xl js-scroll-trigger btn-block" style=" text-align:center; display:block; background-color:green;"
+                    <a class="btn btn-secondary" style=" text-align:center; display:block; background-color:green;"
                         href="{{ url('https://us04web.zoom.us/j/7615833527')}}">
-                        OPRIMA AQUÍ PARA UNIRSE A LA REUNIÓN
+                        <i class="fas fa-users"></i>
                     </a>
                     
                     <br>
 
-                    <h2 class="mb-3">
-                            DAR CLICK EN EL SIGUIENTE BOTÓN PARA EXPRESAR DUDAS DEL USO DE ZOOM  
-                    </h2>
+                    <h3 class="mb-3">
+                            DAR CLICK EN EL BOTÓN COLOR <b style="color:orange;"><i>NARANJA</i></b> PARA EXPRESAR DUDAS DEL USO DE ZOOM  
+                    </h3>
                     <!-- Button trigger modal -->
-                    <button href="{{ url('/dudas-zoom/add') }}" class="btn btn-outline btn-xl js-scroll-trigger btn-block" data-toggle="modal" data-target="#exampleModal"
-                    style=" text-align:center; display:block;">
-                        OPRIMA ESTE BOTÓN PARA EXPRESAR SUS DUDAS
-                    </button>
+                    <a href="{{ url('/dudas-zoom/add') }}" class="btn btn-outline" data-toggle="modal" data-target="#exampleModal"
+                    style=" text-align:center; display:block; background-color:orange;">
+                        <i class="fas fa-question"></i>
+                    </a>
 
                     @include('Partials.modal_questions.modal_questions')
 
                     <br><br>
-                    <h2 class="mb-3">
-                            ¿AÚN NO TIENE LA APP ZOOM?
-                    </h2>
+                    <h5 class="mb-3">
+                            ¿AÚN NO TIENE LA APP ZOOM? OPRIMA EL BOTÓN COLOR <b style="color:#E7B2FF;"><i>LILA</i></b>
+                    </h5>
                     <a
                         href="#download"
-                        class="btn btn-outline btn-xl js-scroll-trigger btn-block"
-                        style=" text-align:center; display:block;"
-                        >OPRIMA ESTE BOTÓN PARA IR A SECCIÓN DE DESCARGAR ZOOM
+                        class="btn btn-outline"
+                        style=" text-align:center; display:block; background-color:#E7B2FF;"
+                        >
+                        <i class="fas fa-cloud-download-alt"></i>
                     </a>
                     
                     </div>
