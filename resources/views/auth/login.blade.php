@@ -5,6 +5,13 @@
     @include('Partials.ADMINPANEL.head.adminPanelHead')
 @endsection
 
+@section('navbarContent')
+    <!-- BARRA DE NAVEGACIÓN -->
+    <div class="py-4">
+        @include('Partials.navbar.navbar_Login_Register')
+    </div>
+@endsection
+
 @section('content')
 
     <style>

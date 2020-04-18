@@ -3,6 +3,13 @@
     
     @include('Partials.head.welcomeHead')
 
+ 
+    <!-- BARRA DE NAVEGACIÓN -->
+    <div class="py-4">
+        @include('Partials.navbar.navbar_Login_Register')
+    </div>
+
+
     <!-- Mensajes de alerta por validaciones -->
     @if ($errors->any())
         <div class="alert alert-danger alert-dismissable fade show" style="border-radius: 6px; text-align:left;">
