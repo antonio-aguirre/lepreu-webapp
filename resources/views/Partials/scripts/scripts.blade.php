@@ -7,6 +7,7 @@
 <script src="{{global_asset('js/new-age.min.js')}}"></script>
 <!-- wow.js animation library on scroll -->
 <script src="{{global_asset('js/wow.js')}}"></script>
+
 <script>
     new WOW().init();
 </script>

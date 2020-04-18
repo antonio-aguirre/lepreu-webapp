@@ -4,7 +4,6 @@
         <div style="background-color:red; border-radius:30px; box-shadow: 5px 10px 5px;">
             <center>
                 <h1 class="section-heading">OPRIMA EL LOGO SEGÚN TU CELULAR / TABLET</h1>
-                <h3 class="section-heading"> </h3>
             </center>
         </div>      
     </div>
