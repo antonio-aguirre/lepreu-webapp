@@ -21,7 +21,7 @@
                     <div class="header-content mx-auto">
 
                     <h2 class="mb-3">
-                            UNASE A LA REUNIÓN OPRIMIENDO EL BOTÓN <b style="color:#0846CD;"><i>AZUL</i></b> DE ABAJO
+                            UNASE A LA REUNIÓN OPRIMIENDO EL BOTÓN <b style="color:#0846CD;"><i>AZUL</i></b>
                     </h2>                
                     
                     @if(count($links)>0)
@@ -42,7 +42,7 @@
                     <br>
 
                     <h2 class="mb-3">
-                            UNASE A LA REUNIÓN <u>DE SERVICIO</u> OPRIMIENDO EL BOTÓN <b style="color:#1AC406;"><i>VERDE</i></b> DE ABAJO
+                            UNASE A LA REUNIÓN <u>DE SERVICIO</u> OPRIMIENDO EL BOTÓN <b style="color:#1AC406;"><i>VERDE</i></b>
                     </h2> 
                     <a class="btn btn-secondary" style=" text-align:center; display:block; background-color:green;"
                         href="{{ url('https://us04web.zoom.us/j/7615833527')}}">
@@ -52,7 +52,7 @@
                     <br>
 
                     <h3 class="mb-3">
-                            DAR CLICK EN EL BOTÓN <b style="color:orange;"><i>NARANJA</i></b> PARA EXPRESAR DUDAS DEL USO DE ZOOM  
+                            DAR CLICK EN EL BOTÓN <b style="color:orange;"><i>NARANJA</i></b> PARA ESCRIBIR SUS DUDAS DEL USO DE ZOOM  
                     </h3>
                     <!-- Button trigger modal -->
                     <a href="{{ url('/dudas-zoom/add') }}" class="btn btn-outline" data-toggle="modal" data-target="#exampleModal"
