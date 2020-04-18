@@ -42,7 +42,7 @@
                     <br>
 
                     <h2 class="mb-3">
-                            UNASE A LA REUNIÓN DE SERVICIO OPRIMIENDO EL BOTÓN <b style="color:#1AC406;"><i>VERDE</i></b> DE ABAJO
+                            UNASE A LA REUNIÓN <u>DE SERVICIO</u> OPRIMIENDO EL BOTÓN <b style="color:#1AC406;"><i>VERDE</i></b> DE ABAJO
                     </h2> 
                     <a class="btn btn-secondary" style=" text-align:center; display:block; background-color:green;"
                         href="{{ url('https://us04web.zoom.us/j/7615833527')}}">
