@@ -14,26 +14,40 @@
 
             <div class="sb-sidenav-menu-heading">Contenidos</div>
             
+            @if(Auth::user()->rol_id == 1)
             <a class="nav-link" href="{{ url('/link-zoom') }}">
                 <div class="sb-nav-link-icon">
                     <i class="fas fa-link"></i>
                 </div>
                 Link Zoom
             </a>
+            @endif
 
+            @if(Auth::user()->rol_id == 2)
             <a class="nav-link" href="">
                 <div class="sb-nav-link-icon">
                     <i class="fas fa-scroll"></i>
                 </div>
                 Noticias
             </a>
+            @endif
 
         </div>
     </div>
 
     <div class="sb-sidenav-footer">
         <div class="small">Conectado como:</div>
-        {{ Auth::user()->typeUser }}
+
+        <?php 
+        
+            if(Auth::user()->rol_id == 1)
+            {
+                echo 'ADMIN';
+            }else{
+                echo  'ANCIANO';
+            }
+        ?>
+        
     </div>
 
 </nav>
