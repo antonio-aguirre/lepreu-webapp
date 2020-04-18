@@ -21,7 +21,7 @@
                     <div class="header-content mx-auto">
 
                     <h2 class="mb-3">
-                            UNASE A LA REUNIÓN OPRIMIENDO EL BOTÓN COLOR <b style="color:#0846CD;"><i>AZUL</i></b> DE ABAJO
+                            UNASE A LA REUNIÓN OPRIMIENDO EL BOTÓN <b style="color:#0846CD;"><i>AZUL</i></b> DE ABAJO
                     </h2>                
                     
                     @if(count($links)>0)
@@ -42,7 +42,7 @@
                     <br>
 
                     <h2 class="mb-3">
-                            UNASE A LA REUNIÓN DE SERVICIO OPRIMIENDO EL BOTÓN COLOR <b style="color:#1AC406;"><i>VERDE</i></b> DE ABAJO
+                            UNASE A LA REUNIÓN DE SERVICIO OPRIMIENDO EL BOTÓN <b style="color:#1AC406;"><i>VERDE</i></b> DE ABAJO
                     </h2> 
                     <a class="btn btn-secondary" style=" text-align:center; display:block; background-color:green;"
                         href="{{ url('https://us04web.zoom.us/j/7615833527')}}">
@@ -52,7 +52,7 @@
                     <br>
 
                     <h3 class="mb-3">
-                            DAR CLICK EN EL BOTÓN COLOR <b style="color:orange;"><i>NARANJA</i></b> PARA EXPRESAR DUDAS DEL USO DE ZOOM  
+                            DAR CLICK EN EL BOTÓN <b style="color:orange;"><i>NARANJA</i></b> PARA EXPRESAR DUDAS DEL USO DE ZOOM  
                     </h3>
                     <!-- Button trigger modal -->
                     <a href="{{ url('/dudas-zoom/add') }}" class="btn btn-outline" data-toggle="modal" data-target="#exampleModal"
@@ -68,10 +68,9 @@
                     </h5>
                     <a
                         href="#download"
-                        class="btn btn-outline"
+                        class="btn btn-outline js-scroll-trigger"
                         style=" text-align:center; display:block; background-color:#E7B2FF;"
-                        >
-                        <i class="fas fa-cloud-download-alt"></i>
+                        ><i class="fas fa-cloud-download-alt"></i>
                     </a>
                     
                     </div>
