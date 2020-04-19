@@ -74,7 +74,7 @@
                     <img class="img-fluid" src="https://res.cloudinary.com/craftwebs/image/upload/v1586543534/4373_mvaru8.jpg">
                 </div>
                 <div class="col-lg-6 wow fadeInRightBig" style="margin-top: 6em;">
-                    <h1>¿Como funciona?</h1>
+                    <h1>¿Cómo funciona?</h1>
                     <ul>
                         <li>Accede de forma rápida a su reunión</li>
                         <li>Tenga instalado en su dispositivo esta página</li>
