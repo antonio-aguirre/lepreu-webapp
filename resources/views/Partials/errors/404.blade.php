@@ -11,7 +11,7 @@
                                 <div class="text-center mt-4">
                                     <img class="mb-4 img-error" src="assets/img/error-404-monochrome.svg" />
                                     <p class="lead"> No pudimos encontrar la url :c </p>
-                                    <a href="{{ url('/home') }}"><i class="fas fa-arrow-left mr-1"></i>Regresar al inicio</a>
+                                    <a href="{{ url('/') }}"><i class="fas fa-arrow-left mr-1"></i>Regresar al inicio</a>
                                 </div>
                             </div>
                         </div>
