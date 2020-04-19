@@ -56,7 +56,7 @@
                 <div class="col-lg-6 col-md-6 col-12 wow fadeInLeftBig" style="padding-top: 10em;">
                     <h1>Bienvenido!</h1>
                     <p>
-                        Este sitio está orientado a ayuda y soporte de la aplicación de Zoom, y sirve como <strong>auxiliar</strong> para acceder a la misma.
+                        Este sitio está orientado a ayuda y soporte de la aplicación Zoom, y sirve como <strong>auxiliar</strong> para acceder a la misma.
                         Toda la ayuda brindada aquí es sin fines de lucro.
                     </p>
                 </div>
