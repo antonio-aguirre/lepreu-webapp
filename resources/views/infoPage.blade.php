@@ -18,23 +18,45 @@
     <!-- Custom styles for this template -->
     <link href="{{global_asset('css/new-age.min.css')}}" rel="stylesheet" />
     <title>Lepreu</title>
+
+    <style>
+        .header-filter:after {
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            display: block;
+            left: 0;
+            top: 0;
+            content: "";
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        .header-filter .container {
+        z-index: 2;
+        position: relative;
+        }
+    </style>
+
 </head>
+
     <body>
-        <div class="jumbotron jumbotron-fluid">
+
+        <div class="jumbotron jumbotron-fluid header header-filter">
             <div class="container wow fadeInUp" style="padding-top: 10em;">
                 <h1 class="display-4 text-center">Lepreu</h1>
-                <p class="text-center">No te quedes lejos de mí, porque se acercan dificultades y no tengo a nadie más que me ayude.</p>
-                <p class="text-center" style="margin-top: -15px;">Salmos 22:11</p>
+                <p class="text-center"><i>"No te quedes lejos de mí, porque se acercan dificultades y no tengo a nadie más que me ayude."</i></p>
+                <!--<p class="text-center" style="margin-top: -15px;">Salmos 22:11</p>-->
+                <p class="blockquote-footer text-center" style="margin-top: -15px; color:white;">Salmos 22:11</footper>
             </div>
         </div>
+
 
         <div class="section container ">
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-12 wow fadeInLeftBig" style="padding-top: 10em;">
                     <h1>Bienvenido!</h1>
                     <p>
-                        Este sitio está orientado a ayuda y soporte de la aplicación de Zoom. Está especialmente dirigido a 
-                        nuestros hermanos <strong>Testigos de Jehová </strong>que necesiten ayuda a usar la aplicación de Zoom.
+                        Este sitio está orientado a ayuda y soporte de la aplicación de Zoom, y sirve como <strong>auxiliar</strong> para acceder a la misma.
                         Toda la ayuda brindada aquí es sin fines de lucro.
                     </p>
                 </div>
