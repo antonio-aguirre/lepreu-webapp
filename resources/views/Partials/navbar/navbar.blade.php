@@ -19,15 +19,15 @@
       <ul class="navbar-nav ml-auto">
 
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" style="color:gray;" href="#download"
-            >Descargas</a>
-        </li>
-
-        <li class="nav-item">
           <a class="nav-link js-scroll-trigger" style="color:gray;" href="#videos"
             >Videos</a>
         </li>
         
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" style="color:gray;" href="#download"
+            >Descargas</a>
+        </li>
+
         @guest
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="{{ route('login') }}" style="color:gray;">{{ __('Login') }}</a>
