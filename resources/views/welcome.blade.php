@@ -20,58 +20,58 @@
                 <div class="col-lg-7 my-auto">
                     <div class="header-content mx-auto">
 
-                    <h2 class="mb-3">
-                            UNASE A LA REUNIÓN OPRIMIENDO EL BOTÓN <b style="color:#0846CD;"><i>AZUL</i></b>
-                    </h2>                
-                    
-                    @if(count($links)>0)
-                        @foreach($links as $link)
-                        <a class="btn btn-primary  " style=" text-align:center; display:block;"
-                                    href="{{ url('https://us04web.zoom.us/j/'.$link->data.'')}}">
-                             <i class="fas fa-video"></i>
+                        <h2 class="mb-3">
+                                UNASE A LA REUNIÓN OPRIMIENDO EL BOTÓN <b style="color:blue;"><i>AZUL</i></b>
+                        </h2>                
+                        
+                        @if(count($links)>0)
+                            @foreach($links as $link)
+                            <a class="btn btn-outline js-scroll-trigger" style=" text-align:center; display:block; background-color:blue;"
+                                        href="{{ url('https://us04web.zoom.us/j/'.$link->data.'')}}">
+                                <i class="fas fa-video"></i>
+                            </a>
+                            @endforeach
+                        @else
+                            <div class="alert alert-warning" role="alert">
+                                <i class="fas fa-info-circle"></i> Disculpe el inconveniente.
+                                <hr>
+                                <p>Link no añadido. Consulte a un anciano para más información.</p>
+                            </div>
+                        @endif
+
+                        <br>
+
+                        <h2 class="mb-3">
+                                UNASE A LA REUNIÓN <u>DE SERVICIO</u> OPRIMIENDO EL BOTÓN <b style="color:#1AC406;"><i>VERDE</i></b>
+                        </h2> 
+                        <a class="btn btn-outline js-scroll-trigger" style=" text-align:center; display:block; background-color:green;"
+                            href="{{ url('https://us04web.zoom.us/j/7615833527')}}">
+                            <i class="fas fa-users"></i>
                         </a>
-                        @endforeach
-                    @else
-                        <div class="alert alert-warning" role="alert">
-                            <i class="fas fa-info-circle"></i> Disculpe el inconveniente.
-                            <hr>
-                            <p>Link no añadido. Consulte a un anciano para más información.</p>
-                        </div>
-                    @endif
+                        
+                        <br>
 
-                    <br>
+                        <h3 class="mb-3">
+                                DAR CLICK EN EL BOTÓN <b style="color:orange;"><i>NARANJA</i></b> PARA ESCRIBIR SUS DUDAS DEL USO DE ZOOM  
+                        </h3>
+                        <!-- Button trigger modal -->
+                        <a href="{{ url('/dudas-zoom/add') }}" class="btn btn-outline" data-toggle="modal" data-target="#exampleModal"
+                        style=" text-align:center; display:block; background-color:orange;">
+                            <i class="fas fa-question"></i>
+                        </a>
 
-                    <h2 class="mb-3">
-                            UNASE A LA REUNIÓN <u>DE SERVICIO</u> OPRIMIENDO EL BOTÓN <b style="color:#1AC406;"><i>VERDE</i></b>
-                    </h2> 
-                    <a class="btn btn-secondary" style=" text-align:center; display:block; background-color:green;"
-                        href="{{ url('https://us04web.zoom.us/j/7615833527')}}">
-                        <i class="fas fa-users"></i>
-                    </a>
-                    
-                    <br>
+                        @include('Partials.modal_questions.modal_questions')
 
-                    <h3 class="mb-3">
-                            DAR CLICK EN EL BOTÓN <b style="color:orange;"><i>NARANJA</i></b> PARA ESCRIBIR SUS DUDAS DEL USO DE ZOOM  
-                    </h3>
-                    <!-- Button trigger modal -->
-                    <a href="{{ url('/dudas-zoom/add') }}" class="btn btn-outline" data-toggle="modal" data-target="#exampleModal"
-                    style=" text-align:center; display:block; background-color:orange;">
-                        <i class="fas fa-question"></i>
-                    </a>
-
-                    @include('Partials.modal_questions.modal_questions')
-
-                    <br><br>
-                    <h5 class="mb-3">
-                            ¿AÚN NO TIENE LA APP ZOOM? OPRIMA EL BOTÓN COLOR <b style="color:#E7B2FF;"><i>LILA</i></b>
-                    </h5>
-                    <a
-                        href="#download"
-                        class="btn btn-outline js-scroll-trigger"
-                        style=" text-align:center; display:block; background-color:#E7B2FF;"
-                        ><i class="fas fa-cloud-download-alt"></i>
-                    </a>
+                        <br><br>
+                        <h5 class="mb-3">
+                                ¿AÚN NO TIENE LA APP ZOOM? OPRIMA EL BOTÓN COLOR <b style="color:#E7B2FF;"><i>LILA</i></b>
+                        </h5>
+                        <a
+                            href="#download"
+                            class="btn btn-outline js-scroll-trigger"
+                            style=" text-align:center; display:block; background-color:#E7B2FF;"
+                            ><i class="fas fa-cloud-download-alt"></i>
+                        </a>
                     
                     </div>
                 </div>
