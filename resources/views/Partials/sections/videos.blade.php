@@ -16,16 +16,16 @@
     <div class="container">
 
         <div class="row no-gutters">          
-            <iframe class="col-lg-6 order-lg-2 text-white showcase-img" width="560" height="315" src="https://www.youtube.com/embed/UiF4icv_xMk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="col-lg-6 order-lg-2 showcase-img" width="560" height="315" src="https://www.youtube.com/embed/UiF4icv_xMk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <div class="col-lg-6 order-lg-1 my-auto showcase-text">
                 <h2>Como instalar Zoom</h2>
                 <p class="lead mb-0">Para empezar necesitamos tener la app Zoom instalada en nuestros dispositivos. <br><br>
-                Lo invitamos a ver este breve video donde explica como instalar la app, de igual manera, dependiendo de su dispositivo, descargue la misma en la sección <a class="js-scroll-trigger" href="#download">descargas.</a></p>
+                Lo invitamos a ver este breve video donde explica como instalar la app, de igual manera, dependiendo de su dispositivo, descargue la misma en la sección <a class="js-scroll-trigger" href="#download">descargas.</a></p><br>
             </div>
         </div>
 
         <div class="row no-gutters">
-            <iframe class="col-lg-6 text-white showcase-img" width="560" height="315" src="https://www.youtube.com/embed/qUsRK5Li64c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="col-lg-6 showcase-img" width="560" height="315" src="https://www.youtube.com/embed/qUsRK5Li64c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <div class="col-lg-6 my-auto showcase-text">
                 <h2>Primeros pasos usando Zoom</h2>
                 <p class="lead mb-0">
