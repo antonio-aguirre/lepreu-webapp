@@ -16,7 +16,7 @@
 
     <style>
         .header-filter:after {
-            position: absolute;
+            position: fixed;
             z-index: 1;
             width: 100%;
             height: 100%;
@@ -32,7 +32,7 @@
         }
     </style>
 
-    <section class="header header-filter" style="background-image: url('https://images.unsplash.com/photo-1445905595283-21f8ae8a33d2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1652&q=80'); background-size:cover; background-position: top left; background-repeat: no-repeat;">
+    <section class="header header-filter" style="background-image: url('https://images.unsplash.com/photo-1486551937199-baf066858de7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1146&q=80'); background-size:cover; background-position: top left; background-repeat: no-repeat;">
         <div id="layoutAuthentication">
             <div id="layoutAuthentication_content">
                 <div class="container">
@@ -63,17 +63,27 @@
                                                 </span>
                                             @enderror
                                         </div>
+
+                                        
                                         <!--<div class="form-group">
                                             <div class="custom-control custom-checkbox"><input class="custom-control-input" id="rememberPasswordCheck" type="checkbox" /><label class="custom-control-label" for="rememberPasswordCheck">Remember password</label></div>
                                         </div>-->
-                                        <br>
                                         <div class="form-group col-lg-12">
                                             <div class="row">
                                                 <div class="col-lg-12" style="text-align:center;">
                                                     <button class="btn btn-primary" type="submit">Accesar</button>
                                                 </div>
+                                                
                                             </div>
                                         </div>
+
+                                        <div class="checkbox" style="text-align:center;">
+                                            <label>
+                                                <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> <!--EL helper OLD ayuda a recuperar un valor anterior escrito en un input-->
+                                                    Recordar sesión
+                                            </label>
+                                        </div>
+
                                         <hr>
                                         <div class="form-group col-lg-12">
                                             <!--<a class="small" href="password.html">Forgot Password?</a>-->
