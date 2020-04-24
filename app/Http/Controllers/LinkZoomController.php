@@ -46,7 +46,7 @@ class LinkZoomController extends Controller
     {
         //Validar datos
         $messages = [
-            'data.digits' => 'No se ha capturado completo el ID',
+            'data.digits' => 'No se ha capturado el ID correctamente',
             'data.required' => 'Es necesario que ingrese el ID',
             'data.min' => 'No se admiten ID negativos',  
             'data.numeric' => 'Solo se admiten números, revise nuevamente',         
@@ -74,13 +74,13 @@ class LinkZoomController extends Controller
 
             if($infoData->save())
             {
-                Session::flash('message','Se ha añadió la información'); //primer palabra es el nombre que tendra la variable y se usara para mostrar el mensaje en index.blade.php
+                Session::flash('message','Se ha añadió el ID'); //primer palabra es el nombre que tendra la variable y se usara para mostrar el mensaje en index.blade.php
                 Session::flash('alert-class','alert alert-success');
                 return back();
 
             }else
             {
-                Session::flash('message','Se ha producido un inconveniente al añadir la información'); //primer palabra es el nombre que tendra la variable y se usara para mostrar el mensaje en index.blade.php
+                Session::flash('message','Se ha producido un inconveniente al añadir el ID'); //primer palabra es el nombre que tendra la variable y se usara para mostrar el mensaje en index.blade.php
                 Session::flash('alert-class','alert alert-warning');
                 return back();
             }
@@ -130,7 +130,7 @@ class LinkZoomController extends Controller
     {
         //Validar datos
         $messages = [
-            'data.digits' => 'No se ha capturado completo el ID',
+            'data.digits' => 'No se ha capturado el ID correctamente',
             'data.required' => 'Es necesario que ingrese el ID',
             'data.min' => 'No se admiten ID negativos',  
             'data.numeric' => 'Solo se admiten números, revise nuevamente',         
