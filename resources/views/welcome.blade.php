@@ -18,14 +18,15 @@
         <div class="container h-100">
             <div class="row h-100">
                 <div class="col-lg-7 my-auto">
-                    <div class="header-content mx-auto">
-
-                        <h2 class="mb-3">
-                                UNASE A LA REUNIÓN OPRIMIENDO EL BOTÓN <b style="color:blue;"><i>AZUL</i></b>
-                        </h2>                
+                    <div class="header-content mx-auto">             
                         
                         @if(count($links)>0)
                             @foreach($links as $link)
+
+                            <h2 class="mb-3">
+                                UNASE A LA REUNIÓN OPRIMIENDO EL BOTÓN <b style="color:blue;"><i>AZUL</i></b>
+                             </h2>
+
                             <a class="btn btn-outline js-scroll-trigger" style=" text-align:center; display:block; background-color:blue;"
                                         href="{{ url('https://us04web.zoom.us/j/'.$link->data.'')}}">
                                 <i class="fas fa-video"></i>
@@ -35,7 +36,7 @@
                             <div class="alert alert-warning" role="alert">
                                 <i class="fas fa-info-circle"></i> Disculpe el inconveniente.
                                 <hr>
-                                <p>Link no añadido. Consulte a un anciano para más información.</p>
+                                <p>Link para unirse a <i>reunión</i> NO añadido. Consulte a un anciano para más información.</p>
                             </div>
                         @endif
 
