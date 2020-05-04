@@ -12,7 +12,7 @@
       aria-expanded="false"
       aria-label="Toggle navigation"
     >
-      Menú <i class="fas fa-arrow-circle-down"></i>
+      Menú <i class="fas fa-bars"></i>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarResponsive">
