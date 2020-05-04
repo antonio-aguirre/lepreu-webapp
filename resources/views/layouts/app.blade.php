@@ -5,7 +5,7 @@
     <body id="page-top">
 
         @yield('navbarContent')
-
+        
         <span>
             <!-- Mensajes de alerta por validaciones -->
             @if ($errors->any())
@@ -13,7 +13,7 @@
                     <div class="container-fluid">
                         <ul>
                             @foreach ($errors->all() as $error)
-                                <li><strong>{{ $error }}</li></strong>
+                                <li>{{ $error }}</li>
                             @endforeach
                         </ul>
                     </div>    
@@ -23,7 +23,7 @@
             @if (Session::has('message'))
             <div class="{{ Session::get('alert-class') }} alert-dismissible fade show" ng-if="message">
                 <div class="container-fluid">
-                    <strong><li>{{ Session::get('message') }}</li></strong>
+                    <li>{{ Session::get('message') }}</li>
                     <button type="button" class="close" data-dismiss="alert">&times;</button>
                 </div>
             </div>
