@@ -12,23 +12,33 @@
     </div>
 @endsection
 
+
 @section('content')
 
     <header class="masthead">
         <div class="container h-100">
             <div class="row h-100">
                 <div class="col-lg-7 my-auto">
-                    <div class="header-content mx-auto">             
+                    <div class="header-content mx-auto">
+
+                        <!-- NOTICIAS
+                        <div class="alert alert-secondary">
+                            <div class="container-fluid">
+                                <a href="" style="color:black;"> <i><u>Dar clic aquí para ver las <b>noticias</b> de su congegación</u></i> </a>
+                                <a type="button" class="close" data-dismiss="alert">&times;</a>
+                            </div>
+                        </div>
+                        -->    
                         
-                        @if(count($links)>0)
-                            @foreach($links as $link)
+                        @if(count($links_principal)>0)
+                            @foreach($links_principal as $link_principal)
 
                             <h2 class="mb-3">
                                 UNASE A LA REUNIÓN OPRIMIENDO EL BOTÓN <b style="color:blue;"><i>AZUL</i></b>
                              </h2>
 
                             <a class="btn btn-outline js-scroll-trigger" style=" text-align:center; display:block; background-color:blue;"
-                                        href="{{ url('https://us04web.zoom.us/j/'.$link->data.'')}}">
+                                        href="{{ url('https://us04web.zoom.us/j/'.$link_principal->data.'')}}">
                                 <i class="fas fa-video"></i>
                             </a>
                             @endforeach
@@ -41,17 +51,20 @@
                         @endif
 
                         <br>
-
-                        <h2 class="mb-3">
-                                UNASE A LA REUNIÓN <u>DE SERVICIO</u> OPRIMIENDO EL BOTÓN <b style="color:#1AC406;"><i>VERDE</i></b>
-                        </h2> 
-                        <a class="btn btn-outline js-scroll-trigger" style=" text-align:center; display:block; background-color:green;"
-                            href="{{ url('https://us04web.zoom.us/j/7615833527')}}">
-                            <i class="fas fa-users"></i>
-                        </a>
                         
-                        <br>
-
+                        @if(count($links_servicio)>0)
+                            @foreach($links_servicio as $link_servicio)
+                                <h2 class="mb-3">
+                                        UNASE A LA REUNIÓN <u>DE SERVICIO</u> OPRIMIENDO EL BOTÓN <b style="color:#1AC406;"><i>VERDE</i></b>
+                                </h2> 
+                                <a class="btn btn-outline js-scroll-trigger" style=" text-align:center; display:block; background-color:green;"
+                                    href="{{ url('https://us04web.zoom.us/j/'.$link_servicio->data.'')}}">
+                                    <i class="fas fa-users"></i>
+                                </a>
+                            @endforeach
+                            <br>
+                        @endif
+                        
                         <h3 class="mb-3">
                                 DAR CLICK EN EL BOTÓN <b style="color:orange;"><i>NARANJA</i></b> PARA ESCRIBIR SUS DUDAS DEL USO DE ZOOM  
                         </h3>
@@ -63,7 +76,7 @@
 
                         @include('Partials.modal_questions.modal_questions')
 
-                        <br><br>
+                        <br>
                         <h5 class="mb-3">
                                 ¿AÚN NO TIENE LA APP ZOOM? OPRIMA EL BOTÓN COLOR <b style="color:#E7B2FF;"><i>LILA</i></b>
                         </h5>
