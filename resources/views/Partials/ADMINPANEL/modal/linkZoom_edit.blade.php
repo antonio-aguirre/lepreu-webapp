@@ -22,13 +22,22 @@
                 <div class="input-group-prepend">
                     <label class="input-group-text" for="inputGroupSelect01">Tipo de ID</label>
                 </div>
+               
                 <select class="custom-select" id="inputGroupSelect01" name="status">
                     @if($link->status == 'Principal')
-                    <option value="{{$link->status}}" selected>{{$link->status}}</option>
-                    <option value="Secundario">Secundaio</option>
-                    @else
-                    <option value="{{$link->status}}" selected>{{$link->status}}</option>
-                    <option value="Principal">Principal</option>
+                      <option value="{{$link->status}}" selected>{{$link->status}}</option>
+                      <option value="Secundario">Secundaio</option>
+                      <option value="Servicio">Reunión Servicio</option>
+                    @endif
+                    @if($link->status == 'Secundario')
+                      <option value="Principal">Principal</option>
+                      <option value="{{$link->status}}" selected>{{$link->status}}</option>
+                      <option value="Servicio">Reunión Servicio</option>
+                    @endif
+                    @if($link->status == 'Servicio')
+                      <option value="Principal">Principal</option>
+                      <option value="Secundario">Secundario</option>
+                      <option value="{{$link->status}}" selected>{{$link->status}}</option>
                     @endif
                 </select>
 
