@@ -2,27 +2,12 @@
     <div class="sb-sidenav-menu">
         <div class="nav">
 
-            <div class="sb-sidenav-menu-heading">Inicio</div>
+            <div class="sb-sidenav-menu-heading">Herramientas</div>
             <a class="nav-link" href="{{url('/home')}}">
-                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                Dashboard
-            </a>
-            <a class="nav-link" href="{{url('/index')}}">
                 <div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>
-                Página de inicio
+                Home
             </a>
-
-            <div class="sb-sidenav-menu-heading">Contenidos</div>
             
-            @if(Auth::user()->rol_id == 1)
-            <a class="nav-link" href="{{ url('/link-zoom') }}">
-                <div class="sb-nav-link-icon">
-                    <i class="fas fa-link"></i>
-                </div>
-                Link Zoom
-            </a>
-            @endif
-
             @if(Auth::user()->rol_id == 2)
             <a class="nav-link" href="">
                 <div class="sb-nav-link-icon">
@@ -31,6 +16,12 @@
                 Noticias
             </a>
             @endif
+
+            <div class="sb-sidenav-menu-heading">Información</div>
+            <a class="nav-link" href="">
+                <div class="sb-nav-link-icon"><i class="fas fa-info-circle"></i></div>
+                Acerca del proyecto
+            </a>
 
         </div>
     </div>
