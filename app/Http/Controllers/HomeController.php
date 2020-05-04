@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Question;
+use App\InfoData;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -24,7 +26,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $questions = Question::get();
-        return view('home')->with(compact('questions'));;
+        if( Auth::user()->rol_id == 1){
+
+            $links = InfoData::get();
+            return view('home',compact('links'));
+        }
+        if( Auth::user()->rol_id == 2){
+            
+        }
+        
     }
 }
