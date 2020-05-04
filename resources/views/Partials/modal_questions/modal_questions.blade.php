@@ -81,6 +81,7 @@
                         <h4> A CONTINUACIÓN DESCRIBA LA DUDA QUE TIENE AL USAR LA APLICACIÓN ZOOM </h4>
                         <h8 style="color:red;">(Ej. ¿Cómo comentar?)</h8>
                         <textarea class="form-control" aria-label="With textarea" rows="5" name="description" value="{{ old('description') }}" placeholder="Escriba su duda aquí" required></textarea>
+                        <br>
                     </div>
 
                 </div>
