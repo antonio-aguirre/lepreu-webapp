@@ -13,7 +13,7 @@
 
             
             @csrf
-            {{ method_field("post") }}
+            {{ method_field("POST") }}
 
             <label for="data">ID zoom</label>
             <input class="form-control" value="{{ old('data', $link->data) }}" type="text" name="data" id="ID" class="col-lg-5" style="text-align:center;" min="0" placeholder="Ingrese el ID" required>

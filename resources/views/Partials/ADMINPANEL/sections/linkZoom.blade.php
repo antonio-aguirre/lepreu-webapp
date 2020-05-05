@@ -125,9 +125,9 @@
                                                         <div class="container row">
 
                                                             <div class="col-md-6">
-                                                                <a type="button" class="btn btn-warning" data-toggle="modal" data-target="#ID_edit{{$link->id}}">
+                                                                <button class="btn btn-warning" data-toggle="modal" data-target="#ID_edit{{$link->id}}">
                                                                     <i class="far fa-edit"></i> Editar
-                                                                </a>
+                                                                </button>
                                                                 @include('Partials.ADMINPANEL.modal.linkZoom_edit')
                                                             </div><br>
 
