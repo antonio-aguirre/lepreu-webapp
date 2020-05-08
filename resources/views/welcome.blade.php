@@ -21,14 +21,14 @@
                 <div class="col-lg-7 my-auto">
                     <div class="header-content mx-auto">
 
-                        <!-- NOTICIAS
+                        <!-- NOTICIAS -->
                         <div class="alert alert-secondary">
                             <div class="container-fluid">
-                                <a href="" style="color:black;"> <i><u>Dar clic aquí para ver las <b>noticias</b> de su congegación</u></i> </a>
+                                <a href="" style="color:black;"> <b>Gracias hn@s. por darle utilidad a este proyecto 🥳</b> </a>
                                 <a type="button" class="close" data-dismiss="alert">&times;</a>
                             </div>
                         </div>
-                        -->    
+                            
                         
                         @if(count($links_principal)>0)
                             @foreach($links_principal as $link_principal)
