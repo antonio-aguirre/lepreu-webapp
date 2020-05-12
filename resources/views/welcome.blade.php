@@ -27,6 +27,13 @@
                                 <a type="button" class="close" data-dismiss="alert">&times;</a>
                             </div>
                         </div>
+
+                        <div class="alert alert-info">
+                            <div class="container-fluid">
+                                <a class="nav-link js-scroll-trigger" href="#videos" style="color:black;"> <u><b>NUEVO video añadido en sección videos de ayuda</b></u> </a>
+                                
+                            </div>
+                        </div>
                                                 
                         @if(count($links_principal)>0)
                             @foreach($links_principal as $link_principal)
