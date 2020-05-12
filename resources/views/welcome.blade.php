@@ -18,7 +18,7 @@
     <header class="masthead">
         <div class="container h-100">
             <div class="row h-100">
-                <div class="col-lg-7 my-auto">
+                <div class="col-lg-6 my-auto">
                     <div class="header-content mx-auto">
 
                         <!-- NOTICIAS -->
@@ -65,18 +65,20 @@
                             <br>
                         @endif
                         
+                        <!--
                         <h3 class="mb-3">
                                 DAR CLICK EN EL BOTÓN <b style="color:orange;"><i>NARANJA</i></b> PARA ESCRIBIR SUS DUDAS DEL USO DE ZOOM  
                         </h3>
-                        <!-- Button trigger modal -->
+                        
                         <a href="{{ url('/dudas-zoom/add') }}" class="btn btn-outline" data-toggle="modal" data-target="#exampleModal"
                         style=" text-align:center; display:block; background-color:orange;">
                             <i class="fas fa-question"></i>
                         </a>
 
-                        @include('Partials.modal_questions.modal_questions')
+                        include('Partials.modal_questions.modal_questions')
 
-                        <br>
+                        
+                        
                         <h5 class="mb-3">
                                 ¿AÚN NO TIENE LA APP ZOOM? OPRIMA EL BOTÓN COLOR <b style="color:#E7B2FF;"><i>LILA</i></b>
                         </h5>
@@ -85,24 +87,26 @@
                             class="btn btn-outline js-scroll-trigger"
                             style=" text-align:center; display:block; background-color:#E7B2FF;"
                             ><i class="fas fa-cloud-download-alt"></i>
-                        </a>
+                        </a>-->
                     
                     </div>
                 </div>
 
-                <div class="col-lg-5 my-auto">
-                    <div class="device-container">
-                        <div style="text-align:center;">
-                            <h4> IMAGEN DE EJEMPLO </h4>
-                        </div>
-                        <div class="device-mockup lumia920 portrait black">
+                <div class="col-lg-6 my-auto">
+                    <div class="container">
+                        <div class="device-mockup ipad_pro portrait gold">
                             <div class="device">
                                 <div class="screen">
                                     <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                                    <img src="{{ global_asset('img/zoomApp.jpg') }}" class="img-fluid" alt="" />
-                                </div>
-                                <div class="button">
-                                    <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+                                    
+                                    <div class="container" style="text-align:center; padding:13px;">
+ 
+                                        <iframe width="370" height="190" src="https://www.youtube.com/embed/UiF4icv_xMk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        
+                                        <iframe width="370" height="190" src="https://www.youtube.com/embed/qUsRK5Li64c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <iframe width="370" height="190" src="https://www.youtube.com/embed/axyU7SnEyPE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -114,8 +118,8 @@
         
     </header>
 
-    @include('Partials.sections.videos')
-    @include('Partials.sections.download')
+    <!--include('Partials.sections.videos')-->
+    <!--include('Partials.sections.download')-->
     
           
 @endsection
