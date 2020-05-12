@@ -30,8 +30,7 @@
 
                         <div class="alert alert-info">
                             <div class="container-fluid">
-                                <a class="nav-link js-scroll-trigger" href="#videos" style="color:black;"> <u><b>NUEVO video añadido en sección videos de ayuda</b></u> </a>
-                                
+                                <a class="nav-link js-scroll-trigger" href="#videos" style="color:black;"> <u><b>NUEVO video añadido para ayuda en zoom 📹</b></u></a>
                             </div>
                         </div>
                                                 
