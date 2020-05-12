@@ -34,6 +34,15 @@
                 </p>
             </div>
         </div>
+
+        <div class="row no-gutters">          
+            <iframe class="col-lg-6 order-lg-2 showcase-img" width="560" height="315" src="https://www.youtube.com/embed/axyU7SnEyPE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+                <h2>Zoom por llamada telefónica</h2>
+                <p class="lead mb-0">Es posible que no contemos con acceso a internet en algún momento, para esto
+                lo invitamos a ver este breve video donde explica como unirse a una reunión en zoom por medio de una llamada telefónica</p><br>
+            </div>
+        </div>
         
     </div>
 </section>
