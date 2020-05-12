@@ -22,11 +22,6 @@
           <a class="nav-link js-scroll-trigger" style="color:gray;" href="#videos"
             >Videos</a>
         </li>
-        
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" style="color:gray;" href="#download"
-            >Descargas</a>
-        </li>
 
         @guest
           <li class="nav-item">
