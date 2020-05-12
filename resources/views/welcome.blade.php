@@ -20,7 +20,6 @@
             <div class="row h-100">
                 <div class="col-lg-6 my-auto">
                     <div class="header-content mx-auto">
-
                         <!-- NOTICIAS -->
                         <div class="alert alert-secondary">
                             <div class="container-fluid">
@@ -28,8 +27,7 @@
                                 <a type="button" class="close" data-dismiss="alert">&times;</a>
                             </div>
                         </div>
-                            
-                        
+                                                
                         @if(count($links_principal)>0)
                             @foreach($links_principal as $link_principal)
 
@@ -93,19 +91,13 @@
                 </div>
 
                 <div class="col-lg-6 my-auto">
-                    <div class="container">
-                        <div class="device-mockup ipad_pro portrait gold">
+                    <div class="device-container">
+                        <div class="device-mockup iphone6_plus portrait black">
                             <div class="device">
                                 <div class="screen">
                                     <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
+                                    <img src="{{ global_asset('img/zoomApp.jpg')}}" class="img-fluid" alt="" />
                                     
-                                    <div class="container" style="text-align:center; padding:13px;">
- 
-                                        <iframe width="370" height="190" src="https://www.youtube.com/embed/UiF4icv_xMk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                        
-                                        <iframe width="370" height="190" src="https://www.youtube.com/embed/qUsRK5Li64c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                        <iframe width="370" height="190" src="https://www.youtube.com/embed/axyU7SnEyPE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    </div>
 
                                 </div>
                             </div>
@@ -118,7 +110,7 @@
         
     </header>
 
-    <!--include('Partials.sections.videos')-->
+    @include('Partials.sections.videos')
     <!--include('Partials.sections.download')-->
     
           
