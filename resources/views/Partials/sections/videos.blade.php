@@ -20,7 +20,7 @@
             <div class="col-lg-6 order-lg-1 my-auto showcase-text">
                 <h2>Como instalar Zoom</h2>
                 <p class="lead mb-0">Para empezar necesitamos tener la app Zoom instalada en nuestros dispositivos. <br><br>
-                Lo invitamos a ver este breve video donde explica como instalar la app, de igual manera, dependiendo de su dispositivo, descargue la misma en la sección <a class="js-scroll-trigger" href="#download">descargas.</a></p><br>
+                Lo invitamos a ver este breve video donde explica como instalar la aplicación.</p><br>
             </div>
         </div>
 
