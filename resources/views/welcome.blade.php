@@ -20,31 +20,18 @@
             <div class="row h-100">
                 <div class="col-lg-6 my-auto">
                     <div class="header-content mx-auto">
-                        <!-- NOTICIAS -->
-                        <div class="alert alert-secondary">
-                            <div class="container-fluid">
-                                <a href="" style="color:black;"> <b>Gracias hn@s. por darle utilidad a este proyecto 🥳</b> </a>
-                                <a type="button" class="close" data-dismiss="alert">&times;</a>
-                            </div>
-                        </div>
-
-                        <div class="alert alert-info">
-                            <div class="container-fluid">
-                                <a class="nav-link js-scroll-trigger" href="#videos" style="color:black;"> <u><b>NUEVO video añadido para ayuda en zoom 📹</b></u></a>
-                            </div>
-                        </div>
+                        
                                                 
                         @if(count($links_principal)>0)
                             @foreach($links_principal as $link_principal)
-
-                            <h2 class="mb-3">
-                                UNASE A LA REUNIÓN OPRIMIENDO EL BOTÓN <b style="color:blue;"><i>AZUL</i></b>
-                             </h2>
-
-                            <a class="btn btn-outline js-scroll-trigger" style=" text-align:center; display:block; background-color:blue;"
-                                        href="{{ url('https://us04web.zoom.us/j/'.$link_principal->data.'')}}">
-                                <i class="fas fa-video"></i>
-                            </a>
+                                <div class="card text-center" style="border:0px;">
+                                    <div class="card-body" style="background: linear-gradient(to top right, #99ccff 0%, #3366ff 100%);">
+                                        <a class="btn btn-secondary" style="display:block; background-color:blue;"
+                                                    href="{{ url('https://us04web.zoom.us/j/'.$link_principal->data.'')}}">
+                                            Unirse a Reunión <br><i class="fas fa-video"></i>
+                                        </a>
+                                    </div>
+                                </div>
                             @endforeach
                         @else
                             <div class="alert alert-warning" role="alert">
@@ -57,17 +44,19 @@
                         <br>
                         
                         @if(count($links_servicio)>0)
-                            @foreach($links_servicio as $link_servicio)
-                                <h2 class="mb-3">
-                                        UNASE A LA REUNIÓN <u>DE SERVICIO</u> OPRIMIENDO EL BOTÓN <b style="color:#1AC406;"><i>VERDE</i></b>
-                                </h2> 
-                                <a class="btn btn-outline js-scroll-trigger" style=" text-align:center; display:block; background-color:green;"
-                                    href="{{ url('https://us04web.zoom.us/j/'.$link_servicio->data.'')}}">
-                                    <i class="fas fa-users"></i>
-                                </a>
+                            @foreach($links_servicio as $link_servicio)  
+                                <div class="card text-center" style="border:0px;">
+                                    <div class="card-body" style="background: linear-gradient(to top right, #00cc99 0%, #00cc66 100%);">
+                                        <a class="btn btn-secondary" style="display:block; background-color:green;"
+                                            href="{{ url('https://us04web.zoom.us/j/'.$link_servicio->data.'')}}">
+                                            Unirse a Reunión de servicio <br><i class="fas fa-users"></i>
+                                        </a>
+                                    </div>
+                                </div>
                             @endforeach
                             <br>
                         @endif
+
                         
                         <!--
                         <h3 class="mb-3">
@@ -98,7 +87,7 @@
 
                 <div class="col-lg-6 my-auto">
                     <div class="device-container">
-                        <div class="device-mockup iphone6_plus portrait black">
+                        <div class="device-mockup lumia920 portrait black">
                             <div class="device">
                                 <div class="screen">
                                     <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
