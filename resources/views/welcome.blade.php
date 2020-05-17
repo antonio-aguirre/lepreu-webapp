@@ -18,7 +18,7 @@
     <header class="masthead">
         <div class="container h-100">
             <div class="row h-100">
-                <div class="col-lg-6 my-auto">
+                <div class="col-lg-5 my-auto">
                     <div class="header-content mx-auto">
                         
                                                 
@@ -85,7 +85,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6 my-auto">
+                <div class="col-lg-7 my-auto">
                     <div class="device-container">
                         <div class="device-mockup lumia920 portrait black">
                             <div class="device">
