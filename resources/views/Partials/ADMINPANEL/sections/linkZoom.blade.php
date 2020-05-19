@@ -56,7 +56,7 @@
                                             </div>
                                             <select class="custom-select" id="inputGroupSelect01" name="status">
                                                 <option value="Principal">Principal</option>
-                                                <option value="Secundario">Secundaio</option>
+                                                <option value="Predicacion">Predicación</option>
                                                 <option value="Servicio">Reunión Servicio</option>
                                             </select>
 
@@ -67,8 +67,8 @@
                                             <div class="collapse" id="collapseExample">
                                                 <div class="card card-body">
                                                     <p><b>Id principal:</b> Es el cual estará disponible al oprimir el botón "unirse a reunion" en la página principal. Solo se puede tener un id principal.</p>
-                                                    <p><b>Id secundario:</b> Es el cual estará como reserva, si se quiere usar para unirse a una reunión, cambie su tipo a "Principal" o "Reunión Servicio" en el botón de edición. 
-                                                                                Se pueden tener múltiples Id secundarios. </p>
+                                                    <p><b>Id de servicio:</b> Es el cual estará disponible si se quieren realizr reuniones de servicio por la semana si las hubiera en su congregación.</p>
+                                                    <p><b>Id para predicar:</b> Es el cual estará disponible si se quiere añadir un ID diferente para predicación grupal via telefónica.</p>
                                                 </div>
                                             </div>
                                         </div> 

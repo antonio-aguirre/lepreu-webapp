@@ -57,6 +57,20 @@
                             <br>
                         @endif
 
+                        @if(count($links_predicacion)>0)
+                            @foreach($links_predicacion as $link_predicacion)  
+                                <div class="card text-center" style="border:0px;">
+                                    <div class="card-body" style="background: linear-gradient(to top right, #ffcc00 0%, #ff6666 100%);">
+                                        <a class="btn btn-secondary" style="display:block; background-color:orange;"
+                                            href="{{ url('https://us04web.zoom.us/j/'.$link_predicacion->data.'')}}">
+                                            Unirse a sala de predicación via telefónica <br><i class="fas fa-phone-volume"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            @endforeach
+                            <br>
+                        @endif
+
                         
                         <!--
                         <h3 class="mb-3">

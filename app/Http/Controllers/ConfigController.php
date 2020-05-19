@@ -24,7 +24,12 @@ class ConfigController extends Controller
                                 ->where('status','Servicio')    
                                 ->get();
 
+        $links_predicacion = InfoData::select('data')
+                                ->where('value','LINK-ZOOM')
+                                ->where('status','Predicacion')    
+                                ->get();
+
         
-        return view('welcome',compact('links_principal','links_servicio'));
+        return view('welcome',compact('links_principal','links_servicio','links_predicacion'));
     }
 }

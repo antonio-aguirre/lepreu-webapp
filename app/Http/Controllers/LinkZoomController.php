@@ -152,7 +152,7 @@ class LinkZoomController extends Controller
                 return back();
                    
             }
-            if( $var2 == "Secundario" )
+            if( $var2 == "Predicacion" )
             {
                 $this->updateSECONDARY_ID_PRIMARY($request,$id);
                 return back();  
@@ -164,8 +164,8 @@ class LinkZoomController extends Controller
             }
         }
 
-        //si existe ya un ID Principal y se selecciona la opción "Secundario"
-        if( ((count(InfoData::where('status', 'Principal')->get())>0) && (($request->status) == 'Secundario'))  )
+        //si existe ya un ID Principal y se selecciona la opción "Predicacion"
+        if( ((count(InfoData::where('status', 'Principal')->get())>0) && (($request->status) == 'Predicacion'))  )
         {
             $var = InfoData::select('status')->where('id',''.$id.'')->get();
             foreach($var as $vars)
@@ -179,7 +179,7 @@ class LinkZoomController extends Controller
                 $this->updatePRIMARY_ID_SECONDARY($request,$id);
                 return back();
             }
-            if( $var2 == "Secundario" )
+            if( $var2 == "Predicacion" )
             {
                 
                 $this->updateSECONDARY_ID_SECONDARY($request,$id);
@@ -208,7 +208,7 @@ class LinkZoomController extends Controller
                 $this->updatePRIMARY_ID_SERVICE($request,$id);
                 return back();
             }
-            if( $var2 == "Secundario" )
+            if( $var2 == "Predicacion" )
             {
                 $this->updateSECONDARY_ID_SERVICE($request,$id);
                 return back();
@@ -245,8 +245,8 @@ class LinkZoomController extends Controller
                     $message = "Se ha actualizado ID de servicio a principal";
                     $badmessage = "Se ha producido un inconveniente en la actualización del ID de servicio a principal";
                 }else{
-                    $message = "Se ha actualizado ID secundario a principal";
-                    $badmessage = "Se ha producido un inconveniente en la actualización del ID secundario a principal";
+                    $message = "Se ha actualizado ID Predicacion a principal";
+                    $badmessage = "Se ha producido un inconveniente en la actualización del ID Predicacion a principal";
                 }
 
                 if($new_type->save()) {
@@ -266,7 +266,7 @@ class LinkZoomController extends Controller
                 $new_type_data->data = $request->data;
 
                 if($new_type_data->save()) {
-                    Session::flash('message','Se ha actualizado ID secundario a principal y actualizado su valor');
+                    Session::flash('message','Se ha actualizado ID Predicacion a principal y actualizado su valor');
                     Session::flash('alert-class','alert alert-success');
                     return back();      
                 }else
@@ -278,8 +278,8 @@ class LinkZoomController extends Controller
             }
         }
 
-        //si NO existe un ID Principal y se selecciona la opción "Secundario"
-        if( ((count(InfoData::where('status', 'Principal')->get()) <= 0) && (($request->status) == 'Secundario'))  )
+        //si NO existe un ID Principal y se selecciona la opción "Predicacion"
+        if( ((count(InfoData::where('status', 'Principal')->get()) <= 0) && (($request->status) == 'Predicacion'))  )
         {
             $var = InfoData::select('data')->where('id',''.$id.'')->get();
             foreach($var as $vars)
@@ -394,7 +394,7 @@ class LinkZoomController extends Controller
             $var2 = $vars->data;
         }
 
-        //se busca el ID del actual "principal" para cambiarlo a "secundario"
+        //se busca el ID del actual "principal" para cambiarlo a "Predicacion"
         $var3 = InfoData::select('id')->where('status', 'Principal')->get();
         foreach($var3 as $vars2)
         {
@@ -406,17 +406,17 @@ class LinkZoomController extends Controller
         {
             // actualización de status del antiguo ID principal
             $idPrincipal_before = InfoData::find($idPrincipal);
-            $idPrincipal_before->status = 'Secundario';
+            $idPrincipal_before->status = 'Predicacion';
 
             $idPrincipal_after = InfoData::find($id);
             $idPrincipal_after->status = $request->status;
 
-            $message = 'Se a actualizado el ID secundario a principal';
+            $message = 'Se a actualizado el ID Predicacion a principal';
 
         }else
         {
             $idPrincipal_before = InfoData::find($idPrincipal);
-            $idPrincipal_before->status = 'Secundario';
+            $idPrincipal_before->status = 'Predicacion';
 
             $idPrincipal_after = InfoData::find($id);
             $idPrincipal_after->data = $request->data;
@@ -455,7 +455,7 @@ class LinkZoomController extends Controller
         {
             // actualización de status del antiguo ID principal
             $idPrincipal_before = InfoData::find($idPrincipal);
-            $idPrincipal_before->status = 'Secundario';
+            $idPrincipal_before->status = 'Predicacion';
 
             $idPrincipal_after = InfoData::find($id);
             $idPrincipal_after->status = $request->status;
@@ -465,7 +465,7 @@ class LinkZoomController extends Controller
         }else
         {
             $idPrincipal_before = InfoData::find($idPrincipal);
-            $idPrincipal_before->status = 'Secundario';
+            $idPrincipal_before->status = 'Predicacion';
 
             $idPrincipal_after = InfoData::find($id);
             $idPrincipal_after->data = $request->data;
@@ -499,11 +499,11 @@ class LinkZoomController extends Controller
 
             if($new_status->save())
             {
-                Session::flash('message','Se ha cambiado ID principal a secundario. No hay ID principal registrado');
+                Session::flash('message','Se ha cambiado ID principal a Predicacion. No hay ID principal registrado');
                 Session::flash('alert-class','alert alert-info');
                 var_dump("Primary to Secondary");
             }else{
-                Session::flash('message','Se ha producido un inconveniente en la actualización del ID principal a secundario');
+                Session::flash('message','Se ha producido un inconveniente en la actualización del ID principal a Predicacion');
                 Session::flash('alert-class','alert alert-warning');
             }
             
@@ -514,11 +514,11 @@ class LinkZoomController extends Controller
             $new_ID->status = $request->status;
 
             if($new_ID->save()) {
-                Session::flash('message','Se ha modificado su valor y cambiado ID principal a secundario. No hay ID principal registrado');
+                Session::flash('message','Se ha modificado su valor y cambiado ID principal a Predicacion. No hay ID principal registrado');
                 Session::flash('alert-class','alert alert-info');       
             }else
             {
-                Session::flash('message','Se ha producido un inconveniente en la actualización del ID principal a secundario');
+                Session::flash('message','Se ha producido un inconveniente en la actualización del ID principal a Predicacion');
                 Session::flash('alert-class','alert alert-warning');
             }
         }
@@ -543,11 +543,11 @@ class LinkZoomController extends Controller
             $new_ID->data = $request->data;
 
             if($new_ID->save()) {
-                Session::flash('message','Se ha actualizado el valor del ID secundario');
+                Session::flash('message','Se ha actualizado el valor del ID Predicacion');
                 Session::flash('alert-class','alert alert-success');       
             }else
             {
-                Session::flash('message','Se ha producido un inconveniente en la actualización del ID secundario');
+                Session::flash('message','Se ha producido un inconveniente en la actualización del ID Predicacion');
                 Session::flash('alert-class','alert alert-warning');
             }
         }
@@ -567,7 +567,7 @@ class LinkZoomController extends Controller
         if( $var2 == ($request->data) )
         {
             $InfoData->status = $request->status;
-            $message = "Se cambio el ID de servicio a secundario. No se modificó su valor.";
+            $message = "Se cambio el ID de servicio a Predicacion. No se modificó su valor.";
             $alert_class = "alert alert-info";
 
         }else{
@@ -575,7 +575,7 @@ class LinkZoomController extends Controller
             $InfoData->data = $request->data;
             $InfoData->status = $request->status;
             
-            $message = "Se a actualizado el ID de servicio a secundario y también modificado su valor.";
+            $message = "Se a actualizado el ID de servicio a Predicacion y también modificado su valor.";
             $alert_class = "alert alert-info";
         }
         
@@ -584,7 +584,7 @@ class LinkZoomController extends Controller
             Session::flash('alert-class',''.$alert_class.'');       
         }else
         {
-            Session::flash('message','Se ha producido un inconveniente en la actualización del ID de servicio a secundario');
+            Session::flash('message','Se ha producido un inconveniente en la actualización del ID de servicio a Predicacion');
             Session::flash('alert-class','alert alert-warning');
         }
     }
@@ -647,7 +647,7 @@ class LinkZoomController extends Controller
             $InfoData = InfoData::find($id);
             $InfoData->status = $request->status;
             
-            $message = "Se actualizo el ID secundario para reunión de servicio. No se modifico su valor.";
+            $message = "Se actualizo el ID Predicacion para reunión de servicio. No se modifico su valor.";
             $session_alert = "alert alert-info";
 
         }else{
@@ -655,7 +655,7 @@ class LinkZoomController extends Controller
             $InfoData->data = $request->data;
             $InfoData->status = $request->status;
 
-            $message = "Se actualizo ID secundario para reunión de servicio. Se modificó su valor";
+            $message = "Se actualizo ID Predicacion para reunión de servicio. Se modificó su valor";
             $session_alert = "alert alert-success";
         }
 
@@ -663,7 +663,7 @@ class LinkZoomController extends Controller
             Session::flash('message',''.$message.'');
             Session::flash('alert-class',''.$session_alert.'');       
         }else{
-            Session::flash('message','Se ha producido un inconveniente en la actualización del ID secundario a de servicio');
+            Session::flash('message','Se ha producido un inconveniente en la actualización del ID Predicacion a de servicio');
             Session::flash('alert-class','alert alert-warning');
         }
         
