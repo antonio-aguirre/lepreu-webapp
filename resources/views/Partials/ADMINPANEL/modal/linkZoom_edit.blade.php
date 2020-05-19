@@ -29,7 +29,7 @@
                       <option value="Predicacion">Predicación</option>
                       <option value="Servicio">Reunión Servicio</option>
                     @endif
-                    @if($link->status == 'Secundario')
+                    @if($link->status == 'Predicacion')
                       <option value="Principal">Principal</option>
                       <option value="{{$link->status}}" selected>{{$link->status}}</option>
                       <option value="Servicio">Reunión Servicio</option>
