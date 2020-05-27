@@ -19,7 +19,7 @@
         <div class="container h-100">
             <div class="row h-100">
                 <div class="col-lg-5 my-auto">
-                    <div class="header-content mx-auto">
+                    <div class="header">
                         
                                                 
                         @if(count($links_principal)>0)
@@ -89,6 +89,8 @@
 
                 <div class="col-lg-7 my-auto">
                     <div class="device-container">
+                        <br>
+                        <p style="text-align:center;">Imagen de ejemplo</p>
                         <div class="device-mockup lumia920 portrait black">
                             <div class="device">
                                 <div class="screen">
