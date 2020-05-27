@@ -24,14 +24,10 @@
                                                 
                         @if(count($links_principal)>0)
                             @foreach($links_principal as $link_principal)
-                                <div class="card text-center" style="border:0px;">
-                                    <div class="card-body" style="background: linear-gradient(to top right, #99ccff 0%, #3366ff 100%);">
-                                        <a class="btn btn-secondary" style="display:block; background-color:blue;"
-                                                    href="{{ url('https://us04web.zoom.us/j/'.$link_principal->data.'')}}">
-                                            Unirse a Reunión <br><i class="fas fa-video"></i>
-                                        </a>
-                                    </div>
-                                </div>
+                                <a class="btn btn-secondary" style="display:block; background: linear-gradient(to top right, #6699ff 0%, #3366ff 100%);"
+                                            href="{{ url('https://us04web.zoom.us/j/'.$link_principal->data.'')}}">
+                                    Unirse a Reunión <br><i class="fas fa-video"></i>
+                                </a>
                             @endforeach
                         @else
                             <div class="alert alert-warning" role="alert">
@@ -45,28 +41,20 @@
                         
                         @if(count($links_servicio)>0)
                             @foreach($links_servicio as $link_servicio)  
-                                <div class="card text-center" style="border:0px;">
-                                    <div class="card-body" style="background: linear-gradient(to top right, #00cc99 0%, #00cc66 100%);">
-                                        <a class="btn btn-secondary" style="display:block; background-color:green;"
-                                            href="{{ url('https://us04web.zoom.us/j/'.$link_servicio->data.'')}}">
-                                            Unirse a Reunión de servicio <br><i class="fas fa-users"></i>
-                                        </a>
-                                    </div>
-                                </div>
+                                <a class="btn btn-secondary" style="display:block; background: linear-gradient(to top right, #00cc99 0%, #669900 100%);"
+                                    href="{{ url('https://us04web.zoom.us/j/'.$link_servicio->data.'')}}">
+                                    Unirse a Reunión de servicio <br><i class="fas fa-users"></i>
+                                </a>
                             @endforeach
                             <br>
                         @endif
 
                         @if(count($links_predicacion)>0)
-                            @foreach($links_predicacion as $link_predicacion)  
-                                <div class="card text-center" style="border:0px;">
-                                    <div class="card-body" style="background: linear-gradient(to top right, #ffcc00 0%, #ff6666 100%);">
-                                        <a class="btn btn-secondary" style="display:block; background-color:orange;"
-                                            href="{{ url('https://us04web.zoom.us/j/'.$link_predicacion->data.'')}}">
-                                            Unirse a sala de predicación via telefónica <br><i class="fas fa-phone-volume"></i>
-                                        </a>
-                                    </div>
-                                </div>
+                            @foreach($links_predicacion as $link_predicacion)       
+                                <a class="btn btn-secondary" style="display:block; background: linear-gradient(to top right, #ffcc00 0%, #ff6666 100%);"
+                                    href="{{ url('https://us04web.zoom.us/j/'.$link_predicacion->data.'')}}">
+                                    Unirse a sala de predicación via telefónica <br><i class="fas fa-phone-volume"></i>
+                                </a>    
                             @endforeach
                             <br>
                         @endif
