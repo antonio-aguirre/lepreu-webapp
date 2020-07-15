@@ -26,7 +26,7 @@
                             @foreach($links_principal as $link_principal)
                                 <a class="btn btn-secondary" style="display:block; background: linear-gradient(to top right, #6699ff 0%, #3366ff 100%);"
                                             href="{{ url('https://us04web.zoom.us/j/'.$link_principal->data.'')}}">
-                                    Unirse a Reunión <br><i class="fas fa-video"></i>
+                                    <br>Unirse a Reunión <br><i class="fas fa-video"></i><br><br>
                                 </a>
                             @endforeach
                         @else
