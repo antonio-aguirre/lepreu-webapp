@@ -10,7 +10,7 @@
                             <div class="col-lg-6">
                                 <div class="text-center mt-4">
                                     <img class="mb-4 img-error" src="assets/img/error-404-monochrome.svg" />
-                                    <p class="lead"> No pudimos encontrar la url :c </p>
+                                    <p class="lead"> Algo a salido mal :c </p>
                                     <a href="{{ url('/') }}"><i class="fas fa-arrow-left mr-1"></i>Regresar al inicio</a>
                                 </div>
                             </div>
