@@ -23,10 +23,10 @@ Auth::routes();
 Route::get('/index','ConfigController@configurations')->name('index');
 
 // RUTAS DEL FORMULARIO DE DUDAS
-Route::post('/dudas-zoom','QuestionController@store');
+//Route::post('/dudas-zoom','QuestionController@store');
 
-Route::get('/registeruser/add','RegistrationController@create');
-Route::post('/registeruser','RegistrationController@store');
+Route::get('/registeruser/add','RegistrationController@create');//muestra el formulario de registro de un usuario
+Route::post('/registeruser','RegistrationController@store'); // manda a registrar al nuevo usuario
 
 // RUTAS PAR CUANDO SE HAYA LOGUEADO
 Route::middleware('auth')->group(function () {
@@ -34,12 +34,16 @@ Route::middleware('auth')->group(function () {
     Route::get('/home', 'HomeController@index')->name('home');
     
 
+    // para definir un midleware agregar desde consola "php artisan make:middleware CheckAge"
+    // luego se tiene que ir a 
+    // app/Http/Kernel.php y definirlo en la sección "protected $routeMiddleware"
+    // Ej. " 'admin' => \App\Http\Middleware\Admin::class, "
     Route::middleware('admin')->group(function () {
 
         Route::resource('/link-zoom','LinkZoomController');
         Route::delete('/link-zoom/{id}/_delete','LinkZoomController@destroy');
         Route::post('/link-zoom/{id}/_edit','LinkZoomController@update');
-        Route::delete('/dudas-zoom/{id}','QuestionController@destroy');
+        //Route::delete('/dudas-zoom/{id}','QuestionController@destroy');
         
     });
 
