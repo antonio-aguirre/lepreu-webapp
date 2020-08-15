@@ -66,7 +66,7 @@ class Kernel extends HttpKernel
 
 
         'admin' => \App\Http\Middleware\Admin::class,
-        'Anciano' => \App\Http\Middleware\Anciano::class,
+        'anciano' => \App\Http\Middleware\Anciano::class,
 
     ];
 
