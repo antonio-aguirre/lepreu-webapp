@@ -18,7 +18,7 @@ class Admin
     {
         if( Auth::user()->rol_id == 1)
         {
-            return $next($request);
+            return $next($request); //la variable $next hace referencia a que pasará a la evaluación si hubiera otro middleware
         }else
         {
             return response()->view('Partials.errors.' . '404', [], 404);
