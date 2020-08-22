@@ -28,28 +28,27 @@ Route::get('/index','ConfigController@configurations')->name('index');
 Route::get('/registeruser/add','RegistrationController@create');//muestra el formulario de registro de un usuario
 Route::post('/registeruser','RegistrationController@store'); // manda a registrar al nuevo usuario
 
+Route::get('/home', 'HomeController@index')->name('home');
+
+
 // RUTAS PAR CUANDO SE HAYA LOGUEADO
-Route::middleware('auth')->group(function () {
 
-    Route::get('/home', 'HomeController@index')->name('home');
+// para definir un midleware agregar desde consola "php artisan make:middleware CheckAge"
+// luego se tiene que ir a 
+// app/Http/Kernel.php y definirlo en la sección "protected $routeMiddleware"
+// Ej. " 'admin' => \App\Http\Middleware\Admin::class, "
+Route::middleware(['auth','admin'])->group(function () {
+
+    Route::resource('/link-zoom','LinkZoomController');
+    Route::delete('/link-zoom/{id}/_delete','LinkZoomController@destroy');
+    Route::post('/link-zoom/{id}/_edit','LinkZoomController@update');
+    //Route::delete('/dudas-zoom/{id}','QuestionController@destroy');
     
-
-    // para definir un midleware agregar desde consola "php artisan make:middleware CheckAge"
-    // luego se tiene que ir a 
-    // app/Http/Kernel.php y definirlo en la sección "protected $routeMiddleware"
-    // Ej. " 'admin' => \App\Http\Middleware\Admin::class, "
-    Route::middleware('admin')->group(function () {
-
-        Route::resource('/link-zoom','LinkZoomController');
-        Route::delete('/link-zoom/{id}/_delete','LinkZoomController@destroy');
-        Route::post('/link-zoom/{id}/_edit','LinkZoomController@update');
-        //Route::delete('/dudas-zoom/{id}','QuestionController@destroy');
-        
-    });
-
-    Route::middleware('anciano')->group(function () {
-
-    });
 });
+
+Route::middleware(['auth','anciano'])->group(function () {
+
+});
+
 
 
