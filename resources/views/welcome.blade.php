@@ -70,7 +70,7 @@
                                     <!-- You can hook the "home button" to some JavaScript events or just remove it -->
 
                                     <!-- Modal -->
-                                    @include('Partials.acknowledgment_modal.greetings')
+                                    @include('Partials.acknowledgment_modal.acknowledgment')
                                     
                                 </div>
                             </div>
