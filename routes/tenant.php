@@ -30,9 +30,6 @@ Route::post('/registeruser','RegistrationController@store'); // manda a registra
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-
-// RUTAS PAR CUANDO SE HAYA LOGUEADO
-
 // para definir un midleware agregar desde consola "php artisan make:middleware CheckAge"
 // luego se tiene que ir a 
 // app/Http/Kernel.php y definirlo en la sección "protected $routeMiddleware"
