@@ -149,8 +149,7 @@ header.masthead {
     padding-top: 50px;
     padding-bottom: 100px;
     color: #fff;
-    background: url(../img/abstract.webp),
-        linear-gradient(to left, #379271, #585858);
+    background: url(../img/BG.png), linear-gradient(to left, #379271, #585858);
 }
 header.masthead .header-content {
     max-width: 500px;
