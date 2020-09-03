@@ -18,9 +18,13 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
 
-        <li class="nav-item">
+        <!--<li class="nav-item">
           <a class="nav-link js-scroll-trigger" style="color:gray;" href="#videos"
             >Videos</a>
+        </li>-->
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" style="color:gray;" href="#download"
+            >Descargar zoom</a>
         </li>
 
         @guest
