@@ -83,7 +83,7 @@
         
     </header>
 
-    @include('Partials.sections.videos')
+    <!--@include('Partials.sections.videos')-->
     <!--include('Partials.sections.download')-->
     
           

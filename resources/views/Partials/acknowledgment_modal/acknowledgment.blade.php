@@ -2,12 +2,9 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
         <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">Acknowledgment</h5>
+            <h5 class="modal-title" id="exampleModalLongTitle">:D</h5>
         </div>
         <div class="modal-body">
-            <p>Julio</p>
-            <p>Antonio</p>
-            <p>Ken</p>
             ✌️
         </div>
         <div class="modal-footer">
