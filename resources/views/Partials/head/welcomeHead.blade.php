@@ -26,5 +26,5 @@
     <link href="{{global_asset('css/new-age.min.css')}}" rel="stylesheet" />
 
     @yield('customs-styles')
-    @include('Partials.Google.analytics')
+    <!--include('Partials.Google.analytics')-->
 </head>
