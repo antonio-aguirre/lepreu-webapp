@@ -24,4 +24,11 @@
     }
 </script>
 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        alert('ATENCIÓN: la página dejará de estar disponible a partir del 1 de enero de 2021');
+    });
+</script>
+
 
